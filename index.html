@@ -710,40 +710,50 @@ function debounce(func,wait){
         timeout=setTimeout(()=>func(...args),wait);
     };
 }
-const debouncedScroll=debounce(()=>{
-    const scrolled=window.pageYOffset;
-    const parallax=document.querySelector('.bg-pattern');
-    if(parallax)parallax.style.transform=\`translateY(\${scrolled*0.5}px)\`;
-},10);
-window.addEventListener('scroll',debouncedScroll);
+const debouncedScroll = debounce(() => {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.bg-pattern');
+    if (parallax) {
+        parallax.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+    }
+}, 10);
+window.addEventListener('scroll', debouncedScroll);
 
 // Touch support for mobile devices
-if('ontouchstart'in window){
+if ('ontouchstart' in window) {
     document.body.classList.add('touch-device');
-    document.querySelectorAll('.contact-card').forEach(card=>{
-        card.addEventListener('touchstart',()=>{card.style.transform='scale(0.98)';});
-        card.addEventListener('touchend',()=>setTimeout(()=>{card.style.transform='';},150));
+    document.querySelectorAll('.contact-card').forEach(card => {
+        card.addEventListener('touchstart', () => {
+            card.style.transform = 'scale(0.98)';
+        });
+        card.addEventListener('touchend', () => setTimeout(() => {
+            card.style.transform = '';
+        }, 150));
     });
 }
 
 // Accessibility improvements
-function improveAccessibility(){
-    document.querySelectorAll('.contact-card').forEach(card=>{
-        const title=card.querySelector('h3').textContent;
-        card.setAttribute('aria-label',\`التواصل عبر \${title}\`);
+function improveAccessibility() {
+    document.querySelectorAll('.contact-card').forEach(card => {
+        const title = card.querySelector('h3').textContent;
+        card.setAttribute('aria-label', 'التواصل عبر ' + title);
     });
-    const skipLink=document.createElement('a');
-    skipLink.href='#main-content';
-    skipLink.textContent='تخطي إلى المحتوى الرئيسي';
-    skipLink.className='skip-link';
-    skipLink.style.cssText='position:absolute;top:-40px;left:6px;background:#000;color:#fff;padding:8px;text-decoration:none;border-radius:4px;z-index:1000;transition:top .3s';
-    skipLink.addEventListener('focus',function(){this.style.top='6px';});
-    skipLink.addEventListener('blur',function(){this.style.top='-40px';});
-    document.body.insertBefore(skipLink,document.body.firstChild);
+
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'تخطي إلى المحتوى الرئيسي';
+    skipLink.className = 'skip-link';
+    skipLink.style.cssText = 'position:absolute;top:-40px;left:6px;background:#000;color:#fff;padding:8px;text-decoration:none;border-radius:4px;z-index:1000;transition:top .3s';
+    
+    skipLink.addEventListener('focus', function () {
+        this.style.top = '6px';
+    });
+    skipLink.addEventListener('blur', function () {
+        this.style.top = '-40px';
+    });
+
+    document.body.insertBefore(skipLink, document.body.firstChild);
 }
 improveAccessibility();
 
 console.log('🎉 صفحة د. أورينا مزوز تم تحميلها بنجاح!');
-    </script>
-</body>
-</html>
