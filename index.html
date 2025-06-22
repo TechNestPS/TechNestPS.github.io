@@ -1,49 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>د. أورينا مزوز</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>د. أورينا مزوز | أخصائية بشرة</title>
   <style>
+    :root {
+      --main-color: #d48b8b;
+      --hover-color: #e8bcbc;
+      --bg-color: #fffdfd;
+      --text-color: #333;
+    }
+
     body {
-      font-family: sans-serif;
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(145deg, #fff0f0, #ffeaea);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background-color: var(--bg-color);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       text-align: center;
-      background: #fefefe;
-      padding: 50px;
-      color: #222;
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 1s ease-in-out;
     }
+
     h1 {
+      color: var(--main-color);
       margin-bottom: 10px;
+      font-size: 2em;
     }
+
+    p.subtitle {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
     .link {
-      margin: 15px;
-      display: block;
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: right;
       text-decoration: none;
-      color: #000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      width: 270px;
-      margin-left: auto;
-      margin-right: auto;
-      transition: 0.3s;
+      color: var(--text-color);
+      background-color: #fff;
+      padding: 14px 20px;
+      margin: 10px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: background-color 0.3s;
+      border: 1px solid #eee;
     }
+
     .link:hover {
-      background-color: #e0f7fa;
+      background-color: var(--hover-color);
+    }
+
+    .link span {
+      margin-right: 10px;
+      font-size: 1.1em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>د. أورينا مزوز</h1>
-  <p>أخصائية بشرة</p>
+  <div class="card">
+    <h1>د. أورينا مزوز</h1>
+    <p class="subtitle">أخصائية بشرة وتجميل</p>
 
-  <a class="link" href="tel:0593851103">📞 اتصال: 0593851103</a>
-  <a class="link" href="https://wa.me/972593851103" target="_blank">💬 واتساب مباشر</a>
-  <a class="link" href="mailto:doctororainamazouz@gmail.com">📧 البريد الإلكتروني</a>
-  <a class="link" href="https://www.instagram.com/orainamazouz" target="_blank">📷 انستغرام</a>
-  <a class="link" href="https://www.facebook.com/profile.php?id=61577239594707" target="_blank">📘 فيسبوك</a>
+    <a class="link" href="tel:0593851103">
+      <span>📞</span>
+      <strong>اتصال مباشر</strong>
+    </a>
 
+    <a class="link" href="https://wa.me/972593851103" target="_blank">
+      <span>💬</span>
+      <strong>واتساب</strong>
+    </a>
+
+    <a class="link" href="mailto:doctororainamazouz@gmail.com">
+      <span>📧</span>
+      <strong>البريد الإلكتروني</strong>
+    </a>
+
+    <a class="link" href="https://www.instagram.com/orainamazouz" target="_blank">
+      <span>📷</span>
+      <strong>انستغرام</strong>
+    </a>
+
+    <a class="link" href="https://www.facebook.com/profile.php?id=61577239594707" target="_blank">
+      <span>📘</span>
+      <strong>فيسبوك</strong>
+    </a>
+
+    <footer>© 2025 د. أورينا مزوز</footer>
+  </div>
 </body>
 </html>
