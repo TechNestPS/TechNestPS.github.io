@@ -78,7 +78,7 @@
   <header class="hero">
     <div class="hero-content">
       <!-- شعار الشركة -->
-<img src="albasha.jpg" alt="شعار شركة الباشا" style="max-width:120px;margin-bottom:1rem;">
+<img src="albasha.png" alt="شعار شركة الباشا" style="max-width:120px;margin-bottom:1rem;">
 
       <h1 data-i18n="name">شركة الباشا</h1>
       <p data-i18n="description">نحن في شركة الباشا نفخر بتقديم أفضل المستلزمات الصحية التي تجمع بين الجودة العالية والتصميم العصري. نلتزم بتقديم حلول مبتكرة وموثوقة لتحسين جودة حياتكم وضمان بيئة صحية وآمنة.</p>
@@ -135,25 +135,25 @@
         <p data-i18n="facebookFollow">تابعنا للجديد</p>
       </a>
       <a class="contact-card" href="https://www.instagram.com/albasha.company_" target="_blank">
-        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-        <h3>انستغرام</h3>
-        <p>@albasha.company_</p>
-      </a>
-      <a class="contact-card" href="https://www.tiktok.com/@albashaco" target="_blank">
-        <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
-        <h3>تيك توك</h3>
-        <p>@albashaco</p>
-      </a>
+  <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+  <h3 data-i18n="instagram">انستغرام</h3>
+  <p>@albasha.company_</p>
+</a>
+     <a class="contact-card" href="https://www.tiktok.com/@albashaco" target="_blank">
+  <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
+  <h3 data-i18n="tiktok">تيك توك</h3>
+  <p>@albashaco</p>
+</a>
       <a class="contact-card" href="mailto:info@albashacompany.com">
         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
         <h3 data-i18n="email">البريد الإلكتروني</h3>
         <p>info@albashacompany.com</p>
       </a>
       <a class="contact-card" href="https://albashaco.ps/" target="_blank">
-        <div class="contact-icon"><i class="fas fa-globe"></i></div>
-        <h3>الموقع الإلكتروني</h3>
-        <p>albashaco.ps</p>
-      </a>
+  <div class="contact-icon"><i class="fas fa-globe"></i></div>
+  <h3 data-i18n="website">الموقع الإلكتروني</h3>
+  <p>albashaco.ps</p>
+</a>
     </div>
   </section>
 
@@ -197,71 +197,81 @@
     document.getElementById("saveBtn").addEventListener("click",()=>{window.location.href="albasha.vcf";closeModal();});
     document.getElementById("cancelBtn").addEventListener("click",()=>{closeModal();});
 
-    const translations={
-      ar:{
-        changeLang:"تغيير اللغة",
-        name:"شركة الباشا",
-        title:"المستلزمات الصحية",
-        description:"نحن في شركة الباشا نفخر بتقديم أفضل المستلزمات الصحية...",
-        about:"رؤيتنا هي تحسين جودة حياتكم من خلال توفير منتجات صحية موثوقة ودائمة...",
-        locationTitle:"موقعنا",
-        contactTitle:"تواصل معنا",
-        call:"الهاتف للتواصل",
-        whatsapp:"واتساب",
-        facebook:"فيسبوك",
-        facebookFollow:"تابعنا للجديد",
-        email:"البريد الإلكتروني",
-        footerTitle:"© 2025 شركة الباشا - جميع الحقوق محفوظة",
-        footerSubtitle:"المستلزمات الصحية – الجودة والموثوقية في منتجاتنا",
-        status:"جاهزون لخدمتكم",
-        chooseAction:"اختر الإجراء",
-        callAction:"📞 اتصال",
-        saveAction:"💾 حفظ الرقم",
-        cancelAction:"إلغاء"
-      },
-      en:{
-        changeLang:"Change Language",
-        name:"Al Basha Company",
-        title:"Health Supplies",
-        description:"At Al Basha Company, we are proud to provide the best health supplies...",
-        about:"Our vision is to improve your quality of life by providing reliable health products...",
-        locationTitle:"Our Location",
-        contactTitle:"Contact Us",
-        call:"Phone Number",
-        whatsapp:"WhatsApp",
-        facebook:"Facebook",
-        facebookFollow:"Follow us for updates",
-        email:"Email",
-        footerTitle:"© 2025 Al Basha Company - All Rights Reserved",
-        footerSubtitle:"Health Supplies – Quality & Reliability in Our Products",
-        status:"Ready to serve you",
-        chooseAction:"Choose Action",
-        callAction:"📞 Call",
-        saveAction:"💾 Save Number",
-        cancelAction:"Cancel"
-      },
-      he:{
-        changeLang:"שנה שפה",
-        name:"חברת אל באשה",
-        title:"ציוד בריאות",
-        description:"בחברת אל באשה אנו גאים לספק את ציוד הבריאות הטוב ביותר...",
-        about:"החזון שלנו הוא לשפר את איכות חייכם על ידי מתן מוצרים אמינים...",
-        locationTitle:"המיקום שלנו",
-        contactTitle:"צור קשר",
-        call:"טלפון ליצירת קשר",
-        whatsapp:"וואטסאפ",
-        facebook:"פייסבוק",
-        facebookFollow:"עקבו אחרינו לעדכונים",
-        email:"אימייל",
-        footerTitle:"© 2025 חברת אל באשה - כל הזכויות שמורות",
-        footerSubtitle:"ציוד בריאות – איכות ואמינות במוצרים שלנו",
-        status:"מוכנים לשרת אתכם",
-        chooseAction:"בחר פעולה",
-        callAction:"📞 התקשר",
-        saveAction:"💾 שמור מספר",
-        cancelAction:"ביטול"
-      }
-    };
+   const translations={
+  ar:{
+    changeLang:"تغيير اللغة",
+    name:"شركة الباشا",
+    title:"المستلزمات الصحية",
+    description:"نحن في شركة الباشا نفخر بتقديم أفضل المستلزمات الصحية...",
+    about:"رؤيتنا هي تحسين جودة حياتكم من خلال توفير منتجات صحية موثوقة ودائمة...",
+    locationTitle:"موقعنا",
+    contactTitle:"تواصل معنا",
+    call:"الهاتف للتواصل",
+    whatsapp:"واتساب",
+    facebook:"فيسبوك",
+    facebookFollow:"تابعنا للجديد",
+    email:"البريد الإلكتروني",
+    footerTitle:"© 2025 شركة الباشا - جميع الحقوق محفوظة",
+    footerSubtitle:"المستلزمات الصحية – الجودة والموثوقية في منتجاتنا",
+    status:"جاهزون لخدمتكم",
+    chooseAction:"اختر الإجراء",
+    callAction:"📞 اتصال",
+    saveAction:"💾 حفظ الرقم",
+    cancelAction:"إلغاء",
+    instagram:"انستغرام",
+    tiktok:"تيك توك",
+    website:"الموقع الإلكتروني"
+  },
+  en:{
+    changeLang:"Change Language",
+    name:"Al Basha Company",
+    title:"Health Supplies",
+    description:"At Al Basha Company, we are proud to provide the best health supplies...",
+    about:"Our vision is to improve your quality of life by providing reliable health products...",
+    locationTitle:"Our Location",
+    contactTitle:"Contact Us",
+    call:"Phone Number",
+    whatsapp:"WhatsApp",
+    facebook:"Facebook",
+    facebookFollow:"Follow us for updates",
+    email:"Email",
+    footerTitle:"© 2025 Al Basha Company - All Rights Reserved",
+    footerSubtitle:"Health Supplies – Quality & Reliability in Our Products",
+    status:"Ready to serve you",
+    chooseAction:"Choose Action",
+    callAction:"📞 Call",
+    saveAction:"💾 Save Number",
+    cancelAction:"Cancel",
+    instagram:"Instagram",
+    tiktok:"TikTok",
+    website:"Website"
+  },
+  he:{
+    changeLang:"שנה שפה",
+    name:"חברת אל באשה",
+    title:"ציוד בריאות",
+    description:"בחברת אל באשה אנו גאים לספק את ציוד הבריאות הטוב ביותר...",
+    about:"החזון שלנו הוא לשפר את איכות חייכם על ידי מתן מוצרים אמינים...",
+    locationTitle:"המיקום שלנו",
+    contactTitle:"צור קשר",
+    call:"טלפון ליצירת קשר",
+    whatsapp:"וואטסאפ",
+    facebook:"פייסבוק",
+    facebookFollow:"עקבו אחרינו לעדכונים",
+    email:"אימייל",
+    footerTitle:"© 2025 חברת אל באשה - כל הזכויות שמורות",
+    footerSubtitle:"ציוד בריאות – איכות ואמינות במוצרים שלנו",
+    status:"מוכנים לשרת אתכם",
+    chooseAction:"בחר פעולה",
+    callAction:"📞 התקשר",
+    saveAction:"💾 שמור מספר",
+    cancelAction:"ביטול",
+    instagram:"אינסטגרם",
+    tiktok:"טיקטוק",
+    website:"אתר אינטרנט"
+  }
+};
+
 
     const btn=document.querySelector(".lang-btn");
     const menu=document.getElementById("langMenu");
