@@ -10,201 +10,174 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-/* === RESET & BASICS === */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Cairo',sans-serif;background:linear-gradient(135deg,#ffffff 0%,#f2f8fc 50%,#e6f1f8 100%);color:#1e293b;min-height:100vh;line-height:1.6;direction:rtl;text-align:right;}
-a{text-decoration:none;color:inherit;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Cairo',sans-serif;background:#f9fafb;color:#1e293b;line-height:1.6;direction:rtl;text-align:right;}
 
-/* === BACKGROUND PATTERN === */
-.bg-pattern{position:fixed;top:0;left:0;width:100%;height:100%;opacity:.03;background-image:radial-gradient(circle at 25px 25px,#266a99 2px,transparent 0);background-size:50px 50px;pointer-events:none;z-index:-1;}
+    a{text-decoration:none;color:inherit;}
 
-/* === CONTAINER === */
-.container{max-width:1024px;margin:0 auto;padding:2rem 1rem;}
+    /* Header */
+    .hero{position:relative;min-height:90vh;background:linear-gradient(135deg,#266a99 0%,#1f4e73 100%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;}
+    .hero-content{max-width:800px;z-index:2;}
+    .hero h1{font-size:3rem;margin-bottom:1rem;}
+    .hero p{font-size:1.2rem;color:#f1f5f9;margin-bottom:2rem;}
+    .hero .btn{background:#fff;color:#266a99;padding:.8rem 1.5rem;border-radius:8px;font-weight:600;transition:.3s;}
+    .hero .btn:hover{background:#f1f5f9;}
 
-/* === ANIMATIONS === */
-@keyframes fadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.5;}}
-@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
-.fade-in{animation:fadeIn 1s ease-out;}
+    /* Language switch */
+    .lang-switch{position:absolute;top:1rem;right:1rem;}
+    .lang-btn{background:#fff;color:#1e293b;border:none;padding:.4rem .6rem;border-radius:8px;cursor:pointer;font-size:1rem;}
+    .lang-menu{display:none;position:absolute;top:110%;right:0;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,.15);}
+    .lang-menu button{display:block;width:100%;padding:.4rem .8rem;background:none;border:none;text-align:right;cursor:pointer;font-family:'Cairo';}
+    .lang-menu button:hover{background:#f1f5f9;}
+    .lang-menu.show{display:block;}
 
-/* === HEADER CARD === */
-.header-card{background:rgba(255,255,255,.1);backdrop-filter:blur(20px);border-radius:24px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.15);margin-bottom:2rem;position:relative;border:1px solid rgba(255,255,255,.2);}
-.header-bg{position:absolute;inset:0;background:linear-gradient(135deg,#266a99 0%,#1f4e73 100%);}
-.header-bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.2);}
-.header-content{position:relative;z-index:2;padding:3rem 2rem;color:#fff;}
+    /* About */
+    .about{padding:4rem 1rem;text-align:center;max-width:900px;margin:auto;}
+    .about h2{color:#266a99;margin-bottom:1rem;font-size:2rem;}
+    .about p{color:#444;font-size:1.1rem;}
 
-/* === PROFILE === */
-.profile-section{display:flex;flex-direction:column;align-items:center;gap:2rem;margin-bottom:3rem;}
-.avatar-container{position:relative;}
-.avatar{width:8rem;height:8rem;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(10px);border:4px solid rgba(255,255,255,.3);box-shadow:0 10px 30px rgba(0,0,0,.2);overflow:hidden;}
-.avatar img{width:100%;height:100%;object-fit:contain;background:#fff;border-radius:50%;padding:5px;}
-.status-indicator{position:absolute;bottom:-8px;right:-8px;width:2rem;height:2rem;background:#10b981;border-radius:50%;border:4px solid #fff;display:flex;align-items:center;justify-content:center;}
-.status-dot{width:.75rem;height:.75rem;background:#fff;border-radius:50%;animation:pulse 2s infinite;}
-.profile-info{text-align:center;flex:1;}
-.doctor-name{font-size:2.5rem;font-weight:700;margin-bottom:.5rem;text-shadow:0 2px 4px rgba(0,0,0,.1);}
-.doctor-title{font-size:1.5rem;color:rgba(255,255,255,.9);margin-bottom:1rem;font-weight:500;}
-.doctor-description{font-size:1.1rem;color:rgba(255,255,255,.85);line-height:1.8;max-width:600px;margin:0 auto 1.5rem;}
-.location{display:flex;align-items:center;justify-content:center;gap:.5rem;color:rgba(255,255,255,.9);font-size:1rem;}
+    /* Contact Cards */
+    .contact{padding:4rem 1rem;background:#f3f7fa;}
+    .contact h2{text-align:center;color:#266a99;margin-bottom:2rem;}
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:1000px;margin:auto;}
+    .contact-card{background:#fff;border-radius:16px;padding:2rem;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;transition:.3s;}
+    .contact-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,.12);}
+    .contact-icon{font-size:2rem;color:#266a99;margin-bottom:1rem;}
+    .contact-card h3{margin-bottom:.5rem;color:#1e293b;}
+    .contact-card p{color:#555;font-size:.95rem;}
 
-/* === STATS === */
-.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
-.stat-item{text-align:center;}
-.stat-icon{width:4rem;height:4rem;background:rgba(255,255,255,.2);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;backdrop-filter:blur(10px);font-size:1.5rem;}
-.stat-number{font-size:1.75rem;font-weight:700;margin-bottom:.5rem;}
-.stat-label{font-size:.9rem;color:rgba(255,255,255,.85);}
+    /* Map */
+    .map{padding:4rem 1rem;text-align:center;}
+    .map iframe{width:100%;height:350px;border:0;border-radius:16px;box-shadow:0 10px 20px rgba(0,0,0,.1);}
 
-/* === CONTACT === */
-.contact-links{display:grid;gap:1.5rem;margin-bottom:2rem;}
-.contact-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1);cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1);border:1px solid rgba(255,255,255,.2);}
-.contact-card:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,.2),0 0 15px rgba(255,255,255,.6);}
-.contact-content{padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;color:#fff;position:relative;overflow:hidden;}
-.contact-left{display:flex;align-items:center;gap:1.5rem;}
-.contact-icon{width:3.5rem;height:3.5rem;background:rgba(255,255,255,.2);border-radius:16px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(10px);font-size:1.5rem;transition:all .3s ease;}
-.contact-card:hover .contact-icon{background:rgba(255,255,255,.3);transform:scale(1.1);}
-.contact-text h3{font-size:1.25rem;font-weight:600;margin-bottom:.25rem;}
-.contact-text p{font-size:.9rem;opacity:.9;}
-.contact-arrow{font-size:1.25rem;opacity:.8;transition:all .3s ease;}
-.contact-card:hover .contact-arrow{opacity:1;transform:translateX(-4px);}
-.phone-card .contact-content,
-.whatsapp-card .contact-content,
-.email-card .contact-content,
-.facebook-card .contact-content {background:linear-gradient(135deg,#266a99 0%,#1f557a 100%);}
+    /* Footer */
+    footer{background:#1f4e73;color:#fff;text-align:center;padding:2rem;}
+    footer p{margin:.3rem 0;}
+    .social{margin-top:1rem;}
+    .social a{margin:0 .5rem;color:#fff;font-size:1.3rem;transition:.3s;}
+    .social a:hover{color:#e0e7ff;}
 
-/* === FOOTER === */
-.footer-card{background:linear-gradient(135deg,#ffffff 0%,#f3f7fa 100%);border-radius:20px;padding:2rem;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.05);border:1px solid rgba(255,255,255,.2);}
-.footer-title{font-size:1.1rem;font-weight:600;color:#266a99;margin-bottom:.5rem;}
-.footer-subtitle{font-size:.9rem;color:#555;margin-bottom:1rem;}
-.footer-status{display:flex;align-items:center;justify-content:center;gap:.5rem;font-size:.8rem;color:#777;}
-.status-dot-small{width:.5rem;height:.5rem;background:#10b981;border-radius:50%;animation:pulse 2s infinite;}
+    /* Floating WhatsApp */
+    .floating-whatsapp{position:fixed;bottom:1.5rem;left:1.5rem;z-index:1000;}
+    .floating-whatsapp a{display:flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;background:linear-gradient(135deg,#266a99 0%,#1f557a 100%);border-radius:50%;color:#fff;text-decoration:none;font-size:1.5rem;box-shadow:0 10px 30px rgba(38,106,153,.4);transition:.3s;animation:float 3s ease-in-out infinite;}
+    .floating-whatsapp a:hover{transform:scale(1.1);box-shadow:0 15px 40px rgba(38,106,153,.6);}
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
 
-/* === FLOATING WHATSAPP === */
-.floating-whatsapp{position:fixed;bottom:1.5rem;left:1.5rem;z-index:1000;}
-.floating-whatsapp a{display:flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;background:linear-gradient(135deg,#266a99 0%,#1f557a 100%);border-radius:50%;color:#fff;text-decoration:none;font-size:1.5rem;box-shadow:0 10px 30px rgba(38,106,153,.4);transition:all .3s cubic-bezier(.4,0,.2,1);animation:float 3s ease-in-out infinite;}
-.floating-whatsapp a:hover{transform:scale(1.1);box-shadow:0 15px 40px rgba(38,106,153,.6);}
-
-/* === LANGUAGE SWITCH === */
-.lang-switch{position:absolute;top:1rem;right:1rem;z-index:2000;}
-.lang-btn{background:#fff;color:#1e293b;border:none;padding:.4rem .6rem;border-radius:8px;cursor:pointer;font-size:1rem;}
-.lang-menu{display:none;position:absolute;top:110%;right:0;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,.15);}
-.lang-menu button{display:block;width:100%;padding:.4rem .8rem;background:none;border:none;text-align:right;cursor:pointer;font-family:'Cairo';}
-.lang-menu button:hover{background:#f1f5f9;}
-.lang-menu.show{display:block;}
-
-/* === MODAL === */
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);align-items:center;justify-content:center;z-index:3000;}
-.modal-content{background:#fff;padding:2rem;border-radius:15px;text-align:center;max-width:300px;width:90%;}
-.modal-content h3{margin-bottom:1rem;}
-.modal-content button{margin:0.5rem 0;padding:0.7rem 1.2rem;width:100%;border:none;border-radius:8px;cursor:pointer;font-size:1rem;}
-#callBtn{background:#10b981;color:#fff;}
-#saveBtn{background:#266a99;color:#fff;}
-#cancelBtn{background:#9ca3af;color:#fff;}
-
-/* === RESPONSIVE === */
-@media(min-width:768px){
-  .container{padding:3rem 2rem;}
-  .profile-section{flex-direction:row;text-align:right;}
-  .profile-info{text-align:right;}
-  .avatar{width:10rem;height:10rem;}
-  .doctor-name{font-size:3rem;}
-  .doctor-title{font-size:1.75rem;}
-  .stats-grid{gap:3rem;}
-  .stat-icon{width:5rem;height:5rem;font-size:2rem;}
-  .stat-number{font-size:2rem;}
-  .contact-content{padding:2rem 2.5rem;}
-  .contact-icon{width:4rem;height:4rem;font-size:1.75rem;}
-  .floating-whatsapp{bottom:2rem;left:2rem;}
-  .floating-whatsapp a{width:4rem;height:4rem;font-size:1.75rem;}
-}
+    /* Modal */
+    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);align-items:center;justify-content:center;z-index:3000;}
+    .modal-content{background:#fff;padding:2rem;border-radius:15px;text-align:center;max-width:300px;width:90%;}
+    .modal-content h3{margin-bottom:1rem;}
+    .modal-content button{margin:0.5rem 0;padding:0.7rem 1.2rem;width:100%;border:none;border-radius:8px;cursor:pointer;font-size:1rem;}
+    #callBtn{background:#10b981;color:#fff;}
+    #saveBtn{background:#266a99;color:#fff;}
+    #cancelBtn{background:#9ca3af;color:#fff;}
   </style>
 </head>
 <body>
-  <div class="bg-pattern"></div>
-  <div class="container" id="main-content">
-    <!-- Header Card -->
-    <div class="header-card fade-in">
-      <div class="header-bg"></div>
-      <div class="header-content">
-        <div class="lang-switch">
-          <button class="lang-btn"><i class="fas fa-globe"></i> <span data-i18n="changeLang">تغيير اللغة</span></button>
-          <div class="lang-menu" id="langMenu">
-            <button data-lang="ar">عربي</button>
-            <button data-lang="en">English</button>
-            <button data-lang="he">עברית</button>
-          </div>
-        </div>
-        <div class="profile-section">
-          <div class="avatar-container">
-            <div class="avatar"><img src="albasha.jpg" alt="شركة الباشا"></div>
-            <div class="status-indicator"><div class="status-dot"></div></div>
-          </div>
-          <div class="profile-info">
-            <h1 class="doctor-name" data-i18n="name">شركة الباشا</h1>
-            <p class="doctor-title" data-i18n="title">المستلزمات الصحية</p>
-            <p class="doctor-description" data-i18n="description">نحن في شركة الباشا نفخر بتقديم أفضل المستلزمات الصحية التي تجمع بين الجودة العالية والتصميم العصري. نلتزم بتقديم حلول مبتكرة وموثوقة لتحسين جودة حياتكم وضمان بيئة صحية وآمنة.</p>
-            <div class="location"><i class="fas fa-map-marker-alt"></i><span data-i18n="location">الخليل – حلحول – الذروة</span></div>
-          </div>
-        </div>
-        <div class="stats-grid">
-          <div class="stat-item"><div class="stat-icon"><i class="fas fa-industry"></i></div><div class="stat-number" data-i18n="experience">سنوات</div><div class="stat-label" data-i18n="experienceLabel">من الخبرة في المستلزمات الصحية</div></div>
-          <div class="stat-item"><div class="stat-icon"><i class="fas fa-box"></i></div><div class="stat-number" data-i18n="projects">منتجات</div><div class="stat-label" data-i18n="projectsLabel">صحية متنوعة</div></div>
-          <div class="stat-item"><div class="stat-icon"><i class="fas fa-users"></i></div><div class="stat-number" data-i18n="clients">عملاء</div><div class="stat-label" data-i18n="clientsLabel">أفراد ومؤسسات</div></div>
-        </div>
+  <!-- Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <!-- شعار الشركة -->
+<img src="albasha.png" alt="شعار شركة الباشا" style="max-width:120px;margin-bottom:1rem;">
+
+      <h1 data-i18n="name">شركة الباشا</h1>
+      <p data-i18n="description">نحن في شركة الباشا نفخر بتقديم أفضل المستلزمات الصحية التي تجمع بين الجودة العالية والتصميم العصري. نلتزم بتقديم حلول مبتكرة وموثوقة لتحسين جودة حياتكم وضمان بيئة صحية وآمنة.</p>
+      <a href="#contact" class="btn" data-i18n="call">الهاتف للتواصل</a>
+    </div>
+    <div class="lang-switch">
+      <button class="lang-btn"><i class="fas fa-globe"></i> <span data-i18n="changeLang">تغيير اللغة</span></button>
+      <div class="lang-menu" id="langMenu">
+        <button data-lang="ar">عربي</button>
+        <button data-lang="en">English</button>
+        <button data-lang="he">עברית</button>
       </div>
     </div>
+  </header>
 
-    <!-- Contact Links -->
-    <div class="contact-links">
-      <div class="contact-card phone-card" onclick="openContactOptions('+97222248444')">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-text"><h3 data-i18n="call">الهاتف للتواصل</h3><p>02-2248444</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
-      </div>
-      <div class="contact-card phone-card" onclick="openContactOptions('+972599300688')">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-text"><h3 data-i18n="call">الهاتف للتواصل</h3><p>0599-300688</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
-      </div>
-      <div class="contact-card phone-card" onclick="openContactOptions('+972599300588')">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-text"><h3 data-i18n="call">الهاتف للتواصل</h3><p>0599-300588</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
-      </div>
+  <!-- About -->
+  <section class="about">
+    <h2 data-i18n="title">رؤيتنا</h2>
+    <p data-i18n="about"> تحسين جودة حياتكم من خلال توفير منتجات صحية موثوقة ودائمة، مما يضمن لكم بيئة صحية وآمنة في كل مكان.</p>
+  </section>
 
-      <a class="contact-card whatsapp-card" href="https://wa.me/972599300688" target="_blank">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fab fa-whatsapp"></i></div><div class="contact-text"><h3 data-i18n="whatsapp">واتساب</h3><p>+972 59-930-0688</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2 data-i18n="contactTitle">تواصل معنا</h2>
+    <div class="contact-grid">
+      <div class="contact-card" onclick="openContactOptions('+97222248444')">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <h3 data-i18n="call">الهاتف للتواصل</h3>
+        <p>02-2248444</p>
+      </div>
+      <div class="contact-card" onclick="openContactOptions('+972599300688')">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <h3 data-i18n="call">الهاتف للتواصل</h3>
+        <p>0599-300688</p>
+      </div>
+      <div class="contact-card" onclick="openContactOptions('+972599300588')">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <h3 data-i18n="call">الهاتف للتواصل</h3>
+        <p>0599-300588</p>
+      </div>
+      <a class="contact-card" href="https://wa.me/972599300688" target="_blank">
+        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+        <h3 data-i18n="whatsapp">واتساب</h3>
+        <p>+972599300688</p>
       </a>
-      <a class="contact-card whatsapp-card" href="https://wa.me/972599300588" target="_blank">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fab fa-whatsapp"></i></div><div class="contact-text"><h3 data-i18n="whatsapp">واتساب</h3><p>+972 59-930-0588</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
+      <a class="contact-card" href="https://wa.me/972599300588" target="_blank">
+        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+        <h3 data-i18n="whatsapp">واتساب</h3>
+        <p>+972599300588</p>
       </a>
-
-      <a class="contact-card facebook-card" href="https://www.facebook.com/share/1CbKxEoTSp/?mibextid=wwXIfr" target="_blank">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fab fa-facebook-f"></i></div><div class="contact-text"><h3 data-i18n="facebook">فيسبوك</h3><p data-i18n="facebookFollow">تابعنا للجديد</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
+      <a class="contact-card" href="https://www.facebook.com/share/1CbKxEoTSp/?mibextid=wwXIfr" target="_blank">
+        <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+        <h3 data-i18n="facebook">فيسبوك</h3>
+        <p data-i18n="facebookFollow">تابعنا للجديد</p>
       </a>
-      <a class="contact-card facebook-card" href="https://www.instagram.com/albasha.company_?igsh=MTBwdzJvdnl6NjJwZg%3D%3D&utm_source=qr" target="_blank">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fab fa-instagram"></i></div><div class="contact-text"><h3>انستغرام</h3><p>@albasha.company_</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
+      <a class="contact-card" href="https://www.instagram.com/albasha.company_" target="_blank">
+  <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+  <h3 data-i18n="instagram">انستغرام</h3>
+  <p>@albasha.company_</p>
+</a>
+     <a class="contact-card" href="https://www.tiktok.com/@albashaco" target="_blank">
+  <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
+  <h3 data-i18n="tiktok">تيك توك</h3>
+  <p>@albashaco</p>
+</a>
+      <a class="contact-card" href="mailto:info@albashacompany.com">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <h3 data-i18n="email">البريد الإلكتروني</h3>
+        <p>info@albashacompany.com</p>
       </a>
-      <a class="contact-card facebook-card" href="https://www.tiktok.com/@albashaco?_t=ZS-8zp9X78Bi9h&_r=1" target="_blank">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fab fa-tiktok"></i></div><div class="contact-text"><h3>تيك توك</h3><p>@albashaco</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
-      </a>
-      <a class="contact-card email-card" href="mailto:info@albashacompany.com">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-text"><h3 data-i18n="email">البريد الإلكتروني</h3><p>info@albashacompany.com</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
-      </a>
-      <a class="contact-card email-card" href="https://albashaco.ps/" target="_blank">
-        <div class="contact-content"><div class="contact-left"><div class="contact-icon"><i class="fas fa-globe"></i></div><div class="contact-text"><h3>الموقع الإلكتروني</h3><p>albashaco.ps</p></div></div><div class="contact-arrow"><i class="fas fa-chevron-left"></i></div></div>
-      </a>
+      <a class="contact-card" href="https://albashaco.ps/" target="_blank">
+  <div class="contact-icon"><i class="fas fa-globe"></i></div>
+  <h3 data-i18n="website">الموقع الإلكتروني</h3>
+  <p>albashaco.ps</p>
+</a>
     </div>
+  </section>
 
-    <!-- خريطة -->
-    <div class="map" style="margin:2rem 0;">
-      <iframe src="https://www.google.com/maps?q=31.5894794464111,35.1046714782715&hl=ar&z=15&output=embed" width="100%" height="350" style="border:0;border-radius:20px;box-shadow:0 10px 20px rgba(0,0,0,.1);" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+  <!-- Map -->
+  <section class="map">
+    <h2 data-i18n="locationTitle">موقعنا</h2>
+    <iframe src="https://www.google.com/maps?q=31.5894794464111,35.1046714782715&hl=ar&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </section>
 
-    <!-- Footer -->
-    <div class="footer-card">
-      <div class="footer-content">
-        <p class="footer-title" data-i18n="footerTitle">© 2025 شركة الباشا - جميع الحقوق محفوظة</p>
-        <p class="footer-subtitle" data-i18n="footerSubtitle">المستلزمات الصحية – الجودة والموثوقية في منتجاتنا</p>
-        <div class="footer-status"><div class="status-dot-small"></div><span data-i18n="status">جاهزون لخدمتكم</span></div>
-      </div>
+  <!-- Footer -->
+  <footer>
+    <p data-i18n="footerTitle">© 2025 شركة الباشا - جميع الحقوق محفوظة</p>
+    <p data-i18n="footerSubtitle">المستلزمات الصحية – الجودة والموثوقية في منتجاتنا</p>
+    <div class="social">
+      <a href="https://www.facebook.com/share/1CbKxEoTSp/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/albasha.company_" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@albashaco" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="floating-whatsapp">
+    <a href="https://wa.me/972599300688" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
-
-  <!-- زر واتساب عائم -->
-  <div class="floating-whatsapp"><a href="https://wa.me/972599300688" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
 
   <!-- Modal -->
   <div id="contactModal" class="modal">
@@ -217,105 +190,103 @@ a{text-decoration:none;color:inherit;}
   </div>
 
   <script>
-  let currentNumber = "";
-  function openContactOptions(number){currentNumber=number;document.getElementById("contactModal").style.display="flex";}
-  function closeModal(){document.getElementById("contactModal").style.display="none";}
-  document.getElementById("callBtn").addEventListener("click",()=>{window.location.href="tel:"+currentNumber;closeModal();});
-  document.getElementById("saveBtn").addEventListener("click",()=>{window.location.href="albasha.vcf";closeModal();});
-  document.getElementById("cancelBtn").addEventListener("click",()=>{closeModal();});
+    let currentNumber = "";
+    function openContactOptions(number){currentNumber=number;document.getElementById("contactModal").style.display="flex";}
+    function closeModal(){document.getElementById("contactModal").style.display="none";}
+    document.getElementById("callBtn").addEventListener("click",()=>{window.location.href="tel:"+currentNumber;closeModal();});
+    document.getElementById("saveBtn").addEventListener("click",()=>{window.location.href="albasha.vcf";closeModal();});
+    document.getElementById("cancelBtn").addEventListener("click",()=>{closeModal();});
 
-  const translations={
-    ar:{
-      changeLang:"تغيير اللغة",
-      name:"شركة الباشا",
-      title:"المستلزمات الصحية",
-      description:"نحن في شركة الباشا نفخر بتقديم أفضل المستلزمات الصحية التي تجمع بين الجودة العالية والتصميم العصري. نلتزم بتقديم حلول مبتكرة وموثوقة لتحسين جودة حياتكم وضمان بيئة صحية وآمنة.",
-      location:"الخليل – حلحول – الذروة",
-      experience:"سنوات",
-      experienceLabel:"من الخبرة في المستلزمات الصحية",
-      projects:"منتجات",
-      projectsLabel:"صحية متنوعة",
-      clients:"عملاء",
-      clientsLabel:"أفراد ومؤسسات",
-      call:"الهاتف للتواصل",
-      whatsapp:"واتساب",
-      facebook:"فيسبوك",
-      facebookFollow:"تابعنا للجديد",
-      email:"البريد الإلكتروني",
-      footerTitle:"© 2025 شركة الباشا - جميع الحقوق محفوظة",
-      footerSubtitle:"المستلزمات الصحية – الجودة والموثوقية في منتجاتنا",
-      status:"جاهزون لخدمتكم",
-      chooseAction:"اختر الإجراء",
-      callAction:"📞 اتصال",
-      saveAction:"💾 حفظ الرقم",
-      cancelAction:"إلغاء"
-    },
-    en:{
-      changeLang:"Change Language",
-      name:"Al Basha Company",
-      title:"Health Supplies",
-      description:"At Al Basha Company, we are proud to provide the best health supplies that combine high quality and modern design. We are committed to offering innovative and reliable solutions to improve your quality of life and ensure a safe and healthy environment.",
-      location:"Halhul – Hebron – Palestine",
-      experience:"Years",
-      experienceLabel:"of Experience in Health Supplies",
-      projects:"Products",
-      projectsLabel:"Variety of Health Supplies",
-      clients:"Clients",
-      clientsLabel:"Individuals & Institutions",
-      call:"Phone Number",
-      whatsapp:"WhatsApp",
-      facebook:"Facebook",
-      facebookFollow:"Follow us for updates",
-      email:"Email",
-      footerTitle:"© 2025 Al Basha Company - All Rights Reserved",
-      footerSubtitle:"Health Supplies – Quality & Reliability in Our Products",
-      status:"Ready to serve you",
-      chooseAction:"Choose Action",
-      callAction:"📞 Call",
-      saveAction:"💾 Save Number",
-      cancelAction:"Cancel"
-    },
-    he:{
-      changeLang:"שנה שפה",
-      name:"חברת אל באשה",
-      title:"ציוד בריאות",
-      description:"בחברת אל באשה אנו גאים לספק את ציוד הבריאות הטוב ביותר המשלב איכות גבוהה ועיצוב מודרני. אנו מחויבים להציע פתרונות חדשניים ואמינים לשיפור איכות חייכם ולהבטחת סביבה בטוחה ובריאה.",
-      location:"חלחול – חברון – פלסטין",
-      experience:"שנים",
-      experienceLabel:"של ניסיון בציוד בריאות",
-      projects:"מוצרים",
-      projectsLabel:"מגוון ציוד בריאות",
-      clients:"לקוחות",
-      clientsLabel:"יחידים ומוסדות",
-      call:"טלפון ליצירת קשר",
-      whatsapp:"וואטסאפ",
-      facebook:"פייסבוק",
-      facebookFollow:"עקבו אחרינו לעדכונים",
-      email:"אימייל",
-      footerTitle:"© 2025 חברת אל באשה - כל הזכויות שמורות",
-      footerSubtitle:"ציוד בריאות – איכות ואמינות במוצרים שלנו",
-      status:"מוכנים לשרת אתכם",
-      chooseAction:"בחר פעולה",
-      callAction:"📞 התקשר",
-      saveAction:"💾 שמור מספר",
-      cancelAction:"ביטול"
-    }
-  };
-
-  const btn=document.querySelector(".lang-btn");
-  const menu=document.getElementById("langMenu");
-  btn.addEventListener("click",()=>menu.classList.toggle("show"));
-  menu.querySelectorAll("button").forEach(b=>{
-    b.addEventListener("click",()=>{const lang=b.getAttribute("data-lang");applyTranslations(lang);menu.classList.remove("show");});
-  });
-  function applyTranslations(lang){
-    document.querySelectorAll("[data-i18n]").forEach(el=>{
-      const key=el.getAttribute("data-i18n");
-      if(translations[lang][key]) el.textContent=translations[lang][key];
-    });
-    document.documentElement.lang=lang;
-    document.documentElement.dir=(lang==="en")?"ltr":"rtl";
+   const translations={
+  ar:{
+    changeLang:"تغيير اللغة",
+    name:"شركة الباشا",
+    title:"المستلزمات الصحية",
+    description:"نحن في شركة الباشا نفخر بتقديم أفضل المستلزمات الصحية...",
+    about:"رؤيتنا هي تحسين جودة حياتكم من خلال توفير منتجات صحية موثوقة ودائمة...",
+    locationTitle:"موقعنا",
+    contactTitle:"تواصل معنا",
+    call:"الهاتف للتواصل",
+    whatsapp:"واتساب",
+    facebook:"فيسبوك",
+    facebookFollow:"تابعنا للجديد",
+    email:"البريد الإلكتروني",
+    footerTitle:"© 2025 شركة الباشا - جميع الحقوق محفوظة",
+    footerSubtitle:"المستلزمات الصحية – الجودة والموثوقية في منتجاتنا",
+    status:"جاهزون لخدمتكم",
+    chooseAction:"اختر الإجراء",
+    callAction:"📞 اتصال",
+    saveAction:"💾 حفظ الرقم",
+    cancelAction:"إلغاء",
+    instagram:"انستغرام",
+    tiktok:"تيك توك",
+    website:"الموقع الإلكتروني"
+  },
+  en:{
+    changeLang:"Change Language",
+    name:"Al Basha Company",
+    title:"Health Supplies",
+    description:"At Al Basha Company, we are proud to provide the best health supplies...",
+    about:"Our vision is to improve your quality of life by providing reliable health products...",
+    locationTitle:"Our Location",
+    contactTitle:"Contact Us",
+    call:"Phone Number",
+    whatsapp:"WhatsApp",
+    facebook:"Facebook",
+    facebookFollow:"Follow us for updates",
+    email:"Email",
+    footerTitle:"© 2025 Al Basha Company - All Rights Reserved",
+    footerSubtitle:"Health Supplies – Quality & Reliability in Our Products",
+    status:"Ready to serve you",
+    chooseAction:"Choose Action",
+    callAction:"📞 Call",
+    saveAction:"💾 Save Number",
+    cancelAction:"Cancel",
+    instagram:"Instagram",
+    tiktok:"TikTok",
+    website:"Website"
+  },
+  he:{
+    changeLang:"שנה שפה",
+    name:"חברת אל באשה",
+    title:"ציוד בריאות",
+    description:"בחברת אל באשה אנו גאים לספק את ציוד הבריאות הטוב ביותר...",
+    about:"החזון שלנו הוא לשפר את איכות חייכם על ידי מתן מוצרים אמינים...",
+    locationTitle:"המיקום שלנו",
+    contactTitle:"צור קשר",
+    call:"טלפון ליצירת קשר",
+    whatsapp:"וואטסאפ",
+    facebook:"פייסבוק",
+    facebookFollow:"עקבו אחרינו לעדכונים",
+    email:"אימייל",
+    footerTitle:"© 2025 חברת אל באשה - כל הזכויות שמורות",
+    footerSubtitle:"ציוד בריאות – איכות ואמינות במוצרים שלנו",
+    status:"מוכנים לשרת אתכם",
+    chooseAction:"בחר פעולה",
+    callAction:"📞 התקשר",
+    saveAction:"💾 שמור מספר",
+    cancelAction:"ביטול",
+    instagram:"אינסטגרם",
+    tiktok:"טיקטוק",
+    website:"אתר אינטרנט"
   }
+};
+
+
+    const btn=document.querySelector(".lang-btn");
+    const menu=document.getElementById("langMenu");
+    btn.addEventListener("click",()=>menu.classList.toggle("show"));
+    menu.querySelectorAll("button").forEach(b=>{
+      b.addEventListener("click",()=>{const lang=b.getAttribute("data-lang");applyTranslations(lang);menu.classList.remove("show");});
+    });
+    function applyTranslations(lang){
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key=el.getAttribute("data-i18n");
+        if(translations[lang][key]) el.textContent=translations[lang][key];
+      });
+      document.documentElement.lang=lang;
+      document.documentElement.dir=(lang==="en")?"ltr":"rtl";
+    }
   </script>
 </body>
 </html>
