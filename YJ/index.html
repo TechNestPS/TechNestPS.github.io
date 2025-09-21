@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شركة YJ | التصميم الداخلي والديكور</title>
+  <meta name="description" content="شركة YJ للتصميم الداخلي والديكور، نقدم حلولاً هندسية مبتكرة وخدمات تصميم، إشراف، وتنفيذ مع اهتمام بأدق التفاصيل." />
+  <meta name="keywords" content="شركة YJ, تصميم داخلي, ديكور, إشراف, تنفيذ, استشارات هندسية, حلول هندسية, أفضل الحلول" />
+  <meta name="theme-color" content="#000000" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Cairo',sans-serif;background:#f9fafb;color:#1e293b;line-height:1.6;direction:rtl;text-align:right;}
+
+    a{text-decoration:none;color:inherit;}
+
+    /* Header */
+    .hero{position:relative;min-height:90vh;background:linear-gradient(135deg,#000000 0%,#000000 100%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;}
+    .hero-content{max-width:800px;z-index:2;}
+    .hero h1{font-size:3rem;margin-bottom:1rem;}
+    .hero p{font-size:1.2rem;color:#f1f5f9;margin-bottom:2rem;}
+    .hero .btn{background:#fff;color:#000000;padding:.8rem 1.5rem;border-radius:8px;font-weight:600;transition:.3s;}
+    .hero .btn:hover{background:#f1f5f9;}
+
+    /* Language switch */
+    .lang-switch{position:absolute;top:1rem;right:1rem;}
+    .lang-btn{background:#fff;color:#1e293b;border:none;padding:.4rem .6rem;border-radius:8px;cursor:pointer;font-size:1rem;}
+    .lang-menu{display:none;position:absolute;top:110%;right:0;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,.15);}
+    .lang-menu button{display:block;width:100%;padding:.4rem .8rem;background:none;border:none;text-align:right;cursor:pointer;font-family:'Cairo';}
+    .lang-menu button:hover{background:#f1f5f9;}
+    .lang-menu.show{display:block;}
+
+    /* About */
+    .about{padding:4rem 1rem;text-align:center;max-width:900px;margin:auto;}
+    .about h2{color:#000000;margin-bottom:1rem;font-size:2rem;}
+    .about p{color:#444;font-size:1.1rem;}
+
+    /* Contact Cards */
+    .contact{padding:4rem 1rem;background:#f3f7fa;}
+    .contact h2{text-align:center;color:#000000;margin-bottom:2rem;}
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:1000px;margin:auto;}
+    .contact-card{background:#fff;border-radius:16px;padding:2rem;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;transition:.3s;}
+    .contact-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,.12);}
+    .contact-icon{font-size:2rem;color:#000000;margin-bottom:1rem;}
+    .contact-card h3{margin-bottom:.5rem;color:#1e293b;}
+    .contact-card p{color:#555;font-size:.95rem;}
+
+    /* Map */
+    .map{padding:4rem 1rem;text-align:center;}
+    .map iframe{width:100%;height:350px;border:0;border-radius:16px;box-shadow:0 10px 20px rgba(0,0,0,.1);}
+
+    /* Footer */
+    footer{background:#000000;color:#fff;text-align:center;padding:2rem;}
+    footer p{margin:.3rem 0;}
+    .social{margin-top:1rem;}
+    .social a{margin:0 .5rem;color:#fff;font-size:1.3rem;transition:.3s;}
+    .social a:hover{color:#e0e7ff;}
+    /* Floating WhatsApp */
+    .floating-whatsapp{position:fixed;bottom:1.5rem;left:1.5rem;z-index:1000;}
+    .floating-whatsapp a{display:flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;background:linear-gradient(135deg,#000000 0%,#000000 100%);border-radius:50%;color:#fff;text-decoration:none;font-size:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:.3s;animation:float 3s ease-in-out infinite;}
+    .floating-whatsapp a:hover{transform:scale(1.1);box-shadow:0 15px 40px rgba(0,0,0,.6);}
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+    /* Modal */
+    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);align-items:center;justify-content:center;z-index:3000;}
+    .modal-content{background:#fff;padding:2rem;border-radius:15px;text-align:center;max-width:300px;width:90%;}
+    .modal-content h3{margin-bottom:1rem;}
+    .modal-content button{margin:0.5rem 0;padding:0.7rem 1.2rem;width:100%;border:none;border-radius:8px;cursor:pointer;font-size:1rem;}
+    #callBtn{background:#10b981;color:#fff;}
+    #saveBtn{background:#000000;color:#fff;}
+    #cancelBtn{background:#9ca3af;color:#fff;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <!-- شعار الشركة -->
+      <img src="yj-logo.png" alt="شعار شركة YJ" style="max-width:120px;margin-bottom:1rem;">
+
+      <h1 data-i18n="name">شركة YJ للتصميم الداخلي والديكور</h1>
+      <p data-i18n="description">التصميم مش مجرد صورة، التصميم روح بنتركها بكل مكان بنصمموه. بنستقبلكم دايمًا بكل حب، لنعطيكم أفضل الحلول الهندسية والاستشارات.</p>
+      <a href="#contact" class="btn" data-i18n="call">الهاتف للتواصل</a>
+    </div>
+    <div class="lang-switch">
+      <button class="lang-btn"><i class="fas fa-globe"></i> <span data-i18n="changeLang">تغيير اللغة</span></button>
+      <div class="lang-menu" id="langMenu">
+        <button data-lang="ar">عربي</button>
+        <button data-lang="en">English</button>
+        <button data-lang="he">עברית</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about">
+    <h2 data-i18n="title">نهتم بأدق التفاصيل</h2>
+    <p data-i18n="about">نقدّم خدمات التصميم، الإشراف، والتنفيذ لنكون خياركم الأفضل دائمًا.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2 data-i18n="contactTitle">تواصل معنا</h2>
+    <div class="contact-grid">
+      <div class="contact-card" onclick="openContactOptions('0592088488')">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <h3 data-i18n="call">الهاتف</h3>
+        <p>059-2088488</p>
+      </div>
+      <a class="contact-card" href="https://wa.me/972595535251" target="_blank">
+        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+        <h3 data-i18n="whatsapp">واتساب</h3>
+        <p>+972 59-553-5251</p>
+      </a>
+      <a class="contact-card" href="https://www.instagram.com/yara.jarrar.design?igsh=MXQzNHJvc3VjcjF0NQ==" target="_blank">
+        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+        <h3 data-i18n="instagram">انستغرام</h3>
+        <p>@yara.jarrar.design</p>
+      </a>
+      <a class="contact-card" href="https://maps.google.com/?q=31.5472965240479,35.0984153747559" target="_blank">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>الموقع</h3>
+        <p>الخليل – الحرس – مجمع عرفة التجاري – الطابق 5</p>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Map -->
+  <section class="map">
+    <h2 data-i18n="locationTitle">موقعنا</h2>
+    <iframe src="https://www.google.com/maps?q=31.5472965240479,35.0984153747559&hl=ar&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p data-i18n="footerTitle">© 2025 شركة YJ للتصميم الداخلي والديكور - جميع الحقوق محفوظة</p>
+    <p data-i18n="footerSubtitle">نهتم بأدق التفاصيل – التصميم، الإشراف، والتنفيذ</p>
+    <div class="social">
+      <a href="https://www.instagram.com/yara.jarrar.design?igsh=MXQzNHJvc3VjcjF0NQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="floating-whatsapp">
+    <a href="https://wa.me/972595535251" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <h3 data-i18n="chooseAction">اختر الإجراء</h3>
+      <button id="callBtn" data-i18n="callAction">📞 اتصال</button>
+      <button id="saveBtn" data-i18n="saveAction">💾 حفظ الرقم</button>
+      <button id="cancelBtn" data-i18n="cancelAction">إلغاء</button>
+    </div>
+  </div>
+
+  <script>
+    let currentNumber = "";
+    function openContactOptions(number){
+      currentNumber=number;
+      document.getElementById("contactModal").style.display="flex";
+    }
+    function closeModal(){
+      document.getElementById("contactModal").style.display="none";
+    }
+    document.getElementById("callBtn").addEventListener("click",()=>{
+      window.location.href="tel:"+currentNumber;
+      closeModal();
+    });
+    document.getElementById("saveBtn").addEventListener("click",()=>{
+      window.location.href="yj.vcf";
+      closeModal();
+    });
+    document.getElementById("cancelBtn").addEventListener("click",()=>{closeModal();});
+
+   const translations={
+  ar:{
+    changeLang:"تغيير اللغة",
+    name:"شركة YJ للتصميم الداخلي والديكور",
+    title:"تصميم داخلي وديكور",
+    description:"التصميم مش مجرد صورة، التصميم روح بنتركها بكل مكان بنصمموه. بنستقبلكم دايمًا بكل حب، لنعطيكم أفضل الحلول الهندسية والاستشارات.",
+    about:"نهتم بأدق التفاصيل – خدمات تصميم، إشراف، وتنفيذ لنكون خياركم الأفضل دائمًا.",
+    locationTitle:"موقعنا",
+    contactTitle:"تواصل معنا",
+    call:"الهاتف",
+    whatsapp:"واتساب",
+    email:"البريد الإلكتروني",
+    footerTitle:"© 2025 شركة YJ للتصميم الداخلي والديكور - جميع الحقوق محفوظة",
+    footerSubtitle:"نهتم بأدق التفاصيل – التصميم، الإشراف، والتنفيذ",
+    status:"جاهزون لخدمتكم",
+    chooseAction:"اختر الإجراء",
+    callAction:"📞 اتصال",
+    saveAction:"💾 حفظ الرقم",
+    cancelAction:"إلغاء",
+    instagram:"انستغرام",
+    website:"الموقع"
+  },
+  en:{
+    changeLang:"Change Language",
+    name:"YJ Interior Design & Decoration",
+    title:"Interior Design & Decoration",
+    description:"Design is not just an image, it is a soul we leave in every place we design. We always welcome you with love to provide the best engineering solutions and consultations.",
+    about:"We care about the smallest details – offering design, supervision, and execution services to always be your best choice.",
+    locationTitle:"Our Location",
+    contactTitle:"Contact Us",
+    call:"Phone",
+    whatsapp:"WhatsApp",
+    email:"Email",
+    footerTitle:"© 2025 YJ Interior Design & Decoration - All Rights Reserved",
+    footerSubtitle:"We care about details – Design, Supervision, and Execution",
+    status:"Ready to serve you",
+    chooseAction:"Choose Action",
+    callAction:"📞 Call",
+    saveAction:"💾 Save Number",
+    cancelAction:"Cancel",
+    instagram:"Instagram",
+    website:"Website"
+  },
+  he:{
+    changeLang:"שנה שפה",
+    name:"חברת YJ לעיצוב פנים ודקורציה",
+    title:"עיצוב פנים ודקורציה",
+    description:"העיצוב הוא לא רק תמונה, אלא נשמה שאנו משאירים בכל מקום שאנו מעצבים. אנו מקבלים אתכם תמיד באהבה כדי להעניק את הפתרונות ההנדסיים והייעוץ הטובים ביותר.",
+    about:"שמנו לב לפרטים הקטנים ביותר – מציעים שירותי עיצוב, פיקוח וביצוע כדי שנהיה תמיד הבחירה הטובה ביותר שלכם.",
+    locationTitle:"המיקום שלנו",
+    contactTitle:"צור קשר",
+    call:"טלפון",
+    whatsapp:"וואטסאפ",
+    email:"אימייל",
+    footerTitle:"© 2025 חברת YJ לעיצוב פנים ודקורציה - כל הזכויות שמורות",
+    footerSubtitle:"שמנו לב לפרטים – עיצוב, פיקוח וביצוע",
+    status:"מוכנים לשרת אתכם",
+    chooseAction:"בחר פעולה",
+    callAction:"📞 התקשר",
+    saveAction:"💾 שמור מספר",
+    cancelAction:"ביטול",
+    instagram:"אינסטגרם",
+    website:"אתר אינטרנט"
+  }
+};
+
+
+    const btn=document.querySelector(".lang-btn");
+    const menu=document.getElementById("langMenu");
+    btn.addEventListener("click",()=>menu.classList.toggle("show"));
+    menu.querySelectorAll("button").forEach(b=>{
+      b.addEventListener("click",()=>{
+        const lang=b.getAttribute("data-lang");
+        applyTranslations(lang);
+        menu.classList.remove("show");
+      });
+    });
+    function applyTranslations(lang){
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key=el.getAttribute("data-i18n");
+        if(translations[lang][key]) el.textContent=translations[lang][key];
+      });
+      document.documentElement.lang=lang;
+      document.documentElement.dir=(lang==="en")?"ltr":"rtl";
+    }
+  </script>
+</body>
+</html>
 
