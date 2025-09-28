@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DBD LOGISTICS | الوساطة والضمان</title>
+  <meta name="description" content="DBD LOGISTICS أول شركة وساطة وضمان في فلسطين، نعمل كوسيط وضامن بين التاجر والزبون لحماية الأموال وضمان التسليم والتوصيل السريع." />
+  <meta name="keywords" content="DBD LOGISTICS, وساطة, ضمان, فلسطين, توصيل سريع, حماية أموال, تجارة إلكترونية آمنة" />
+  <meta name="theme-color" content="#d4af37" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Cairo',sans-serif;background:#1a1a1a;color:#e5e5e5;line-height:1.6;direction:rtl;text-align:right;}
+
+    a{text-decoration:none;color:inherit;}
+
+    /* Header */
+    .hero{position:relative;min-height:90vh;background:linear-gradient(135deg,#1a1a1a 0%,#000 100%);color:#d4af37;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;}
+    .hero-content{max-width:800px;z-index:2;}
+    .hero h1{font-size:3rem;margin-bottom:1rem;color:#d4af37;}
+    .hero p{font-size:1.2rem;color:#f5f5f5;margin-bottom:2rem;}
+    .hero .btn{background:#d4af37;color:#000;padding:.8rem 1.5rem;border-radius:8px;font-weight:600;transition:.3s;}
+    .hero .btn:hover{background:#b68d40;color:#fff;}
+
+    /* About */
+    .about{padding:4rem 1rem;text-align:center;max-width:900px;margin:auto;}
+    .about h2{color:#d4af37;margin-bottom:1rem;font-size:2rem;}
+    .about p{color:#ddd;font-size:1.1rem;}
+
+    /* Contact Cards */
+    .contact{padding:4rem 1rem;background:#111;}
+    .contact h2{text-align:center;color:#d4af37;margin-bottom:2rem;}
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:1000px;margin:auto;}
+    .contact-card{background:#1f1f1f;border-radius:16px;padding:2rem;box-shadow:0 10px 25px rgba(0,0,0,.5);text-align:center;transition:.3s;color:#f5f5f5;}
+    .contact-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,.7);}
+    .contact-icon{font-size:2rem;color:#d4af37;margin-bottom:1rem;}
+    .contact-card h3{margin-bottom:.5rem;color:#d4af37;}
+    .contact-card p{color:#ccc;font-size:.95rem;}
+
+    /* Map */
+    .map{padding:4rem 1rem;text-align:center;background:#1a1a1a;}
+    .map iframe{width:100%;height:350px;border:0;border-radius:16px;box-shadow:0 10px 20px rgba(0,0,0,.7);}
+
+    /* Footer */
+    footer{background:#000;color:#d4af37;text-align:center;padding:2rem;}
+    footer p{margin:.3rem 0;}
+    .social{margin-top:1rem;}
+    .social a{margin:0 .5rem;color:#d4af37;font-size:1.3rem;transition:.3s;}
+    .social a:hover{color:#fff;}
+
+    /* Floating WhatsApp */
+    .floating-whatsapp{position:fixed;bottom:1.5rem;left:1.5rem;z-index:1000;}
+    .floating-whatsapp a{display:flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;background:linear-gradient(135deg,#d4af37 0%,#b68d40 100%);border-radius:50%;color:#000;text-decoration:none;font-size:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,.6);transition:.3s;animation:float 3s ease-in-out infinite;}
+    .floating-whatsapp a:hover{transform:scale(1.1);box-shadow:0 15px 40px rgba(0,0,0,.8);}
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+    /* Modal */
+    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);align-items:center;justify-content:center;z-index:3000;}
+    .modal-content{background:#1a1a1a;color:#f5f5f5;padding:2rem;border-radius:15px;text-align:center;max-width:300px;width:90%;}
+    .modal-content h3{margin-bottom:1rem;color:#d4af37;}
+    .modal-content button{margin:0.5rem 0;padding:0.7rem 1.2rem;width:100%;border:none;border-radius:8px;cursor:pointer;font-size:1rem;}
+    #callBtn{background:#10b981;color:#fff;}
+    #saveBtn{background:#d4af37;color:#000;}
+    #cancelBtn{background:#9ca3af;color:#fff;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <!-- شعار الشركة -->
+      <img src="dbd-logo.png" alt="شعار DBD LOGISTICS" style="max-width:150px;margin-bottom:1rem;">
+
+      <h1>DBD LOGISTICS</h1>
+      <p>أول شركة تقدم خدمة الوساطة والضمان في فلسطين. نضمن حماية أموال الزبون والتاجر، ونوفر تجربة شراء آمنة مع توصيل سريع وخدمة عملاء فورية.</p>
+      <a href="#contact" class="btn">اتصل بنا</a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about">
+    <h2>رسالتنا</h2>
+    <p>ثقة حقيقية: صفر غش وصفر رواجع. هدفنا بناء سوق إلكتروني نظيف وآمن بين التاجر والزبون.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>تواصل معنا</h2>
+    <div class="contact-grid">
+      <div class="contact-card" onclick="openContactOptions('+970569815651')">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <h3>الهاتف للتواصل</h3>
+        <p>0569815651</p>
+      </div>
+      <a class="contact-card" href="https://wa.me/message/4JUIXIC4U26YI1" target="_blank">
+        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+        <h3>واتساب</h3>
+        <p>+970569815651</p>
+      </a>
+      <a class="contact-card" href="https://www.facebook.com/share/1B3hcDQMn8/?mibextid=wwXIfr" target="_blank">
+        <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+        <h3>فيسبوك</h3>
+        <p>تابعنا للجديد</p>
+      </a>
+      <a class="contact-card" href="https://www.tiktok.com/@dbd.logistics?_t=ZS-906DzOJfFo8&_r=1" target="_blank">
+        <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
+        <h3>تيك توك</h3>
+        <p>@dbd.logistics</p>
+      </a>
+      <a class="contact-card" href="https://dbdlog.top/" target="_blank">
+        <div class="contact-icon"><i class="fas fa-globe"></i></div>
+        <h3>الموقع الإلكتروني</h3>
+        <p>dbdlog.top</p>
+      </a>
+    </div>
+  </section>
+
+   <!-- Map -->
+  <section class="map">
+    <h2>موقعنا</h2>
+    <iframe src="https://www.google.com/maps?q=31.5894794464111,35.1046714782715&hl=ar&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 DBD LOGISTICS - جميع الحقوق محفوظة</p>
+    <p>الوساطة والضمان – ثقة حقيقية، صفر غش وصفر رواجع</p>
+    <div class="social">
+      <a href="https://www.facebook.com/share/1B3hcDQMn8/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/@dbd.logistics?_t=ZS-906DzOJfFo8&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://dbdlog.top/" target="_blank"><i class="fas fa-globe"></i></a>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="floating-whatsapp">
+    <a href="https://wa.me/message/4JUIXIC4U26YI1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <h3>اختر الإجراء</h3>
+      <button id="callBtn">📞 اتصال</button>
+      <button id="saveBtn">💾 حفظ الرقم</button>
+      <button id="cancelBtn">إلغاء</button>
+    </div>
+  </div>
+
+  <script>
+    let currentNumber = "";
+    function openContactOptions(number){
+      currentNumber=number;
+      document.getElementById("contactModal").style.display="flex";
+    }
+    function closeModal(){
+      document.getElementById("contactModal").style.display="none";
+    }
+    document.getElementById("callBtn").addEventListener("click",()=>{
+      window.location.href="tel:"+currentNumber;
+      closeModal();
+    });
+    document.getElementById("saveBtn").addEventListener("click",()=>{
+      window.location.href="dbdlogistics.vcf";
+      closeModal();
+    });
+    document.getElementById("cancelBtn").addEventListener("click",()=>{closeModal();});
+  </script>
+</body>
+</html>
 
