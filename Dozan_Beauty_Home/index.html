@@ -1,163 +1,495 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dozan Beauty Home | مركز تجميل وعناية بالبشرة</title>
-  <meta name="description" content="Dozan Beauty Home: راحة، نظافة، وأفضل نتائج في جلسات الليزر والميزوثيرابي. الموقع: رفيديا - عمارة شركة جوال - الطابق الخامس، نابلس." />
-  <meta name="theme-color" content="#f5a623" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="icon" type="image/png" href="dozan-logo.png">
-  <style>
-    :root {
-      --clr-primary: #0b2c3d;
-      --clr-secondary: #11394f;
-      --clr-accent: #f5a623;
-      --clr-text-light: #fff;
-      --clr-text-subtle: #eee;
-      --clr-whatsapp: #25D366;
-      --font-cairo: 'Cairo', sans-serif;
-      --box-shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.6);
-      --transition-speed: 0.3s;
-    }
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:var(--font-cairo);background:var(--clr-primary);color:var(--clr-text-light);line-height:1.7;}
-    a{text-decoration:none;color:inherit;}
-    h1,h2,h3{font-weight:700;}
-    section{padding:5rem 1rem;text-align:center;}
-    .btn{display:inline-block;background:linear-gradient(135deg,var(--clr-accent),#d98507);color:#fff;padding:1rem 2rem;border-radius:50px;font-weight:600;transition:.3s;box-shadow:0 5px 20px rgba(0,0,0,.4);}
-    .btn:hover{transform:scale(1.05);background:#fff;color:var(--clr-primary);}
-    .section-heading{color:var(--clr-accent);margin-bottom:2.5rem;font-size:2.2rem;}
-    .hero{position:relative;min-height:100vh;background:linear-gradient(rgba(11,44,61,.85),rgba(11,44,61,.85)),url('bg.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;}
-    .hero-content{max-width:800px;}
-    .hero__logo{max-width:160px;margin-bottom:1.5rem;}
-    .hero__title{font-size:3.2rem;color:var(--clr-accent);margin-bottom:1rem;}
-    .hero__slogan{font-size:1.4rem;margin-bottom:2.5rem;color:var(--clr-text-subtle);}
-    .about__text{max-width:900px;margin:0 auto;color:var(--clr-text-subtle);font-size:1.2rem;}
-    .about__text p{margin-bottom:1rem;}
-    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;max-width:1000px;margin:auto;}
-    .contact-card{background:var(--clr-secondary);border-radius:20px;padding:1.5rem;text-align:center;transition:.3s;box-shadow:0 10px 25px rgba(0,0,0,.5);}
-    .contact-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 15px 35px rgba(0,0,0,.6);}
-    .contact-icon{width:70px;height:70px;margin:auto 0 1rem;background:var(--clr-accent);color:#fff;font-size:2rem;display:flex;align-items:center;justify-content:center;border-radius:50%;}
-    .contact-card h3{margin-bottom:.5rem;color:var(--clr-accent);}
-    .map__frame{width:100%;height:400px;border:0;border-radius:16px;box-shadow:var(--box-shadow-dark);max-width:900px;margin:auto;display:block;}
-    .footer{background:var(--clr-primary);color:var(--clr-accent);text-align:center;padding:2rem;border-top:1px solid var(--clr-secondary);}
-    .footer p{margin:.5rem 0;}
-    .social a{margin:0 .6rem;color:var(--clr-accent);font-size:1.5rem;}
-    .social a:hover{color:#fff;}
-    .floating-whatsapp{position:fixed;bottom:1.5rem;left:1.5rem;z-index:1000;}
-    .floating-whatsapp__link{display:flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;background:var(--clr-whatsapp);border-radius:50%;color:#fff;font-size:1.6rem;box-shadow:var(--box-shadow-dark);}
-    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);align-items:center;justify-content:center;z-index:3000;}
-    .modal-content{background:var(--clr-secondary);color:#fff;padding:2rem;border-radius:15px;text-align:center;max-width:300px;width:90%;}
-    .modal-content button{margin:.5rem 0;padding:.8rem 1.2rem;width:100%;border:none;border-radius:8px;cursor:pointer;font-size:1rem;font-family:var(--font-cairo);font-weight:600;}
-    #saveBtn{background:var(--clr-accent);color:var(--clr-primary);}
-    #cancelBtn{background:#666;color:#fff;}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dozan Beauty Home | مركز تجميل وعناية بالبشرة</title>
+    <meta name="description" content="Dozan Beauty Home: راحة، نظافة، وأفضل نتائج في جلسات الليزر والميزوثيرابي. الموقع: رفيديا - عمارة شركة جوال - الطابق الخامس، نابلس." />
+    <meta name="theme-color" content="#f5a623" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="dozan-logo.png">
+
+    <style>
+        /* CSS Variables for Easy Customization */
+        :root {
+            --clr-primary: #0b2c3d;
+            --clr-secondary: #11394f;
+            --clr-accent: #f5a623;
+            --clr-text-light: #fff;
+            --clr-text-subtle: #eee;
+            --clr-whatsapp: #25D366;
+            --font-cairo: 'Cairo', sans-serif;
+            --box-shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.6);
+            --transition-speed: 0.3s;
+        }
+
+        /* ===== BASE STYLES & RESET ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-cairo);
+            background: var(--clr-primary);
+            color: var(--clr-text-light);
+            line-height: 1.7;
+            text-align: right; /* Ensure RTL alignment is default */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        section {
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+
+        /* ===== UTILITIES ===== */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--clr-accent), #d98507);
+            color: var(--clr-text-light);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition-speed);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: var(--clr-text-light);
+            color: var(--clr-primary);
+        }
+
+        .section-heading {
+            color: var(--clr-accent);
+            margin-bottom: 2.5rem;
+            font-size: 2.2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(rgba(11, 44, 61, 0.85), rgba(11, 44, 61, 0.85)),
+                        url('bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero__logo {
+            max-width: 160px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero__title {
+            font-size: 3.2rem;
+            color: var(--clr-accent);
+            margin-bottom: 1rem;
+        }
+
+        .hero__slogan {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: var(--clr-text-subtle);
+        }
+        
+        /* ===== ABOUT ===== */
+        .about__text {
+            max-width: 900px;
+            margin: 0 auto;
+            color: var(--clr-text-subtle);
+            font-size: 1.2rem;
+        }
+
+        .about__text p {
+            margin-bottom: 1rem;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            background: var(--clr-primary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contact-card {
+            background: var(--clr-secondary);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-speed);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            display: block;
+            animation: slideUp 1s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            margin: auto;
+            margin-bottom: 1rem;
+            background: var(--clr-accent);
+            color: var(--clr-text-light);
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.5);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--clr-accent);
+            font-size: 1.3rem;
+        }
+
+        .contact-card p {
+            color: var(--clr-text-subtle);
+            font-size: 1rem;
+        }
+
+        /* ===== MAP ===== */
+        .map__frame {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 16px;
+            box-shadow: var(--box-shadow-dark);
+            max-width: 900px;
+            margin: auto;
+            display: block;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--clr-primary);
+            color: var(--clr-accent);
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--clr-secondary);
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        .social {
+            margin-top: 1rem;
+        }
+
+        .social a {
+            margin: 0 0.6rem;
+            color: var(--clr-accent);
+            font-size: 1.5rem;
+            transition: var(--transition-speed);
+        }
+
+        .social a:hover {
+            color: var(--clr-text-light);
+        }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            z-index: 1000;
+        }
+
+        .floating-whatsapp__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: var(--clr-whatsapp);
+            border-radius: 50%;
+            color: var(--clr-text-light);
+            font-size: 1.6rem;
+            box-shadow: var(--box-shadow-dark);
+            transition: var(--transition-speed);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-whatsapp__link:hover {
+            transform: scale(1.1);
+            background: #20b358;
+        }
+
+        /* ===== MODAL ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+        }
+
+        .modal-content {
+            background: var(--clr-secondary);
+            color: var(--clr-text-light);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 300px;
+            width: 90%;
+            box-shadow: var(--box-shadow-dark);
+        }
+
+        .modal-content h3 {
+            margin-bottom: 1rem;
+            color: var(--clr-accent);
+        }
+
+        .modal-content button {
+            margin: 0.5rem 0;
+            padding: 0.8rem 1.2rem;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: var(--font-cairo);
+            font-weight: 600;
+            transition: var(--transition-speed);
+        }
+
+        #callBtn {
+            background: #10b981;
+            color: var(--clr-text-light);
+        }
+        #callBtn:hover {
+            opacity: 0.9;
+        }
+
+        #saveBtn {
+            background: var(--clr-accent);
+            color: var(--clr-primary);
+        }
+        #saveBtn:hover {
+            opacity: 0.9;
+        }
+
+        #cancelBtn {
+            background: #666;
+            color: var(--clr-text-light);
+        }
+        #cancelBtn:hover {
+            background: #444;
+        }
+
+        /* ===== ANIMATIONS & MEDIA QUERIES ===== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero__title { font-size: 2.5rem; }
+            .hero__slogan { font-size: 1.2rem; }
+            .section-heading { font-size: 2rem; }
+            section { padding: 4rem 1rem; }
+        }
+    </style>
 </head>
 <body>
 
-<header class="hero" id="home">
-  <div class="hero-content">
-    <img src="dozan-logo.png" alt="شعار Dozan Beauty Home" class="hero__logo">
-    <h1 class="hero__title">Dozan Beauty Home</h1>
-    <p class="hero__slogan">"مكان بتلاقي فيه الراحة، واهتمام بالنظافة لتحصلي على نتائج ليزر وميزوثيرابي ممتازة ومنافسة 🧡"</p>
-    <a href="#contact" class="btn">احجزي الآن</a>
-  </div>
-</header>
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <img src="dozan-logo.png" alt="شعار Dozan Beauty Home" class="hero__logo">
+            <h1 class="hero__title">Dozan Beauty Home</h1>
+            <p class="hero__slogan">"مكان بتلاقي فيه الراحة، واهتمام بالنظافة لتحصلي على نتائج ليزر وميزوثيرابي ممتازة ومنافسة 🧡"</p>
+            <a href="#contact" class="btn">احجزي الآن</a>
+        </div>
+    </header>
 
-<section class="about" id="about">
-  <div class="container">
-    <h2 class="section-heading">من نحن</h2>
-    <div class="about__text">
-      <p>Dozan Beauty Home هو مركز تجميل متخصص بجلسات الليزر والميزوثيرابي. نوفر لكِ تجربة آمنة، مريحة، ونتائج مميزة.</p>
-      <p><strong>هدفنا:</strong> منحكِ العناية المثالية بجودة عالية وراحة تامة.</p>
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-heading">من نحن</h2>
+            <div class="about__text">
+                <p>Dozan Beauty Home هو مركز تجميل متخصص بجلسات الليزر والميزوثيرابي. نوفر لكِ تجربة آمنة، مريحة، ونتائج مميزة.</p>
+                <p><strong>هدفنا:</strong> منحكِ العناية المثالية بجودة عالية وراحة تامة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-heading">تواصل معنا</h2>
+            <div class="contact-grid">
+                
+                <a class="contact-card" href="https://wa.me/970595848330" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>واتساب وحجز</h3>
+                    <p>+970595848330</p>
+                </a>
+
+                <div class="contact-card" role="button" tabindex="0" 
+                     onclick="openContactOptions('+97022389195')" 
+                     onkeypress="if(event.key==='Enter')openContactOptions('+97022389195')">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>هاتف المركز</h3>
+                    <p>022389195</p>
+                </div>
+                
+                <a class="contact-card" href="https://www.facebook.com/share/1GtuHBmL75/" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+                    <h3>فيسبوك</h3>
+                    <p>تابعينا للجديد</p>
+                </a>
+
+                <a class="contact-card" href="https://www.instagram.com/dozanbeautyps" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                    <h3>إنستغرام</h3>
+                    <p>@dozanbeautyps</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="map" id="location">
+        <div class="container">
+            <h2 class="section-heading">موقعنا</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3669.7299580064823!2d35.24770746098958!3d32.22382619585178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDEzJzI1LjgiTiAzNcKwMTQnNTguMyJF!5e1!3m2!1sen!2s!4v1759323375209!5m2!1sen!2s"
+                    class="map__frame"
+                    title="موقع Dozan Beauty Home"
+                    allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/share/1GtuHBmL75/" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/dozanbeautyps" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/970595848330" target="_blank" rel="noopener noreferrer" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>© 2025 Dozan Beauty Home - جميع الحقوق محفوظة</p>
+        <p>الراحة – الجمال – العناية المثالية</p>
+    </footer>
+
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/970595848330" class="floating-whatsapp__link" target="_blank" rel="noopener noreferrer" aria-label="تواصل واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
-  </div>
-</section>
 
-<section id="contact" class="contact">
-  <div class="container">
-    <h2 class="section-heading">تواصل معنا</h2>
-    <div class="contact-grid">
-      <div class="contact-card" onclick="openContactOptions()">
-        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-        <h3>الهاتف للتواصل</h3>
-        <p>0595848330 / 2389195</p>
-      </div>
-      <a class="contact-card" href="https://wa.me/970595848330" target="_blank">
-        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-        <h3>واتساب</h3>
-        <p>+970595848330</p>
-      </a>
-      <a class="contact-card" href="https://www.facebook.com/share/1GtuHBmL75/" target="_blank">
-        <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
-        <h3>فيسبوك</h3>
-        <p>تابعينا للجديد</p>
-      </a>
-      <a class="contact-card" href="https://www.instagram.com/dozanbeautyps" target="_blank">
-        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-        <h3>إنستغرام</h3>
-        <p>@dozanbeautyps</p>
-      </a>
+    <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+        <div class="modal-content">
+            <h3 id="modalHeading">اختر الإجراء</h3>
+            <button id="callBtn" aria-label="اتصال هاتفي">📞 اتصال</button>
+            <button id="saveBtn" aria-label="حفظ رقم الهاتف">💾 حفظ الرقم</button>
+            <button id="cancelBtn" aria-label="إلغاء وإغلاق النافذة">إلغاء</button>
+        </div>
     </div>
-  </div>
-</section>
 
-<section class="map" id="location">
-  <div class="container">
-    <h2 class="section-heading">موقعنا</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3669.7299580064823!2d35.24770746098958!3d32.22382619585178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDEzJzI1LjgiTiAzNcKwMTQnNTguMyJF!5e1!3m2!1sen!2s!4v1759323375209!5m2!1sen!2s" class="map__frame" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-</section>
+    <script>
+        let currentNumber = "";
+        const modal = document.getElementById("contactModal");
+        const callBtn = document.getElementById("callBtn");
+        const saveBtn = document.getElementById("saveBtn");
+        const cancelBtn = document.getElementById("cancelBtn");
 
-<footer class="footer">
-  <div class="social">
-    <a href="https://www.facebook.com/share/1GtuHBmL75/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/dozanbeautyps" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/970595848330" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </div>
-  <p>© 2025 Dozan Beauty Home - جميع الحقوق محفوظة</p>
-  <p>الراحة – الجمال – العناية المثالية</p>
-</footer>
+        // Function to open the modal
+        function openContactOptions(number) {
+            currentNumber = number;
+            modal.style.display = "flex";
+            modal.setAttribute('aria-hidden', 'false');
+            // Set focus to the first interactive element for accessibility
+            callBtn.focus();
+        }
 
-<div class="floating-whatsapp">
-  <a href="https://wa.me/970595848330" class="floating-whatsapp__link" target="_blank"><i class="fab fa-whatsapp"></i></a>
-</div>
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = "none";
+            modal.setAttribute('aria-hidden', 'true');
+        }
 
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-    <h3>اختر الرقم</h3>
-    <button onclick="callNumber('0595848330')">📞 0595848330</button>
-    <button onclick="callNumber('2389195')">📞 2389195</button>
-    <button id="saveBtn">💾 حفظ الأرقام</button>
-    <button id="cancelBtn">إلغاء</button>
-  </div>
-</div>
+        // Event Listeners
+        callBtn.addEventListener("click", () => {
+            window.location.href = "tel:" + currentNumber;
+            closeModal();
+        });
 
-<script>
-  const modal = document.getElementById("contactModal");
-  const saveBtn = document.getElementById("saveBtn");
-  const cancelBtn = document.getElementById("cancelBtn");
+        // Note: The .vcf file (dozanbeauty.vcf) needs to exist in the root directory for this to work.
+        saveBtn.addEventListener("click", () => {
+            window.location.href = "dozanbeauty.vcf";
+            closeModal();
+        });
 
-  function openContactOptions(){
-    modal.style.display="flex";
-  }
-  function closeModal(){
-    modal.style.display="none";
-  }
-  function callNumber(number){
-    window.location.href="tel:"+number;
-    closeModal();
-  }
-  saveBtn.addEventListener("click",()=>{
-    window.location.href="dozanbeauty.vcf"; // يحتوي الرقمين
-    closeModal();
-  });
-  cancelBtn.addEventListener("click",closeModal);
-  modal.addEventListener("click",(e)=>{if(e.target===modal){closeModal();}});
-  document.addEventListener("keydown",(e)=>{if(e.key==="Escape"){closeModal();}});
-</script>
+        cancelBtn.addEventListener("click", closeModal);
 
+        // Close modal when clicking outside (on the backdrop)
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Close modal on Escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
