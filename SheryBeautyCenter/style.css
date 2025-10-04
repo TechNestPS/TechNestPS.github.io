@@ -88,6 +88,9 @@ section {
     /* تأكدي من وجود صورة 'hero-bg.jpg' */
     padding: 120px 20px;
     color: white;
+    /* التأكد من ضبط حجم الخلفية لتغطي كامل المساحة */
+    background-size: cover; 
+    background-position: center;
 }
 
 .hero-content {
@@ -142,7 +145,7 @@ section {
     border-radius: 15px;
     box-shadow: var(--shadow-deep);
     text-align: right;
-    border-right: 8px solid var(--primary-color); /* شريط جانبي مميز */
+    border-right: 8px solid var(--primary-color);
 }
 
 .expertise-grid {
@@ -208,7 +211,7 @@ section {
 .social-icons-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* للسماح بالتجاوب */
+    flex-wrap: wrap; 
     gap: 20px;
     margin-top: 30px;
 }
@@ -306,57 +309,91 @@ footer {
 
 /*================================
    التجاوب (Responsiveness)
+   تعديلات أساسية للهواتف
 =================================*/
 @media (max-width: 992px) {
+    /* إخفاء روابط القائمة في الشاشات الصغيرة لجعل شريط التصفح بسيطًا */
     .nav-links {
-        display: none; /* إخفاء الروابط في الشاشات الصغيرة - يمكن استبدالها بقائمة هامبرغر */
+        display: none; 
     }
     .navbar {
-        justify-content: center;
+        justify-content: center; /* توسيط اللوغو في حال عدم وجود الروابط */
     }
 }
 
 @media (max-width: 768px) {
+    /* تحسين الهيدر ليتناسب مع شاشة الهاتف */
     .hero {
-        padding: 80px 15px;
+        padding: 60px 15px; /* تقليل التباعد الداخلي */
+        min-height: 450px; /* ضمان ظهور الهيدر بارتفاع معقول */
     }
+    
     .hero h1 {
-        font-size: 2.5em;
+        font-size: 2.2em; /* تصغير حجم العنوان الرئيسي */
     }
-    .about-card {
-        padding: 25px;
-        border-right: 5px solid var(--primary-color);
-    }
-    .expertise-grid {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .social-link {
-        padding: 10px 15px;
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 60px 10px;
-    }
-    .hero h1 {
-        font-size: 2em;
+    .subtitle {
+        font-size: 1.1em;
     }
     .logo {
         width: 100px;
         height: 100px;
+        border-width: 4px;
+    }
+    
+    /* أقسام المحتوى */
+    section {
+        padding: 40px 15px;
+    }
+
+    /* قسم النبذة */
+    .about-card {
+        padding: 25px;
+    }
+    .expertise-grid {
+        flex-direction: column; /* جعل العناصر تتكدس فوق بعضها */
+        gap: 15px;
+    }
+    
+    /* روابط السوشيال */
+    .social-icons-container {
+        gap: 10px;
+    }
+    .social-link {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+    
+    /* النموذج */
+    .form-wrapper {
+        padding: 25px;
+    }
+    .submit-btn {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em; /* تصغير العناوين الفرعية */
     }
     .main-cta {
         font-size: 1em;
         padding: 10px 20px;
     }
+    
+    /* ضمان تكديس أيقونات السوشيال عمودياً إذا ضاقت المساحة */
+    .social-icons-container {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+    .social-link {
+        justify-content: center;
+    }
 }
 
 
 /*================================
-   تأثيرات الحركة (Animations)
+   تأثيرات الحركة (Animations) - لم تتغير
 =================================*/
 
 @keyframes popIn {
