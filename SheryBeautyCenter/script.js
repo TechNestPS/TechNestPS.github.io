@@ -1,3 +1,13 @@
+// ===================================
+// ** التعديل هنا: إجبار الصفحة على البدء من الأعلى **
+// ===================================
+window.onload = function() {
+    // التأكد من أن التمرير يتم إلى أعلى الصفحة (0,0)
+    window.scrollTo(0, 0); 
+}
+// ===================================
+
+
 document.getElementById("joinForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
