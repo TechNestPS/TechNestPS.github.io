@@ -1,18 +1,22 @@
 document.getElementById("joinForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  let name = document.getElementById("name").value;
-  let address = document.getElementById("address").value;
-  let phone = document.getElementById("phone").value;
-  let age = document.getElementById("age").value;
+    let name = document.getElementById("name").value;
+    let address = document.getElementById("address").value;
+    let phone = document.getElementById("phone").value;
+    let age = document.getElementById("age").value;
 
-  let message = `مرحباً، أود الانضمام إلى الدورة/التدريب:
-  👩‍💼 الاسم: ${name}
-  📍 العنوان: ${address}
-  📞 الهاتف: ${phone}
-  🎂 العمر: ${age}`;
+    let message = `مرحباً شيرين، أود الانضمام إلى الدورة/التدريب التخصصي:
+👩‍💼 الاسم: ${name}
+📍 العنوان/المدينة: ${address}
+📞 الهاتف: ${phone}
+🎂 العمر: ${age}
+---
+برجاء التواصل معي لتأكيد التفاصيل.`;
 
-  let url = `https://wa.me/970597889681?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
+    // رقم الواتساب الخاص بك
+    let whatsappNumber = '970597889681'; 
+
+    let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
 });
-
