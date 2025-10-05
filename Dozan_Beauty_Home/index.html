@@ -96,36 +96,36 @@
             animation: fadeIn 2s ease;
         }
         
-     /* 🔥 تنسيق اللوغو 🔥 */
+/* 🔥 تنسيق اللوغو 🔥 */
 .hero__logo {
-    display: block;           /* يخلي الصورة بلوك */
-    margin: 0 auto 1.5rem;    /* بالنص أفقياً + مسافة تحت */
-    max-width: 180px;         /* حجم مناسب للجوال */
-    height: auto;             /* يحافظ على التناسب */
+    display: block;           
+    margin: 0 auto 1.5rem;    
+    max-width: 220px;   /* كان 180px → كبرناه شوي للجوال */
+    height: auto;             
 }
 
 /* للأجهزة المتوسطة (تابلت) */
 @media (min-width: 768px) {
     .hero__logo {
-        max-width: 250px;
+        max-width: 280px;   /* كان 250px */
     }
 }
 
 /* للأجهزة الكبيرة (ديسكتوب) */
 @media (min-width: 1200px) {
     .hero__logo {
-        max-width: 320px;
+        max-width: 360px;   /* كان 320px */
     }
 }
 
 /* لضمان أن المحتوى كله (بما فيه اللوغو) يكون بالنص عمودياً وأفقياً */
 .hero {
     display: flex;
-    flex-direction: column;  /* العناصر فوق بعض */
-    justify-content: center; /* بالنص عمودياً */
-    align-items: center;     /* بالنص أفقياً */
-    min-height: 100vh;       /* يملى الشاشة */
-    text-align: center;      /* الكتابة بالنص */
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
+    text-align: center;      
 }
 
 
