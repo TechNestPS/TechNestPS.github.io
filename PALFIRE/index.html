@@ -1,1 +1,474 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PALFIRE | مدافئ حديثة تجمع بين الأناقة والكفاءة</title>
+    <meta name="description" content="شركة PALFIRE الفلسطينية لصناعة مدافئ الحطب والغاز بتصميم عصري يجمع بين الجمال الهندسي، الأمان والكفاءة العالية في التدفئة. جودة ألمانية وكفالة 5 سنوات." />
+    <meta name="theme-color" content="#ff6600" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/jpg" href="palfire-logo.jpg">
+
+    <style>
+        /* 🎨 ألوان وهوية PALFIRE */
+        :root {
+            --clr-primary: #000000;           /* خلفية سوداء */
+            --clr-secondary: #1a1a1a;         /* رمادي غامق */
+            --clr-accent: #ff6600;            /* برتقالي ناري */
+            --clr-text-light: #ffffff;        /* أبيض */
+            --clr-text-subtle: #cccccc;
+            --clr-whatsapp: #25D366;
+            --font-cairo: 'Cairo', sans-serif;
+            --box-shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.6);
+            --transition-speed: 0.3s;
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-cairo);
+            background: var(--clr-primary);
+            color: var(--clr-text-light);
+            line-height: 1.7;
+            text-align: right;
+            font-size: 16px;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        h1, h2, h3 { font-weight: 700; }
+        section { padding: 5rem 1rem; text-align: center; }
+
+        /* ===== UTILITIES ===== */
+        .container { max-width: 1100px; margin: auto; }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--clr-accent), #cc5200);
+            color: var(--clr-text-light);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition-speed);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: var(--clr-text-light);
+            color: var(--clr-primary);
+        }
+
+        .section-heading {
+            color: var(--clr-accent);
+            margin-bottom: 2.5rem;
+            font-size: 2.2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* ===== HERO SECTION (HEADER) ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                        url('fireplace-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 2s ease;
+        }
+
+        /* 🔥 تنسيق اللوغو 🔥 */
+        .hero__logo {
+            display: block;           
+            margin: 0 auto 1.5rem;    
+            max-width: 220px;
+            height: auto;             
+        }
+
+/* للأجهزة المتوسطة (تابلت) */
+@media (min-width: 768px) {
+    .hero__logo {
+        max-width: 280px;   /* كان 250px */
+    }
+}
+
+/* للأجهزة الكبيرة (ديسكتوب) */
+@media (min-width: 1200px) {
+    .hero__logo {
+        max-width: 360px;   /* كان 320px */
+    }
+}
+
+/* لضمان أن المحتوى كله (بما فيه اللوغو) يكون بالنص عمودياً وأفقياً */
+.hero {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
+    text-align: center;      
+}
+
+
+        .hero__title {
+            font-size: 3.2rem;
+            color: var(--clr-accent);
+            margin-bottom: 1rem;
+        }
+
+        .hero__slogan {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: var(--clr-text-subtle);
+        }
+        
+        /* ===== ABOUT & SERVICES SECTIONS ===== */
+        .about, .services {
+            background: var(--clr-secondary);
+        }
+
+        .about__text, .services__content {
+            max-width: 900px;
+            margin: 0 auto;
+            color: var(--clr-text-subtle);
+            font-size: 1.1rem;
+            text-align: right;
+            padding: 0 1rem;
+        }
+
+        .about__text h3 {
+            color: var(--clr-accent);
+            margin-top: 1.5rem;
+            font-size: 1.6rem;
+            border-bottom: 2px dashed rgba(245, 166, 35, 0.4);
+            padding-bottom: 0.5rem;
+            text-align: right;
+        }
+        
+        .about__text p {
+            margin-bottom: 1rem;
+            text-align: right;
+        }
+
+        .about__quote {
+            font-style: italic;
+            font-weight: 600;
+            color: var(--clr-accent);
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(245, 166, 35, 0.3);
+            text-align: center;
+        }
+
+        .services__list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-item {
+            background: var(--clr-primary);
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1 1 45%; 
+            max-width: 400px;
+            text-align: right;
+            border-right: 4px solid var(--clr-accent);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            font-size: 1.1rem;
+        }
+        .service-item i {
+            color: var(--clr-accent);
+            margin-left: 10px;
+            font-size: 1.3em;
+            vertical-align: middle;
+        }
+
+        /* ===== CONTACT SECTION (Mobile Friendly Grid) ===== */
+        .contact { background: var(--clr-primary); }
+        .contact-grid {
+            /* يتم تعديل عرض الأعمدة تلقائياً على الجوال */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+            gap: 1rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .contact-card {
+            background: var(--clr-secondary);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-speed);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            display: block;
+            animation: slideUp 1s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        }
+        .contact-icon {
+            width: 70px; height: 70px; margin: auto; margin-bottom: 1rem;
+            background: var(--clr-accent); color: var(--clr-text-light);
+            font-size: 2rem; display: flex; align-items: center;
+            justify-content: center; border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.5);
+        }
+        .contact-card h3 { margin-bottom: 0.5rem; color: var(--clr-accent); font-size: 1.2rem; }
+        .contact-card p { color: var(--clr-text-subtle); font-size: 0.9rem; }
+        
+        /* ===== MAP SECTION ===== */
+        .map__frame {
+            width: 100%; height: 300px; /* تقليل ارتفاع الخريطة للجوال */
+            border: 0; border-radius: 16px;
+            box-shadow: var(--box-shadow-dark); max-width: 900px; margin: auto; display: block;
+        }
+        
+        /* ===== FOOTER SECTION & WHATSAPP BUTTON ===== */
+        .footer { background: var(--clr-primary); color: var(--clr-accent); text-align: center; padding: 2rem; border-top: 1px solid var(--clr-secondary); }
+        .social { margin-top: 1rem; }
+        .social a { margin: 0 0.6rem; color: var(--clr-accent); font-size: 1.5rem; transition: var(--transition-speed); }
+        .social a:hover { color: var(--clr-text-light); }
+        .floating-whatsapp { position: fixed; bottom: 1rem; left: 1rem; z-index: 1000; }
+        .floating-whatsapp__link {
+            display: flex; align-items: center; justify-content: center;
+            width: 3.5rem; height: 3.5rem; background: var(--clr-whatsapp);
+            border-radius: 50%; color: var(--clr-text-light); font-size: 1.6rem;
+            box-shadow: var(--box-shadow-dark); transition: var(--transition-speed);
+            animation: float 3s ease-in-out infinite;
+        }
+        .floating-whatsapp__link:hover { transform: scale(1.1); background: #20b358; }
+        
+        /* ===== MODAL STYLES ===== */
+        .modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8); align-items: center; justify-content: center;
+            z-index: 3000;
+        }
+        .modal-content {
+            background: var(--clr-secondary); color: var(--clr-text-light);
+            padding: 2rem; border-radius: 15px; text-align: center;
+            max-width: 300px; width: 90%; box-shadow: var(--box-shadow-dark);
+        }
+
+        /* ===== MEDIA QUERIES (Mobile Optimization) ===== */
+        @media (max-width: 768px) {
+            .hero__title { font-size: 1.7rem; }
+            .hero__slogan { font-size: 1.1rem; }
+            .section-heading { font-size: 2rem; }
+            section { padding: 4rem 1rem; }
+            .service-item { flex: 1 1 100%; } /* خدمة واحدة في الصف على الموبايل */
+            .contact-grid { grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); } /* عمودان في الجوال */
+        }
+    </style>
+</head>
+<body>
+
+   <header class="hero" id="home">
+    <div class="hero-content">
+        <img src="palfire-logo.jpg" alt="شعار شركة PALFIRE" class="hero__logo">
+        <h1 class="hero__title">PALFIRE</h1>
+        <p class="hero__slogan">
+            شركة فلسطينية متخصصة بصناعة <strong>مدافئ الحطب والغاز</strong> بجودة عالية وتصميم عصري يجمع بين <br>
+            <strong>الهندسة والجمال، الأمان والكفاءة في التدفئة</strong>.<br>
+            نستخدم أفضل المواد الألمانية والمواصفات العالمية لضمان أداء ممتاز وكفالة حقيقية لمدة 5 سنوات.<br>
+            <i class="fas fa-fire"></i> الدفء.. يبدأ من PALFIRE.
+        </p>
+        <a href="#contact" class="btn">تواصل معنا الآن</a>
+    </div>
+</header>
+
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-heading">من نحن ؟</h2>
+        <div class="about__text">
+            <p>
+                نحن في <strong>PALFIRE</strong> نصنع مدافئ تجمع بين الأناقة الحديثة والكفاءة العالية، لتمنح بيتك الدفء والمظهر الجمالي في آن واحد.
+            </p>
+
+            <h3>رؤيتنا</h3>
+            <p>
+                أن نكون الاسم الأول في عالم المدافئ في فلسطين والمنطقة، من خلال تقديم منتجات تجمع بين <strong>الجودة الألمانية</strong> والتصميم الفلسطيني العصري.
+            </p>
+
+            <h3>أهدافنا</h3>
+            <p>
+                نعمل على تطوير صناعة التدفئة في فلسطين عبر منتجات مبتكرة، آمنة، ومتينة، مع التزامنا الكامل بخدمة عملائنا وضمان رضاهم.
+            </p>
+
+            <p class="about__quote">
+                في PALFIRE، نؤمن أن التدفئة ليست مجرد حاجة... بل تجربة دفء وجمال تدوم.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-heading">منتجاتنا وخدماتنا</h2>
+        <ul class="services__list">
+            <li class="service-item"><i class="fas fa-fire"></i> مدافئ حطب بتصاميم عصرية وجودة ألمانية</li>
+            <li class="service-item"><i class="fas fa-burn"></i> مدافئ غاز عالية الكفاءة والأمان</li>
+            <li class="service-item"><i class="fas fa-tools"></i> خدمات صيانة وضمان لمدة 5 سنوات</li>
+            <li class="service-item"><i class="fas fa-palette"></i> تصاميم مخصصة تناسب ديكور منزلك</li>
+        </ul>
+        <p class="about__text" style="text-align: center; margin-top: 2rem;">
+            مع PALFIRE، الدفء فنّ نصنعه بإتقان 🔥
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-heading">تواصل معنا</h2>
+        <div class="contact-grid">
+            
+            <a class="contact-card" href="https://wa.me/972504474575" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                <h3>واتساب</h3>
+                <p>+972504474575</p>
+            </a>
+
+            <div class="contact-card" role="button" tabindex="0" 
+                onclick="openContactOptions('0569322245')" 
+                onkeypress="if(event.key==='Enter')openContactOptions('0569322245')">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <h3>اتصال مباشر</h3>
+                <p>0569322245</p>
+            </div>
+
+            <a class="contact-card" href="https://www.facebook.com/fireplacewood?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+                <h3>فيسبوك</h3>
+                <p>@fireplacewood</p>
+            </a>
+
+            <a class="contact-card" href="https://www.tiktok.com/@khalilalbaba79" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
+                <h3>تيك توك</h3>
+                <p>@khalilalbaba79</p>
+            </a>
+
+            <a class="contact-card" href="https://www.google.com/maps?q=32.19399717391283,35.300846775638895" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>العنوان</h3>
+                <p>نابلس – روجيب – المنطقة الصناعية</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+  <section class="map" id="location">
+    <div class="container">
+        <h2 class="section-heading">موقعنا</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3376.3797256307066!2d35.300846775638895!3d32.19399717391283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDExJzM4LjQiTiAzNcKwMTgnMTIuMyJF!5e0!3m2!1sar!2s!4v1760110945614!5m2!1sar!2s"
+            class="map__frame"
+            title="موقع شركة PALFIRE - نابلس، روجيب، المنطقة الصناعية"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="social">
+        <a href="https://www.facebook.com/fireplacewood?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@khalilalbaba79" target="_blank" rel="noopener noreferrer" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/972504474575" target="_blank" rel="noopener noreferrer" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>© 2025 PALFIRE - جميع الحقوق محفوظة</p>
+    <p>الجودة – الأمان – الدفء الحقيقي</p>
+</footer>
+
+<div class="floating-whatsapp">
+    <a href="https://wa.me/972504474575" class="floating-whatsapp__link" target="_blank" rel="noopener noreferrer" aria-label="تواصل واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-content">
+        <h3 id="modalHeading">اختر الإجراء</h3>
+        <button id="callBtn" aria-label="اتصال هاتفي">📞 اتصال</button>
+        <button id="saveBtn" aria-label="حفظ رقم الهاتف">💾 حفظ الرقم</button>
+        <button id="cancelBtn" aria-label="إلغاء وإغلاق النافذة">إلغاء</button>
+    </div>
+</div>
+
+<script>
+    let currentNumber = "";
+    const modal = document.getElementById("contactModal");
+    const callBtn = document.getElementById("callBtn");
+    const saveBtn = document.getElementById("saveBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    // فتح نافذة الخيارات
+    function openContactOptions(number) {
+        currentNumber = number;
+        modal.style.display = "flex";
+        modal.setAttribute('aria-hidden', 'false');
+        callBtn.focus();
+    }
+
+    // إغلاق النافذة
+    function closeModal() {
+        modal.style.display = "none";
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    // أحداث الأزرار
+    callBtn.addEventListener("click", () => {
+        window.location.href = "tel:" + currentNumber;
+        closeModal();
+    });
+
+    // ملف vcf خاص بـ PALFIRE
+    saveBtn.addEventListener("click", () => {
+        window.location.href = "palfire.vcf"; 
+        closeModal();
+    });
+
+    cancelBtn.addEventListener("click", closeModal);
+
+    // إغلاق عند النقر خارج النافذة
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // إغلاق عند الضغط على Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+</script>
+</body>
+</html>
