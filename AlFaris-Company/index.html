@@ -256,15 +256,24 @@
     font-size: 0.9rem;
 }
 
-/* ===== MAP SECTION ===== */
-.map__frame {
-    width: 100%; height: 300px;
-    border: 0; border-radius: 16px;
-    box-shadow: var(--box-shadow-dark);
-    max-width: 900px;
-    margin: auto;
-    display: block;
-}
+<section class="map" id="location">
+  <div class="container">
+    <h2 class="section-heading">موقعنا</h2>
+    <a href="https://goo.gl/maps/7y7zJ8r6oE1Pb6Mr9" target="_blank" class="btn" style="margin-bottom: 1.5rem;">
+      فتح في خرائط Google
+    </a>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11210.312376671362!2d35.26979324339614!3d32.409600196620126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151cfc401a9cadf1%3A0x3f4f531995ea3bc0!2sQabatiya!5e1!3m2!1sen!2s!4v1760292339044!5m2!1sen!2s"
+      class="map__frame"
+      title="موقع شركة مصانع الفارس - قباطية، جنين، فلسطين"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
 
         
         /* ===== FOOTER SECTION & WHATSAPP BUTTON ===== */
