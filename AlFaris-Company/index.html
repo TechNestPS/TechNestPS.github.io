@@ -275,37 +275,57 @@
     </iframe>
   </div>
 </section>
-
 <!-- ===== FOOTER SECTION & WHATSAPP BUTTON ===== -->
 <style>
+  /* ===== FOOTER SECTION (ثابت وأنيق) ===== */
   .footer {
-    background: var(--clr-primary);
-    color: var(--clr-accent);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, var(--clr-secondary), var(--clr-primary));
+    color: var(--clr-text-subtle);
     text-align: center;
-    padding: 2rem;
-    border-top: 1px solid var(--clr-secondary);
+    padding: 1.8rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+  }
+
+  .footer p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: var(--clr-text-subtle);
+    line-height: 1.6;
   }
 
   .social {
-    margin-top: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   .social a {
     margin: 0 0.6rem;
     color: var(--clr-accent);
-    font-size: 1.5rem;
-    transition: var(--transition-speed);
+    font-size: 1.6rem;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
 
   .social a:hover {
     color: var(--clr-text-light);
+    transform: translateY(-3px);
   }
 
+  /* 🧱 لمنع تغطية المحتوى بالفوتر */
+  body {
+    padding-bottom: 120px; /* نفس ارتفاع الفوتر تقريبا */
+  }
+
+  /* ===== WHATSAPP FLOATING BUTTON ===== */
   .floating-whatsapp {
     position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    z-index: 1000;
+    bottom: 6rem; /* فوق الفوتر مباشرة */
+    left: 1.2rem;
+    z-index: 3000;
   }
 
   .floating-whatsapp__link {
@@ -319,7 +339,7 @@
     color: var(--clr-text-light);
     font-size: 1.6rem;
     box-shadow: var(--box-shadow-dark);
-    transition: var(--transition-speed);
+    transition: transform 0.3s ease, background 0.3s ease;
     animation: float 3s ease-in-out infinite;
   }
 
@@ -339,7 +359,7 @@
     background: rgba(0, 0, 0, 0.8);
     align-items: center;
     justify-content: center;
-    z-index: 3000;
+    z-index: 4000;
   }
 
   .modal-content {
@@ -353,7 +373,7 @@
     box-shadow: var(--box-shadow-dark);
   }
 
-  /* ===== MEDIA QUERIES (Mobile Optimization) ===== */
+  /* ===== MEDIA QUERIES (Responsive) ===== */
   @media (max-width: 768px) {
     .hero__title { font-size: 1.7rem; }
     .hero__slogan { font-size: 1.1rem; }
