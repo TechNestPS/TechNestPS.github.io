@@ -1,691 +1,515 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fares Hasan Abd-Eljawad | Civil Engineer</title>
-  <meta name="description" content="Civil Engineer and Roads & Infrastructure Specialist with 15+ years of experience in road/traffic design, quantity surveying, quality control, project management, and transportation systems." />
-  <meta name="keywords" content="Fares Abd-Eljawad, Civil Engineer, Roads, Infrastructure, Transportation, Project Management" />
-  <meta name="theme-color" content="#3b82f6" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-/* Reset and Base Styles */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    font-family:'Cairo',sans-serif;
-    background:linear-gradient(135deg,#f8fafc 0%,#e0f2fe 50%,#e0e7ff 100%);
-    color:#1e293b;
-    min-height:100vh;
-    line-height:1.6;
-    direction:ltr;
-    text-align:left;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شركة الفارس | للحجر ومواد البناء</title>
+    <meta name="description" content="شركة الفارس الفلسطينية الرائدة في صناعة الحجر ومواد البناء، الحاصلة على شهادات الأيزو العالمية وشهادات ضبط الجودة من مؤسسة المواصفات والمقاييس الفلسطينية." />
+    <meta name="theme-color" content="#e87722" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+
+    <style>
+        /* 🎨 ألوان وهوية شركة الفارس */
+        :root {
+            --clr-primary: #0b2d44;           /* أزرق غامق من الشعار */
+            --clr-secondary: #153b59;         /* درجة أفتح قليلاً للأقسام */
+            --clr-accent: #e87722;            /* برتقالي الشعار */
+            --clr-text-light: #ffffff;        /* أبيض للنصوص */
+            --clr-text-subtle: #d9d9d9;       /* رمادي فاتح */
+            --clr-whatsapp: #25D366;
+            --font-cairo: 'Cairo', sans-serif;
+            --box-shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --transition-speed: 0.3s;
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-cairo);
+            background: var(--clr-primary);
+            color: var(--clr-text-light);
+            line-height: 1.7;
+            text-align: right;
+            font-size: 16px;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        h1, h2, h3 { font-weight: 700; }
+        section { padding: 5rem 1rem; text-align: center; }
+
+        /* ===== UTILITIES ===== */
+        .container { max-width: 1100px; margin: auto; }
+
+        
+      .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--clr-accent), #c96518);
+    color: var(--clr-text-light);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition-speed);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    border: none;
 }
 
-/* Background Pattern */
-.bg-pattern{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    opacity:.03;
-    background-image:radial-gradient(circle at 25px 25px,#3b82f6 2px,transparent 0);
-    background-size:50px 50px;
-    pointer-events:none;
-    z-index:-1;
+.btn:hover {
+    transform: scale(1.05);
+    background: var(--clr-text-light);
+    color: var(--clr-primary);
 }
 
-/* Container */
-.container{
-    max-width:1024px;
-    margin:0 auto;
-    padding:2rem 1rem;
+.section-heading {
+    color: var(--clr-accent);
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    animation: fadeIn 1s ease-out;
 }
 
-/* Animations */
-@keyframes fadeIn{
-    from{opacity:0;transform:translateY(30px);}
-    to{opacity:1;transform:translateY(0);}
-}
-@keyframes pulse{
-    0%,100%{opacity:1;}
-    50%{opacity:.5;}
-}
-@keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
-}
-.fade-in{
-    animation:fadeIn 1s ease-out;
+/* ===== HERO SECTION (HEADER) ===== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    /* 🔧 يُفضّل لاحقًا استبدال الصورة بخلفية الحجر أو المصنع */
+    background: linear-gradient(rgba(11, 45, 68, 0.9), rgba(11, 45, 68, 0.9)),
+                url('stone-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
 }
 
-/* Header Card */
-.header-card{
-    background:rgba(255,255,255,.9);
-    backdrop-filter:blur(20px);
-    border-radius:24px;
-    overflow:hidden;
-    box-shadow:0 20px 40px rgba(0,0,0,.1);
-    margin-bottom:2rem;
-    position:relative;
-    border:1px solid rgba(255,255,255,.2);
-}
-.header-bg{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(135deg,#3b82f6 0%,#6366f1 50%,#3b82f6 100%);
-}
-.header-bg::after{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.1);
-}
-.header-content{
-    position:relative;
-    z-index:2;
-    padding:3rem 2rem;
-    color:#fff;
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 2s ease;
 }
 
-/* Profile Section */
-.profile-section{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:2rem;
-    margin-bottom:3rem;
-}
-.avatar-container{position:relative;}
-.avatar{
-    width:8rem;
-    height:8rem;
-    background:rgba(255,255,255,.2);
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    backdrop-filter:blur(10px);
-    border:4px solid rgba(255,255,255,.3);
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-}
-.avatar-emoji{font-size:3rem;}
-.status-indicator{
-    position:absolute;
-    bottom:-8px;
-    right:-8px;
-    width:2rem;
-    height:2rem;
-    background:#10b981;
-    border-radius:50%;
-    border:4px solid #fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+/* 🧱 تنسيق اللوغو (الفارس) */
+.hero__logo {
+    display: block;           
+    margin: 0 auto 1.5rem;    
+    max-width: 220px;
+    height: auto;             
 }
 
-.status-dot{
-    width:.75rem;
-    height:.75rem;
-    background:#fff;
-    border-radius:50%;
-    animation:pulse 2s infinite;
-}
-.profile-info{text-align:center;flex:1;}
-.doctor-name{
-    font-size:2.5rem;
-    font-weight:700;
-    margin-bottom:.5rem;
-    text-shadow:0 2px 4px rgba(0,0,0,.1);
-}
-.doctor-title{
-    font-size:1.5rem;
-    color:rgba(255,255,255,.9);
-    margin-bottom:1rem;
-    font-weight:500;
-}
-.doctor-description{
-    font-size:1.1rem;
-    color:rgba(255,255,255,.8);
-    line-height:1.8;
-    max-width:600px;
-    margin:0 auto 1.5rem;
-}
-.location{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:.5rem;
-    color:rgba(255,255,255,.9);
-    font-size:1rem;
+/* للأجهزة المتوسطة (تابلت) */
+@media (min-width: 768px) {
+    .hero__logo {
+        max-width: 280px;
+    }
 }
 
 
-/* Stats Grid */
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2rem;
-}
-.stat-item{text-align:center;}
-.stat-icon{
-    width:4rem;
-    height:4rem;
-    background:rgba(255,255,255,.2);
-    border-radius:16px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 1rem;
-    backdrop-filter:blur(10px);
-    font-size:1.5rem;
-}
-.stat-number{
-    font-size:1.75rem;
-    font-weight:700;
-    margin-bottom:.5rem;
-}
-.stat-label{
-    font-size:.9rem;
-    color:rgba(255,255,255,.8);
+/* للأجهزة الكبيرة (ديسكتوب) */
+@media (min-width: 1200px) {
+    .hero__logo {
+        max-width: 360px; /* كان 320px */
+    }
 }
 
-/* Contact Links */
-.contact-links{
-    display:grid;
-    gap:1.5rem;
-    margin-bottom:2rem;
-}
-.contact-card{
-    background:#fff;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
-    cursor:pointer;
-    transition:all .3s cubic-bezier(.4,0,.2,1);
-    border:1px solid rgba(255,255,255,.2);
-}
-.contact-card:hover{
-    transform:translateY(-4px) scale(1.02);
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-}
-.contact-content{
-    padding:1.5rem 2rem;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    color:#fff;
-    position:relative;
-    overflow:hidden;
-}
-.contact-left{
-    display:flex;
-    align-items:center;
-    gap:1.5rem;
-}
-.contact-icon{
-    width:3.5rem;
-    height:3.5rem;
-    background:rgba(255,255,255,.2);
-    border-radius:16px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    backdrop-filter:blur(10px);
-    font-size:1.5rem;
-    transition:all .3s ease;
-}
-.contact-card:hover .contact-icon{
-    background:rgba(255,255,255,.3);
-    transform:scale(1.1);
-}
-.contact-text h3{
-    font-size:1.25rem;
-    font-weight:600;
-    margin-bottom:.25rem;
-}
-.contact-text p{font-size:.9rem;opacity:.9;}
-.contact-arrow{
-    font-size:1.25rem;
-    opacity:.8;
-    transition:all .3s ease;
-}
-.contact-card:hover .contact-arrow{
-    opacity:1;
-    transform:translateX(-4px);
+/* لضمان أن المحتوى كله (بما فيه اللوغو) يكون بالنص عمودياً وأفقياً */
+.hero {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
+    text-align: center;      
 }
 
-/* Contact Card Colors */
-.phone-card .contact-content{background:linear-gradient(135deg,#10b981 0%,#059669 100%);}
-.whatsapp-card .contact-content{background:linear-gradient(135deg,#22c55e 0%,#16a34a 100%);}
-.email-card .contact-content{background:linear-gradient(135deg,#3b82f6 0%,#2563eb 100%);}
-.linkedin-card .contact-content{background:linear-gradient(135deg,#0a66c2 0%,#004182 100%);}
-.drive-card .contact-content{background:linear-gradient(135deg,#f59e0b 0%,#d97706 100%);}
-
-/* Footer */
-.footer-card{
-    background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%);
-    border-radius:20px;
-    padding:2rem;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-    border:1px solid rgba(255,255,255,.2);
-}
-.footer-title{
-    font-size:1.1rem;
-    font-weight:600;
-    color:#374151;
-    margin-bottom:.5rem;
-}
-.footer-subtitle{
-    font-size:.9rem;
-    color:#6b7280;
-    margin-bottom:1rem;
-}
-.footer-status{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:.5rem;
-    font-size:.8rem;
-    color:#9ca3af;
+.hero__title {
+    font-size: 3.2rem;
+    color: var(--clr-accent); /* برتقالي الفارس */
+    margin-bottom: 1rem;
 }
 
-.status-dot-small{
-    width:.5rem;
-    height:.5rem;
-    background:#10b981;
-    border-radius:50%;
-    animation:pulse 2s infinite;
+.hero__slogan {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    color: var(--clr-text-subtle);
 }
 
-/* Floating WhatsApp Button */
-.floating-whatsapp{
-    position:fixed;
-    bottom:1.5rem;
-    left:1.5rem;
-    z-index:1000;
-}
-.floating-whatsapp a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:3.5rem;
-    height:3.5rem;
-    background:linear-gradient(135deg,#22c55e 0%,#16a34a 100%);
-    border-radius:50%;
-    color:#fff;
-    text-decoration:none;
-    font-size:1.5rem;
-    box-shadow:0 10px 30px rgba(34,197,94,.4);
-    transition:all .3s cubic-bezier(.4,0,.2,1);
-    animation:float 3s ease-in-out infinite;
-}
-.floating-whatsapp a:hover{
-    transform:scale(1.1);
-    box-shadow:0 15px 40px rgba(34,197,94,.6);
+/* ===== ABOUT & SERVICES SECTIONS ===== */
+.about, .services {
+    background: var(--clr-secondary);
 }
 
-/* Responsive Design */
-@media(min-width:768px){
-    .container{padding:3rem 2rem;}
-    .profile-section{flex-direction:row;text-align:left;}
-    .profile-info{text-align:left;}
-    .avatar{width:10rem;height:10rem;}
-    .avatar-emoji{font-size:4rem;}
-    .doctor-name{font-size:3rem;}
-    .doctor-title{font-size:1.75rem;}
-    .stats-grid{gap:3rem;}
-    .stat-icon{width:5rem;height:5rem;font-size:2rem;}
-    .stat-number{font-size:2rem;}
-    .contact-content{padding:2rem 2.5rem;}
-    .contact-icon{width:4rem;height:4rem;font-size:1.75rem;}
-    .floating-whatsapp{bottom:2rem;left:2rem;}
-    .floating-whatsapp a{width:4rem;height:4rem;font-size:1.75rem;}
-}
-@media(max-width:640px){
-    .container{padding:1rem;}
-    .header-content{padding:2rem 1.5rem;}
-    .stats-grid{gap:1rem;}
-    .stat-icon{width:3rem;height:3rem;font-size:1.25rem;}
-    .stat-number{font-size:1.5rem;}
-    .contact-content{padding:1.25rem 1.5rem;}
-    .contact-icon{width:3rem;height:3rem;font-size:1.25rem;}
-    .contact-left{gap:1rem;}
-    .doctor-name{font-size:2rem;}
-    .doctor-title{font-size:1.25rem;}
-    .doctor-description{font-size:1rem;}
+.about__text, .services__content {
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--clr-text-subtle);
+    font-size: 1.1rem;
+    text-align: right;
+    padding: 0 1rem;
 }
 
-/* Smooth Scrolling */
-html{scroll-behavior:smooth;}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar{width:8px;}
-::-webkit-scrollbar-track{background:#f1f5f9;}
-::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px;}
-::-webkit-scrollbar-thumb:hover{background:#94a3b8;}
-
-/* Focus Styles for Accessibility */
-.contact-card:focus-visible,
-.floating-whatsapp a:focus-visible{
-    outline:2px solid #3b82f6;
-    outline-offset:2px;
+.about__text h3 {
+    color: var(--clr-accent);
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    border-bottom: 2px dashed rgba(232, 119, 34, 0.4); /* ظل برتقالي الفارس */
+    padding-bottom: 0.5rem;
+    text-align: right;
 }
+
+.about__text p {
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.about__quote {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--clr-accent);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(232, 119, 34, 0.3);
+    text-align: center;
+}
+
+.services__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-item {
+    background: var(--clr-primary);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 45%; 
+    max-width: 400px;
+    text-align: right;
+    border-right: 4px solid var(--clr-accent);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
+}
+
+.service-item i {
+    color: var(--clr-accent);
+    margin-left: 10px;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+/* ===== CONTACT SECTION (Mobile Friendly Grid) ===== */
+.contact { background: var(--clr-primary); }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-card {
+    background: var(--clr-secondary);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition-speed);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: block;
+    animation: slideUp 1s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.contact-icon {
+    width: 70px; height: 70px; margin: auto; margin-bottom: 1rem;
+    background: var(--clr-accent); color: var(--clr-text-light);
+    font-size: 2rem; display: flex; align-items: center;
+    justify-content: center; border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(232, 119, 34, 0.5);
+}
+
+.contact-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--clr-accent);
+    font-size: 1.2rem;
+}
+
+.contact-card p {
+    color: var(--clr-text-subtle);
+    font-size: 0.9rem;
+}
+
+/* ===== MAP SECTION ===== */
+.map__frame {
+    width: 100%; height: 300px;
+    border: 0; border-radius: 16px;
+    box-shadow: var(--box-shadow-dark);
+    max-width: 900px;
+    margin: auto;
+    display: block;
+}
+
+        
+        /* ===== FOOTER SECTION & WHATSAPP BUTTON ===== */
+        .footer { background: var(--clr-primary); color: var(--clr-accent); text-align: center; padding: 2rem; border-top: 1px solid var(--clr-secondary); }
+        .social { margin-top: 1rem; }
+        .social a { margin: 0 0.6rem; color: var(--clr-accent); font-size: 1.5rem; transition: var(--transition-speed); }
+        .social a:hover { color: var(--clr-text-light); }
+        .floating-whatsapp { position: fixed; bottom: 1rem; left: 1rem; z-index: 1000; }
+        .floating-whatsapp__link {
+            display: flex; align-items: center; justify-content: center;
+            width: 3.5rem; height: 3.5rem; background: var(--clr-whatsapp);
+            border-radius: 50%; color: var(--clr-text-light); font-size: 1.6rem;
+            box-shadow: var(--box-shadow-dark); transition: var(--transition-speed);
+            animation: float 3s ease-in-out infinite;
+        }
+        .floating-whatsapp__link:hover { transform: scale(1.1); background: #20b358; }
+        
+        /* ===== MODAL STYLES ===== */
+        .modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8); align-items: center; justify-content: center;
+            z-index: 3000;
+        }
+        .modal-content {
+            background: var(--clr-secondary); color: var(--clr-text-light);
+            padding: 2rem; border-radius: 15px; text-align: center;
+            max-width: 300px; width: 90%; box-shadow: var(--box-shadow-dark);
+        }
+
+        /* ===== MEDIA QUERIES (Mobile Optimization) ===== */
+        @media (max-width: 768px) {
+            .hero__title { font-size: 1.7rem; }
+            .hero__slogan { font-size: 1.1rem; }
+            .section-heading { font-size: 2rem; }
+            section { padding: 4rem 1rem; }
+            .service-item { flex: 1 1 100%; } /* خدمة واحدة في الصف على الموبايل */
+            .contact-grid { grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); } /* عمودان في الجوال */
+        }
     </style>
 </head>
 <body>
-    <!-- Background Pattern -->
-    <div class="bg-pattern"></div>
 
-    <div class="container" id="main-content">
-<!-- Header Card -->
-<div class="header-card fade-in">
-  <div class="header-bg"></div>
-  <div class="header-content">
-    <!-- Profile Section -->
-    <div class="profile-section">
-<!-- Avatar -->
-<div class="avatar-container" style="position: relative;">
-  <div class="avatar" style="
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  ">
-    <img src="fares.jpg" alt="Fares Hasan Abd-Eljawad" style="
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    ">
-  </div>
-  <div class="status-indicator" style="
-    position: absolute;
-    bottom: 4px;
-    right: 4px;
-    width: 16px;
-    height: 16px;
-    background-color: #00c853;
-    border: 2px solid #fff;
-    border-radius: 50%;
-  "></div>
-</div>
-
-
-<!-- Info -->
-<div class="profile-info">
-    <h1 class="doctor-name">Fares Hasan Abd-Eljawad</h1>
-    <p class="doctor-title">Civil Engineer | Roads & Infrastructure Specialist</p>
-    <p class="doctor-description">
-        Civil Engineer with more than 15 years of experience in roads, traffic design, 
-        quantity surveying, quality control, and project management. Skilled in 
-        leading infrastructure projects from concept through execution with strong 
-        technical expertise and leadership.
+<header class="hero" id="home">
+  <div class="hero-content">
+    <img src="logo.jpg" alt="شعار شركة مصانع الفارس" class="hero__logo">
+    <h1 class="hero__title">شركة مصانع الفارس</h1>
+    <p class="hero__slogan">
+      المصنع الأول في فلسطين والمتخصص في <strong>الصناعات الإنشائية</strong> 🏗️ <br>
+      والحاصل على <strong>شهادات الأيزو العالمية</strong> وشهادات ضبط الجودة من  
+      <strong>مؤسسة المواصفات والمقاييس الفلسطينية</strong>.<br>
+      <i class="fas fa-industry"></i> الجودة تبدأ من الفارس.
     </p>
+    <a href="#contact" class="btn">تواصل معنا الآن</a>
+  </div>
+</header>
 
-    <!-- Location -->
-    <div class="location">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Tulkarem – Palestine</span>
+<section class="about" id="about">
+  <div class="container">
+    <h2 class="section-heading">من نحن؟</h2>
+    <div class="about__text">
+      <p>
+        <strong>شركة مصانع الفارس للصناعات الإنشائية</strong>  
+        هي شركة فلسطينية رائدة في مجال الحجر ومواد البناء،  
+        تتميز بالجودة العالية والالتزام بالمعايير المحلية والدولية.
+      </p>
+
+      <h3>رؤيتنا</h3>
+      <p>
+        أن نكون الخيار الأول في فلسطين والمنطقة في مجال الصناعات الإنشائية،  
+        من خلال تقديم منتجات مبتكرة، متينة، ومستدامة.
+      </p>
+
+      <h3>أهدافنا</h3>
+      <p>
+        تطوير قطاع البناء الفلسطيني، ورفع مستوى الجودة والمواصفات،  
+        وتعزيز الثقة بمنتجات الصناعة الوطنية.
+      </p>
+
+      <p class="about__quote">في الفارس... نبني الثقة كما نبني الحجر 🧱</p>
     </div>
-</div>
-</div>
+  </div>
+</section>
 
-<!-- Stats -->
-<div class="stats-grid">
-    <div class="stat-item">
-        <div class="stat-icon"><i class="fas fa-users"></i></div>
-        <div class="stat-number">15+</div>
-        <div class="stat-label">Years of Experience</div>
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-heading">منتجاتنا وخدماتنا</h2>
+    <ul class="services__list">
+      <li class="service-item"><i class="fas fa-cubes"></i> إنتاج الحجر الطبيعي والاصطناعي بمواصفات عالمية</li>
+      <li class="service-item"><i class="fas fa-th-large"></i> بلاط إنترلوك وبلاط صناعي بجودة عالية</li>
+      <li class="service-item"><i class="fas fa-hard-hat"></i> تنفيذ أعمال تركيب وتشطيب إنشائي احترافية</li>
+      <li class="service-item"><i class="fas fa-certificate"></i> شهادات ISO وشهادات ضبط جودة من مؤسسة المواصفات الفلسطينية</li>
+    </ul>
+    <p class="about__text" style="text-align:center; margin-top:2rem;">
+      مع الفارس... نبني المستقبل بثقة وجودة عالية 🏆
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-heading">تواصل معنا</h2>
+    <div class="contact-grid">
+
+      <a class="contact-card" href="https://wa.me/972562311111" target="_blank" rel="noopener noreferrer">
+        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+        <h3>واتساب</h3>
+        <p>+972562311111</p>
+      </a>
+
+      <a class="contact-card" href="tel:+972562311111">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <h3>اتصال مباشر</h3>
+        <p>+972562311111</p>
+      </a>
+
+      <a class="contact-card" href="https://www.facebook.com/share/19CQBYsmhz/" target="_blank" rel="noopener noreferrer">
+        <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+        <h3>فيسبوك</h3>
+        <p>@alfaris-factory</p>
+      </a>
+
+      <a class="contact-card" href="https://alfaris-factory.jimdosite.com/" target="_blank" rel="noopener noreferrer">
+        <div class="contact-icon"><i class="fas fa-globe"></i></div>
+        <h3>موقعنا الإلكتروني</h3>
+        <p>alfaris-factory.jimdosite.com</p>
+      </a>
+
+      <a class="contact-card" href="https://www.google.com/maps?q=Qabatia,Jenin,Palestine" target="_blank" rel="noopener noreferrer">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>العنوان</h3>
+        <p>قباطية – جنين – فلسطين</p>
+      </a>
     </div>
-    <div class="stat-item">
-        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-        <div class="stat-number">50+</div>
-        <div class="stat-label">Projects Completed</div>
+  </div>
+</section>
+
+<!-- قسم الشهادات والكتالوج -->
+<section id="certificates" class="contact">
+  <div class="container">
+    <h2 class="section-heading">الشهادات والكتالوجات</h2>
+    <div class="contact-grid">
+
+      <a class="contact-card" href="https://drive.google.com/file/d/1sR51t8niu8ogKSfup6Xx0Jw4NbEgH1zo/view?usp=sharing" target="_blank">
+        <div class="contact-icon"><i class="fas fa-book-open"></i></div>
+        <h3>كتالوج المنتجات</h3>
+        <p>عرض وتحميل الكتالوج الكامل</p>
+      </a>
+
+      <a class="contact-card" href="https://drive.google.com/file/d/1kZrAhWbnUFrwddegOdUv8jr9lCDBqtLu/view?usp=sharing" target="_blank">
+        <div class="contact-icon"><i class="fas fa-award"></i></div>
+        <h3>شهادة ISO</h3>
+        <p>شهادة الجودة العالمية ISO</p>
+      </a>
+
+      <a class="contact-card" href="https://drive.google.com/file/d/1SWo1_Nm1CLtU-xXhRBo29Z5EhH4fGQ0c/view?usp=sharing" target="_blank">
+        <div class="contact-icon"><i class="fas fa-certificate"></i></div>
+        <h3>شهادات اعتماد المنتجات</h3>
+        <p>من مؤسسة المواصفات والمقاييس الفلسطينية</p>
+      </a>
     </div>
-    <div class="stat-item">
-        <div class="stat-icon"><i class="fas fa-certificate"></i></div>
-        <div class="stat-number">Certificates</div>
-        <div class="stat-label">Professional & Training</div>
-    </div>
-</div>
-</div>
-</div>
+  </div>
+</section>
 
+<!-- خريطة -->
+<section class="map" id="location">
+  <div class="container">
+    <h2 class="section-heading">موقعنا</h2>
+    <iframe src="https://www.google.com/maps?q=Qabatia,Jenin,Palestine"
+      class="map__frame"
+      title="موقع شركة مصانع الفارس - قباطية، جنين، فلسطين"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
 
-<!-- Contact Links -->
-<div class="contact-links">
+<footer class="footer">
+  <div class="social">
+    <a href="https://www.facebook.com/share/19CQBYsmhz/" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://wa.me/972562311111" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://alfaris-factory.jimdosite.com/" target="_blank" aria-label="الموقع الرسمي"><i class="fas fa-globe"></i></a>
+  </div>
+  <p>© 2025 شركة مصانع الفارس - جميع الحقوق محفوظة</p>
+  <p>الجودة – الثقة – الريادة في الصناعات الإنشائية</p>
+</footer>
 
-    <!-- WhatsApp -->
-    <a class="contact-card whatsapp-card" data-href="https://wa.me/970599115747">
-        <div class="contact-content">
-            <div class="contact-left">
-                <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                <div class="contact-text"><h3>WhatsApp</h3><p>+970 599 115 747</p></div>
-            </div>
-            <div class="contact-arrow"><i class="fas fa-chevron-left"></i></div>
-        </div>
-    </a>
-
-    <!-- LinkedIn -->
-    <a class="contact-card linkedin-card" data-href="https://www.linkedin.com/in/fares-abed-aljawad-72395660/">
-        <div class="contact-content">
-            <div class="contact-left">
-                <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
-                <div class="contact-text"><h3>LinkedIn</h3><p>View Profile</p></div>
-            </div>
-            <div class="contact-arrow"><i class="fas fa-chevron-left"></i></div>
-        </div>
-    </a>
-
-    <!-- Certificates -->
-    <a class="contact-card drive-card" data-href="https://drive.google.com/file/d/1rc0h6g53Ces8N-Injh_LyQXw-4XOaWJd/view?usp=sharing">
-        <div class="contact-content">
-            <div class="contact-left">
-                <div class="contact-icon"><i class="fas fa-certificate"></i></div>
-                <div class="contact-text"><h3>Certificates</h3><p>Training & Courses</p></div>
-            </div>
-            <div class="contact-arrow"><i class="fas fa-chevron-left"></i></div>
-        </div>
-    </a>
-
-    <!-- Experience Certificates -->
-    <a class="contact-card drive-card" data-href="https://drive.google.com/file/d/1fM4CbmoYDtwd15RsYDfkopmtZ5L6gyl_/view?usp=sharing">
-        <div class="contact-content">
-            <div class="contact-left">
-                <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
-                <div class="contact-text"><h3>Experience Certificates</h3><p>Professional Records</p></div>
-            </div>
-            <div class="contact-arrow"><i class="fas fa-chevron-left"></i></div>
-        </div>
-    </a>
-
-    <!-- Resume -->
-    <a class="contact-card drive-card" data-href="https://drive.google.com/file/d/1EJHUFIj-h0_IAZ9hhBWqBgtMVWClK7Sf/view?usp=sharing">
-        <div class="contact-content">
-            <div class="contact-left">
-                <div class="contact-icon"><i class="fas fa-file-alt"></i></div>
-                <div class="contact-text"><h3>Resume</h3><p>Civil Engineer CV</p></div>
-            </div>
-            <div class="contact-arrow"><i class="fas fa-chevron-left"></i></div>
-        </div>
-    </a>
-  
-    <!-- Resume -->
-    <a class="contact-card drive-card" data-href="https://drive.google.com/file/d/14bbYCD5Ki4khzHlvhFcef7iCRUir6h8z/view?usp=sharing">
-        <div class="contact-content">
-            <div class="contact-left">
-                <div class="contact-icon"><i class="fas fa-file-alt"></i></div>
-                <div class="contact-text"><h3>ATS Resume</h3><p>Civil Engineer ATS Resume</p></div>
-            </div>
-            <div class="contact-arrow"><i class="fas fa-chevron-left"></i></div>
-        </div>
-    </a>
-
-    <!-- Phone -->
-    <a class="contact-card phone-card" data-href="tel:+970599115747">
-        <div class="contact-content">
-            <div class="contact-left">
-                <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                <div class="contact-text"><h3>Direct Call</h3><p>+970 599 115 747</p></div>
-            </div>
-            <div class="contact-arrow"><i class="fas fa-chevron-left"></i></div>
-        </div>
-    </a>
-</div>
-
-<!-- Footer -->
-<div class="footer-card">
-    <div class="footer-content">
-        <p class="footer-title">© 2025 Fares Hasan Abd-Eljawad - All Rights Reserved</p>
-        <p class="footer-subtitle">Civil Engineer | Roads & Infrastructure Specialist</p>
-        <div class="footer-status"><div class="status-dot-small"></div><span>Available for Projects & Consultations</span></div>
-    </div>
-</div>
-
-
-<!-- Floating WhatsApp Button -->
 <div class="floating-whatsapp">
-    <a href="https://wa.me/970599115747" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/972562311111" class="floating-whatsapp__link" target="_blank" aria-label="تواصل واتساب">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </div>
 
-<!-- Inline JS -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <h3>اختر الإجراء</h3>
+    <button id="callBtn">📞 اتصال</button>
+    <button id="saveBtn">💾 حفظ الرقم</button>
+    <button id="cancelBtn">إلغاء</button>
+  </div>
+</div>
+
 <script>
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-    initializeAnimations();
-    handleContactClicks();
-    handleScrollAnimations();
-    addHoverEffects();
-    handleResponsive();
-});
+  let currentNumber = "";
+  const modal = document.getElementById("contactModal");
+  const callBtn = document.getElementById("callBtn");
+  const saveBtn = document.getElementById("saveBtn");
+  const cancelBtn = document.getElementById("cancelBtn");
 
-// Initialize page animations
-function initializeAnimations() {
-    const contactCards = document.querySelectorAll('.contact-card');
-    contactCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        setTimeout(() => {
-            card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, 200 + index * 100);
-    });
-    const footer = document.querySelector('.footer-card');
-    if (footer) {
-        footer.style.opacity = '0';
-        footer.style.transform = 'translateY(30px)';
-        setTimeout(() => {
-            footer.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            footer.style.opacity = '1';
-            footer.style.transform = 'translateY(0)';
-        }, 800);
-    }
-}
+  // 🔹 فتح نافذة الخيارات عند النقر على الاتصال
+  function openContactOptions(number) {
+      currentNumber = number;
+      modal.style.display = "flex";
+      modal.setAttribute("aria-hidden", "false");
+      callBtn.focus();
+  }
 
-// Handle contact card clicks
-function handleContactClicks() {
-    document.querySelectorAll('.contact-card').forEach(card => {
-        card.addEventListener('click', function (e) {
-            e.preventDefault();
-            const href = this.getAttribute('data-href');
-            if (!href) return;
-            if (href.startsWith('http')) {
-                window.open(href, '_blank', 'noopener,noreferrer');
-            } else {
-                window.location.href = href;
-            }
-        });
+  // 🔹 إغلاق النافذة
+  function closeModal() {
+      modal.style.display = "none";
+      modal.setAttribute("aria-hidden", "true");
+  }
 
-        card.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.click();
-            }
-        });
+  // 🔹 زر الاتصال
+  callBtn.addEventListener("click", () => {
+      window.location.href = "tel:" + currentNumber;
+      closeModal();
+  });
 
-        card.setAttribute('tabindex', '0');
-        card.setAttribute('role', 'button');
-    });
-}
+  // 🔹 حفظ جهة الاتصال (ملف vcf خاص بشركة الفارس)
+  saveBtn.addEventListener("click", () => {
+      window.location.href = "alfaris.vcf";
+      closeModal();
+  });
 
-// Handle scroll animations
-function handleScrollAnimations() {
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('animate-in');
-        });
-    }, observerOptions);
-    document.querySelectorAll('.contact-card, .footer-card').forEach(el => observer.observe(el));
-}
+  // 🔹 إغلاق النافذة
+  cancelBtn.addEventListener("click", closeModal);
 
-// Add enhanced hover effects
-function addHoverEffects() {
-    const contactCards = document.querySelectorAll('.contact-card');
-    contactCards.forEach(card => {
-        card.addEventListener('mouseenter', function () {
-            this.style.transform = 'translateY(-4px) scale(1.02)';
-            const arrow = this.querySelector('.contact-arrow');
-            if (arrow) arrow.style.transform = 'translateX(-4px)';
-            createRippleEffect(this);
-        });
-        card.addEventListener('mouseleave', function () {
-            this.style.transform = '';
-            const arrow = this.querySelector('.contact-arrow');
-            if (arrow) arrow.style.transform = '';
-        });
-    });
-    const floatingBtn = document.querySelector('.floating-whatsapp a');
-    if (floatingBtn) {
-        floatingBtn.addEventListener('mouseenter', function () { this.style.transform = 'scale(1.1) rotate(5deg)'; });
-        floatingBtn.addEventListener('mouseleave', function () { this.style.transform = ''; });
-    }
-}
+  // 🔹 إغلاق عند النقر خارج النافذة
+  modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+  });
 
-// Create ripple effect
-function createRippleEffect(element) {
-    const ripple = document.createElement('div');
-    ripple.style.position = 'absolute';
-    ripple.style.borderRadius = '50%';
-    ripple.style.background = 'rgba(255, 255, 255, 0.3)';
-    ripple.style.transform = 'scale(0)';
-    ripple.style.animation = 'ripple 0.6s linear';
-    ripple.style.left = '50%';
-    ripple.style.top = '50%';
-    ripple.style.width = '20px';
-    ripple.style.height = '20px';
-    ripple.style.marginLeft = '-10px';
-    ripple.style.marginTop = '-10px';
-    ripple.style.pointerEvents = 'none';
-    element.style.position = 'relative';
-    element.appendChild(ripple);
-    setTimeout(() => ripple.remove(), 600);
-}
-
-// Handle responsive behavior
-function handleResponsive() {
-    let resizeTimer;
-    window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(handleScrollAnimations, 250);
-    });
-}
-
-// Add CSS animation for ripple effect
-const styleEl = document.createElement('style');
-styleEl.textContent = `
-@keyframes ripple { to { transform: scale(4); opacity: 0 } }
-.animate-in { animation: slideInUp 0.6s cubic-bezier(.4,0,.2,1) forwards }
-@keyframes slideInUp { from { opacity: 0; transform: translateY(30px) } to { opacity: 1; transform: translateY(0) } }
-`;
-document.head.appendChild(styleEl);
+  // 🔹 إغلاق عند الضغط على زر Escape
+  document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.style.display === "flex") closeModal();
+  });
 </script>
+</body>
+</html>
