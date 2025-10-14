@@ -5,26 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amal Care | عناية متكاملة بالبشرة والشعر والجسم</title>
     <meta name="description" content="Amal Care بإشراف الصيدلانية أمل طميزي، تقدم حلولًا متطورة لمشاكل البشرة والشعر والجسم باستخدام جهاز فحص بشرة يعمل بالذكاء الاصطناعي." />
-    <meta name="theme-color" content="#85bcbf" />
+    <meta name="theme-color" content="#ffffff" />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="icon" type="image/png" href="amalcare-logo.png">
 
     <style>
-        /* CSS Variables for Easy Customization */
+        /* ===== الألوان العامة ===== */
         :root {
             --clr-primary: #76b6b1; /* الأخضر الفاتح من الشعار */
             --clr-secondary: #d9a7b0; /* الوردي الهادئ */
             --clr-accent: #b87289; /* وردي أغمق للتأكيد */
-            --clr-text-light: #ffffff;
-            --clr-text-subtle: #f3f3f3;
+            --clr-text-main: #3b6c68; /* أخضر داكن للنصوص */
+            --clr-text-accent: #b87289; /* وردي للعناوين أو التمييز */
             --clr-whatsapp: #25D366;
             --font-cairo: 'Cairo', sans-serif;
-            --box-shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.2);
             --transition-speed: 0.3s;
         }
 
-        /* ===== BASE STYLES & RESET ===== */
+        /* ===== RESET ===== */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -37,73 +36,70 @@
 
         body {
             font-family: var(--font-cairo);
-            background: var(--clr-primary);
-            color: var(--clr-text-light);
+            background: #ffffff; /* الخلفية بيضاء بالكامل */
+            color: var(--clr-text-main);
             line-height: 1.7;
             text-align: right;
-            font-size: 16px; /* حجم خط أساسي لضمان الوضوح على الجوال */
+            font-size: 16px;
         }
 
-      a { 
-    text-decoration: none; 
-    color: inherit; 
-}
-h1, h2, h3 { 
-    font-weight: 700; 
-}
-section { 
-    padding: 5rem 1rem; 
-    text-align: center; 
-}
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+        }
 
-/* ===== UTILITIES ===== */
-.container { 
-    max-width: 1100px; 
-    margin: auto; 
-}
+        h1, h2, h3 { 
+            font-weight: 700; 
+        }
 
-/* === الأزرار === */
-.btn {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--clr-accent), var(--clr-secondary));
-    color: var(--clr-text-light);
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: var(--transition-speed);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    border: none;
-}
+        section { 
+            padding: 5rem 1rem; 
+            text-align: center; 
+        }
 
-.btn:hover {
-    transform: scale(1.05);
-    background: var(--clr-text-light);
-    color: var(--clr-accent);
-}
+        /* ===== UTILITIES ===== */
+        .container { 
+            max-width: 1100px; 
+            margin: auto; 
+        }
 
-/* === عناوين الأقسام === */
-.section-heading {
-    color: var(--clr-accent);
-    margin-bottom: 2.5rem;
-    font-size: 2.2rem;
-    animation: fadeIn 1s ease-out;
-}
+        /* ===== الأزرار ===== */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--clr-secondary), var(--clr-accent));
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition-speed);
+            border: none;
+        }
 
-/* ===== HERO SECTION (HEADER) ===== */
-.hero {
-    position: relative;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #fff7f9, #dfeeee);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    flex-direction: column;
-}
+        .btn:hover {
+            transform: scale(1.05);
+            background: var(--clr-primary);
+            color: #fff;
+        }
 
+        /* ===== عناوين الأقسام ===== */
+        .section-heading {
+            color: var(--clr-text-accent);
+            margin-bottom: 2.5rem;
+            font-size: 2.2rem;
+        }
 
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: #ffffff; /* أبيض بالكامل */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            flex-direction: column;
+        }
 /* === محتوى القسم الرئيسي === */
 .hero-content {
     max-width: 800px;
@@ -116,12 +112,11 @@ section {
     margin: 0 auto 1.5rem;
     max-width: 220px;
     height: auto;
-    background: rgba(255, 255, 255, 0.25); /* خلفية شفافة خفيفة */
-    padding: 10px;
-    border-radius: 20px;
-    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.15)); /* ظل ناعم */
+    background: none; /* إزالة الخلفية */
+    padding: 0; /* بدون حواف */
+    border-radius: 0;
+    filter: none; /* إزالة الظل بالكامل */
 }
-
 
 /* الأجهزة المتوسطة (تابلت) */
 @media (min-width: 768px) {
@@ -137,56 +132,60 @@ section {
     }
 }
 
+/* === النصوص الرئيسية === */
 .hero__title {
     font-size: 3.2rem;
-    color: #3b6c68; /* أخضر زمردي ناعم */
+    color: var(--clr-primary); /* أخضر من ألوان اللوغو */
     margin-bottom: 1rem;
-    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.6);
+    text-shadow: none; /* إزالة الشادو */
 }
 
 .hero__slogan {
     font-size: 1.4rem;
     margin-bottom: 2.5rem;
-    color: #6b5e62; /* رمادي وردي */
+    color: var(--clr-accent); /* وردي ناعم من الشعار */
     line-height: 1.8;
 }
 
-
 /* ===== ABOUT & SERVICES SECTIONS ===== */
 .about, .services {
-    background: linear-gradient(135deg, var(--clr-secondary), #c9dedd); /* تدرج لطيف بين الوردي والأخضر الفاتح */
+    background: #ffffff; /* خلفية بيضاء بالكامل */
 }
 
+/* نصوص الأقسام */
 .about__text, .services__content {
     max-width: 900px;
     margin: 0 auto;
-    color: var(--clr-text-subtle);
+    color: #444; /* رمادي غامق واضح */
     font-size: 1.1rem;
     text-align: right;
     padding: 0 1rem;
 }
 
+/* عناوين الأقسام الداخلية */
 .about__text h3 {
-    color: var(--clr-accent);
+    color: var(--clr-primary); /* أخضر من الشعار */
     margin-top: 1.5rem;
     font-size: 1.6rem;
-    border-bottom: 2px dashed rgba(184, 114, 137, 0.4);
+    border-bottom: 2px dashed var(--clr-secondary); /* وردي فاتح من الشعار */
     padding-bottom: 0.5rem;
     text-align: right;
 }
 
+/* الفقرات */
 .about__text p {
     margin-bottom: 1rem;
     text-align: right;
 }
 
+/* الاقتباس */
 .about__quote {
     font-style: italic;
     font-weight: 600;
     color: var(--clr-accent);
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(184, 114, 137, 0.3);
+    border-top: 1px solid var(--clr-secondary);
     text-align: center;
 }
 
@@ -201,26 +200,41 @@ section {
     margin-top: 30px;
 }
 
+/* عناصر الخدمات */
 .service-item {
-    background: var(--clr-primary);
+    background: #f8fafa; /* أبيض مائل للأخضر الفاتح */
     padding: 20px;
     border-radius: 12px;
     flex: 1 1 45%;
     max-width: 400px;
     text-align: right;
-    border-right: 4px solid var(--clr-accent);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-right: 4px solid var(--clr-accent); /* وردي ناعم */
+    box-shadow: none; /* بدون ظل */
     font-size: 1.1rem;
     transition: var(--transition-speed);
 }
 
+/* عند المرور */
 .service-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    background: #fff0f5; /* لمسة وردية خفيفة عند hover */
 }
 
 .service-item i {
-    color: var(--clr-accent);
+    color: var(--clr-primary); /* أيقونات خضراء */
+    margin-left: 10px;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+
+.service-item:hover {
+    transform: translateY(-5px);
+    background: #fff5f7; /* لمسة وردية خفيفة بدل الظل */
+}
+
+.service-item i {
+    color: var(--clr-primary); /* أيقونات خضراء */
     margin-left: 10px;
     font-size: 1.3em;
     vertical-align: middle;
@@ -228,7 +242,7 @@ section {
 
 /* ===== CONTACT SECTION ===== */
 .contact { 
-    background: var(--clr-primary); 
+    background: #ffffff; /* خلفية بيضاء بالكامل */
 }
 
 .contact-grid {
@@ -240,20 +254,21 @@ section {
 }
 
 .contact-card {
-    background: var(--clr-secondary);
+    background: #f9f9f9; /* رمادي فاتح جداً */
     border-radius: 20px;
     padding: 1.5rem;
     text-align: center;
     transition: var(--transition-speed);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: none; /* إزالة الظل */
     cursor: pointer;
     display: block;
     animation: slideUp 1s ease;
+    border: 1px solid #eee;
 }
 
 .contact-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    background: #fff5f7; /* لمسة وردية خفيفة عند التمرير */
 }
 
 .contact-icon {
@@ -261,23 +276,23 @@ section {
     height: 70px; 
     margin: auto; 
     margin-bottom: 1rem;
-    background: var(--clr-accent); 
-    color: var(--clr-text-light);
+    background: var(--clr-primary); /* أخضر فاتح من الشعار */
+    color: #fff;
     font-size: 2rem; 
     display: flex; 
     align-items: center;
     justify-content: center; 
     border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(184, 114, 137, 0.4);
+    box-shadow: none; /* بدون ظل */
 }
 
 .contact-card h3 { 
     margin-bottom: 0.5rem; 
-    color: var(--clr-accent); 
+    color: var(--clr-primary); /* أخضر داكن */
     font-size: 1.2rem; 
 }
 .contact-card p { 
-    color: var(--clr-text-subtle); 
+    color: #555; 
     font-size: 0.9rem; 
 }
 
@@ -287,7 +302,7 @@ section {
     height: 300px;
     border: 0; 
     border-radius: 16px;
-    box-shadow: var(--box-shadow-dark); 
+    box-shadow: none; /* إزالة الظلال */
     max-width: 900px; 
     margin: auto; 
     display: block;
@@ -295,11 +310,11 @@ section {
 
 /* ===== FOOTER ===== */
 .footer { 
-    background: var(--clr-primary); 
-    color: var(--clr-accent); 
+    background: #ffffff; /* أبيض بالكامل */
+    color: var(--clr-primary); /* نصوص خضراء */
     text-align: center; 
     padding: 2rem; 
-    border-top: 1px solid var(--clr-secondary); 
+    border-top: 2px solid var(--clr-secondary); /* خط علوي وردي ناعم */
 }
 
 .social { 
@@ -313,7 +328,7 @@ section {
     transition: var(--transition-speed); 
 }
 .social a:hover { 
-    color: var(--clr-text-light); 
+    color: var(--clr-primary); 
 }
 
 /* ===== WHATSAPP FLOAT BUTTON ===== */
@@ -332,9 +347,9 @@ section {
     height: 3.5rem; 
     background: var(--clr-whatsapp);
     border-radius: 50%; 
-    color: var(--clr-text-light); 
+    color: #fff; 
     font-size: 1.6rem;
-    box-shadow: var(--box-shadow-dark); 
+    box-shadow: none; 
     transition: var(--transition-speed);
     animation: float 3s ease-in-out infinite;
 }
@@ -351,32 +366,34 @@ section {
     left: 0; 
     width: 100%; 
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); 
+    background: rgba(0, 0, 0, 0.5); 
     align-items: center; 
     justify-content: center;
     z-index: 3000;
 }
 
 .modal-content {
-    background: var(--clr-secondary); 
-    color: var(--clr-text-light);
+    background: #fff; 
+    color: var(--clr-primary);
     padding: 2rem; 
     border-radius: 15px; 
     text-align: center;
     max-width: 300px; 
     width: 90%; 
-    box-shadow: var(--box-shadow-dark);
+    box-shadow: none;
+    border: 1px solid #ddd;
 }
 
-          /* ===== MEDIA QUERIES (Mobile Optimization) ===== */
-    @media (max-width: 768px) {
-        .hero__title { font-size: 1.7rem; }
-        .hero__slogan { font-size: 1.1rem; }
-        .section-heading { font-size: 2rem; }
-        section { padding: 4rem 1rem; }
-        .service-item { flex: 1 1 100%; }
-        .contact-grid { grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); }
-    }
+/* ===== MEDIA QUERIES (Mobile Optimization) ===== */
+@media (max-width: 768px) {
+    .hero__title { font-size: 1.7rem; }
+    .hero__slogan { font-size: 1.1rem; }
+    .section-heading { font-size: 2rem; }
+    section { padding: 4rem 1rem; }
+    .service-item { flex: 1 1 100%; }
+    .contact-grid { grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); }
+}
+
     </style>
 </head>
 <body>
@@ -490,7 +507,7 @@ section {
             <a href="https://wa.me/970597619999" target="_blank" rel="noopener noreferrer" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
         </div>
         <p>© 2025 Amal Care – جميع الحقوق محفوظة</p>
-        <p>العلم والجمال يلتقيان مع Amal Care ✨</p>
+        <p>العلم والجمال يلتقيان مع Amal Care </p>
     </footer>
 
     <div class="floating-whatsapp">
