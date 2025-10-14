@@ -94,15 +94,15 @@ section {
 .hero {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(rgba(118, 182, 177, 0.85), rgba(217, 167, 176, 0.85)),
-                url('amalcare-bg.jpg') center/cover no-repeat; /* صورة جديدة تعكس طابع Amal Care */
+    background: linear-gradient(135deg, #fff7f9, #dfeeee); /* تدرج ناعم أبيض وردي-أخضر */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    flex-direction: column;  
+    flex-direction: column;
 }
+
 
 /* === محتوى القسم الرئيسي === */
 .hero-content {
@@ -112,11 +112,16 @@ section {
 
 /* === تنسيق اللوغو === */
 .hero__logo {
-    display: block;           
-    margin: 0 auto 1.5rem;    
+    display: block;
+    margin: 0 auto 1.5rem;
     max-width: 220px;
-    height: auto;             
+    height: auto;
+    background: rgba(255, 255, 255, 0.25); /* خلفية شفافة خفيفة */
+    padding: 10px;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.15)); /* ظل ناعم */
 }
+
 
 /* الأجهزة المتوسطة (تابلت) */
 @media (min-width: 768px) {
@@ -393,7 +398,7 @@ section {
             <div class="about__text">
                 <p>
                     <strong>Amal Care</strong> هي العلامة المتخصصة بالعناية بالبشرة والشعر والجسم، 
-                    بإشراف الصيدلانية <strong>أمل طميزي</strong> من بلدة بيت أولا – الخليل.
+                    بإشراف الصيدلانية <strong>أمل طميزي</strong> من بلدة إذنا – الخليل.
                     هدفنا هو الجمع بين المعرفة الدوائية والعناية التجميلية لتقديم حلول فعالة وصحية.
                 </p>
 
