@@ -1,1 +1,13 @@
-
+BEGIN:VCARD
+VERSION:3.0
+N:شركة النور للميكنة الصناعية;;;
+FN:شركة النور للميكنة الصناعية
+ORG:شركة النور للميكنة الصناعية
+TITLE:صناعة وصيانة مصانع الطوب
+TEL;TYPE=CELL:+972592989348
+TEL;TYPE=WORK,VOICE:+972592989348
+ADR;TYPE=WORK:;;المنطقة الصناعية، الخليل;;;فلسطين
+EMAIL;TYPE=INTERNET:info@noorindustry.com
+URL:https://www.facebook.com/profile.php?id=100057474548529
+NOTE:شركة النور متخصصة في صناعة وصيانة مصانع الطوب وتوريد جميع مستلزماتها الصناعية.
+END:VCARD
