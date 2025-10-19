@@ -1,1 +1,13 @@
-
+BEGIN:VCARD
+VERSION:3.0
+N:علي;فادي;;;
+FN:Fadi Ali
+ORG:WASLI Delivery - شركة وصلي للتوصيل
+TITLE:خدمات توصيل طرود داخل فلسطين (الضفة - القدس - الداخل)
+TEL;TYPE=CELL:+972522207513
+TEL;TYPE=WORK,VOICE:+970594955831
+ADR;TYPE=WORK:;;الخليل - فلسطين;;;;
+EMAIL;TYPE=INTERNET:info@wasli.ps
+URL:https://www.facebook.com/profile.php?id=61579638938581
+NOTE:شركة وصلي للتوصيل بإدارة فادي علي، نقدم خدمات توصيل طرود إلى كافة مناطق الضفة الغربية، القدس، والداخل الفلسطيني بسرعة وأمان.
+END:VCARD
