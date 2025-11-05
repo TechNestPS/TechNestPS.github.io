@@ -1,1 +1,119 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قريباً</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Cairo", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .time-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .time-box small {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h1>قريباً</h1>
+  <p>نحن نعمل بجد لإطلاق موقعنا الجديد! ترقبونا...</p>
+
+  <div class="countdown">
+    <div class="time-box">
+      <span id="days">00</span>
+      <small>أيام</small>
+    </div>
+    <div class="time-box">
+      <span id="hours">00</span>
+      <small>ساعات</small>
+    </div>
+    <div class="time-box">
+      <span id="minutes">00</span>
+      <small>دقائق</small>
+    </div>
+    <div class="time-box">
+      <span id="seconds">00</span>
+      <small>ثوانٍ</small>
+    </div>
+  </div>
+
+  <footer>© 2025 جميع الحقوق محفوظة</footer>
+
+  <script>
+    const countDownDate = new Date("Dec 31, 2025 23:59:59").getTime();
+
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.querySelector(".countdown").innerHTML = "<h2>انطلق الموقع الآن!</h2>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
