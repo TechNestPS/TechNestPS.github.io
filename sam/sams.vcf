@@ -1,1 +1,9 @@
-
+BEGIN:VCARD
+VERSION:3.0
+FN:SAM'S Pizza & Sandwiches
+ORG:SAM'S Pizza & Sandwiches
+TEL;TYPE=WORK,VOICE:+970566222330
+ADR;TYPE=WORK:;;بيرزيت - عمارة الساعة - نزلة عين الحمام - مقابل مكتبة ريتاج;;;;
+EMAIL:samspizza@gmail.com
+URL:https://www.instagram.com/samspizzaandsandwiches
+END:VCARD
