@@ -1,1 +1,547 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAM'S Pizza & Sandwiches</title>
+    <meta name="description" content="SAM'S Pizza & Sandwiches." />
+    <meta name="theme-color" content="#f5a623" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="dozan-logo.png">
 
+    <style>
+        /* CSS Variables for Easy Customization */
+        :root {
+            --clr-primary: #0b2c3d;
+            --clr-secondary: #11394f;
+            --clr-accent: #f5a623;
+            --clr-text-light: #fff;
+            --clr-text-subtle: #eee;
+            --clr-whatsapp: #25D366;
+            --font-cairo: 'Cairo', sans-serif;
+            --box-shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.6);
+            --transition-speed: 0.3s;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-cairo);
+            background: var(--clr-primary);
+            color: var(--clr-text-light);
+            line-height: 1.7;
+            text-align: right;
+            font-size: 16px;
+        }
+        a { text-decoration: none; color: inherit; }
+        h1, h2, h3 { font-weight: 700; }
+        section { padding: 5rem 1rem; text-align: center; }
+
+        .container { max-width: 1100px; margin: auto; }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--clr-accent), #d98507);
+            color: var(--clr-text-light);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition-speed);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            border: none;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background: var(--clr-text-light);
+            color: var(--clr-primary);
+        }
+        .section-heading {
+            color: var(--clr-accent);
+            margin-bottom: 2.5rem;
+            font-size: 2.2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(rgba(11, 44, 61, 0.85), rgba(11, 44, 61, 0.85)),
+                        url('bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero-content { max-width: 800px; animation: fadeIn 2s ease; }
+/* 🔥 تنسيق اللوغو 🔥 */
+.hero__logo {
+    display: block;           
+    margin: 0 auto 1.5rem;    
+    max-width: 220px;
+    height: auto;             
+}
+
+/* للأجهزة المتوسطة (تابلت) */
+@media (min-width: 768px) {
+    .hero__logo {
+        max-width: 280px;
+    }
+}
+
+/* للأجهزة الكبيرة (ديسكتوب) */
+@media (min-width: 1200px) {
+    .hero__logo {
+        max-width: 360px;
+    }
+}
+
+/* ضمان تمركز اللوغو والمحتوى */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* ===== ألوان حسب هوية Truffle ===== */
+.hero__title {
+    font-size: 3.2rem;
+    color: #f1b787; /* ذهبي */
+    margin-bottom: 1rem;
+}
+
+.hero__slogan {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    color: #FFFFFF; /* أبيض */
+}
+
+/* ===== ABOUT & SERVICES SECTIONS ===== */
+.about, 
+.services {
+    background: #000000; /* أسود */
+}
+
+.about__text, 
+.services__content {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #FFFFFF; /* أبيض */
+    font-size: 1.1rem;
+    text-align: right;
+    padding: 0 1rem;
+}
+
+.about__text h3 {
+    color: #f1b787; /* ذهبي */
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    border-bottom: 2px dashed rgba(241, 183, 135, 0.4); /* ذهبي شفاف */
+    padding-bottom: 0.5rem;
+    text-align: right;
+}
+
+.about__text p {
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.about__quote {
+    font-style: italic;
+    font-weight: 600;
+    color: #f1b787;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(241, 183, 135, 0.3);
+    text-align: center;
+}
+
+/* ===== SERVICES LIST ===== */
+.services__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-item {
+    background: #111111; /* أسود أفتح قليلًا */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 45%; 
+    max-width: 400px;
+    text-align: right;
+    border-right: 4px solid #f1b787; /* شريط ذهبي */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+    font-size: 1.1rem;
+    color: #FFFFFF;
+}
+
+.service-item i {
+    color: #f1b787;
+    margin-left: 10px;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact { 
+    background: #000000; /* أسود */
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.contact-card {
+    background: #111111; /* أسود أفتح */
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    display: block;
+    animation: slideUp 1s ease;
+    color: #FFFFFF;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.25); /* ظل خفيف أبيض */
+}
+
+.contact-icon {
+    width: 70px; 
+    height: 70px; 
+    margin: auto; 
+    margin-bottom: 1rem;
+    background: #f1b787; /* ذهبي */
+    color: #000000; /* أسود */
+    font-size: 2rem; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(241, 183, 135, 0.5); /* ذهبي شفاف */
+}
+
+.contact-card h3 { 
+    margin-bottom: 0.5rem; 
+    color: #f1b787; /* ذهبي */
+    font-size: 1.2rem; 
+}
+
+.contact-card p { 
+    color: #FFFFFF; /* أبيض */
+    font-size: 0.9rem; 
+}
+
+/* ===== MAP SECTION ===== */
+.map__frame {
+    width: 100%; 
+    height: 300px;
+    border: 0; 
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.18);
+    max-width: 900px; 
+    margin: auto; 
+    display: block;
+}
+
+/* ===== FOOTER SECTION & WHATSAPP BUTTON ===== */
+.footer { 
+    background: #000000; 
+    color: #f1b787; /* ذهبي */
+    text-align: center; 
+    padding: 2rem; 
+    border-top: 1px solid #222; 
+}
+
+.social { margin-top: 1rem; }
+
+.social a { 
+    margin: 0 0.6rem; 
+    color: #f1b787; /* ذهبي */
+    font-size: 1.5rem; 
+    transition: 0.3s; 
+}
+
+.social a:hover { 
+    color: #FFFFFF; 
+}
+
+/* WHATSAPP BUTTON */
+.floating-whatsapp { 
+    position: fixed; 
+    bottom: 1rem; 
+    left: 1rem; 
+    z-index: 1000; 
+}
+
+.floating-whatsapp__link {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 3.5rem; 
+    height: 3.5rem; 
+    background: #25D366; /* واتساب */
+    border-radius: 50%; 
+    color: #FFFFFF; 
+    font-size: 1.6rem;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-whatsapp__link:hover { 
+    transform: scale(1.1); 
+    background: #20b358; 
+}
+
+/* ===== MODAL STYLES ===== */
+.modal {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); 
+    align-items: center; 
+    justify-content: center;
+    z-index: 3000;
+}
+
+.modal-content {
+    background: #111111; /* أسود أفتح */
+    color: #FFFFFF; 
+    padding: 2rem; 
+    border-radius: 15px; 
+    text-align: center;
+    max-width: 300px; 
+    width: 90%; 
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+}
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+    .hero__title { font-size: 1.7rem; }
+    .hero__slogan { font-size: 1.1rem; }
+    .section-heading { font-size: 2rem; }
+    section { padding: 4rem 1rem; }
+    .service-item { flex: 1 1 100%; }
+    .contact-grid { 
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); 
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <img src="logo.png" alt="Truffle Logo" class="hero__logo">
+
+            <h1 class="hero__title">Truffle</h1>
+
+            <p class="hero__slogan">
+                تجربة فاخرة… تفاصيل راقية… ونكهات بتترك بصمة.<br>
+                كل زيارة لـ Truffle هي لحظة استثنائية من الذوق والتميز. ✨
+            </p>
+
+            <a href="#contact" class="btn">تواصل معنا</a>
+        </div>
+    </header>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-heading">قائمتنا</h2>
+
+            <ul class="services__list">
+                <li class="service-item"><i class="fas fa-bread-slice"></i> حلويات ومخبوزات فاخرة</li>
+                <li class="service-item"><i class="fas fa-mug-hot"></i> مشروبات ساخنة وباردة</li>
+                <li class="service-item"><i class="fas fa-cookie"></i> أصناف تروفل مميزة</li>
+                <li class="service-item"><i class="fas fa-ice-cream"></i> حلويات موسمية ومبتكرة</li>
+            </ul>
+
+            <p class="about__text" style="text-align: center; margin-top: 2rem;">
+                لأن التفاصيل الصغيرة… بتصنع الفرق ✨
+            </p>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-heading">تواصل معنا</h2>
+
+            <div class="contact-grid">
+                
+                <a class="contact-card" href="https://wa.me/972595035830" target="_blank">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>واتساب</h3>
+                    <p>+972595035830</p>
+                </a>
+
+                <a class="contact-card" 
+                   href="http://truffle.page.gd/" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <div class="contact-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>المنيو الإلكتروني</h3>
+                    <p>اضغط لعرض المنيو</p>
+                </a>
+
+                <div class="contact-card" role="button" onclick="openContactOptions('0595035830')">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>اتصال مباشر</h3>
+                    <p>0595035830</p>
+                </div>
+
+                <a class="contact-card" href="https://www.facebook.com/share/17mhofkoDg/" target="_blank">
+                    <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+                    <h3>فيسبوك</h3>
+                    <p>تابعنا على فيسبوك</p>
+                </a>
+
+                <a class="contact-card" href="https://www.instagram.com/truffle.res" target="_blank">
+                    <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                    <h3>إنستغرام</h3>
+                    <p>@truffle.res</p>
+                </a>
+
+                <a class="contact-card" href="https://www.tiktok.com/@truffle.ps" target="_blank">
+                    <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
+                    <h3>تيك توك</h3>
+                    <p>@truffle.ps</p>
+                </a>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>العنوان</h3>
+                    <p>نابلس</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+   <section class="map" id="location">
+    <div class="container">
+        <h2 class="section-heading">موقعنا</h2>
+
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3374.5983361056515!2d35.223865075640546!3d32.24197997389172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDE0JzMxLjEiTiAzNcKwMTMnMzUuMiJF!5e0!3m2!1sen!2s!4v1763836339410!5m2!1sen!2s"
+    class="map__frame"
+    title="Truffle Location - نابلس"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="social">
+
+        <a href="https://www.facebook.com/share/17mhofkoDg/" 
+           target="_blank" aria-label="فيسبوك">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/truffle.res" 
+           target="_blank" aria-label="إنستغرام">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@truffle.ps" 
+           target="_blank" aria-label="تيك توك">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="https://wa.me/972595035830" 
+           target="_blank" aria-label="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <p>© 2025 Truffle - جميع الحقوق محفوظة</p>
+    <p>نكهات تُحكى… وتفاصيل تُشعرُك بالتميز ✨</p>
+</footer>
+
+<div class="floating-whatsapp">
+    <a href="https://wa.me/972595035830" 
+       class="floating-whatsapp__link" 
+       target="_blank" 
+       aria-label="تواصل واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-content">
+        <h3 id="modalHeading">اختر الإجراء</h3>
+        <button id="callBtn" aria-label="اتصال هاتفي">📞 اتصال</button>
+        <button id="saveBtn" aria-label="حفظ رقم الهاتف">💾 حفظ الرقم</button>
+        <button id="cancelBtn" aria-label="إلغاء">إلغاء</button>
+    </div>
+</div>
+
+<script>
+    let currentNumber = "";
+    const modal = document.getElementById("contactModal");
+    const callBtn = document.getElementById("callBtn");
+    const saveBtn = document.getElementById("saveBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    function openContactOptions(number) {
+        currentNumber = number;
+        modal.style.display = "flex";
+        callBtn.focus();
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    callBtn.addEventListener("click", () => {
+        window.location.href = "tel:" + currentNumber;
+        closeModal();
+    });
+
+    saveBtn.addEventListener("click", () => {
+        window.location.href = "truffle.vcf"; 
+        closeModal();
+    });
+
+    cancelBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "flex") closeModal();
+    });
+</script>
+
+</body>
+</html>
