@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dania Sushi | دانية سوشي - المنيو الرسمي</title>
+  <title>Dania Sushi | دانية سوشي - المنيو الرسمي 3 لغات</title>
   
   <!-- Meta Descriptions & SEO -->
-  <meta name="description" content="دانية سوشي (Sakura by Dania) - تصفح المنيو الرسمي بالعربية والإنجليزية للرولات المميزة، الماكي، والسلطات والوجبات العائلية." />
+  <meta name="description" content="دانية سوشي (Sakura by Dania) - تصفح المنيو الرسمي 3 لغات (عربي، إنجليزي، عبـري) للرولات المميزة، الماكي، والسلطات والوجبات العائلية." />
   <meta name="keywords" content="Dania Sushi, دانية سوشي, sakura_by_dania, منيو دانية سوشي, سوشي بيت لحم, سوشي القدس, سوشي بيت جالا" />
   <meta name="theme-color" content="#f8cecf" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Dania Sushi | دانية سوشي" />
-  <meta property="og:description" content="أشهى وأطزج سوشي فاخر بحب وشغف - تصفح قائمة الطعام المنيو الآن" />
+  <meta property="og:description" content="أشهى وأطزج سوشي فاخر بحب وشغف - تصفح قائمة الطعام المنيو الآن (عربي / English / עברית)" />
   <meta property="og:image" content="logo.jpg" />
 
   <!-- Google Fonts -->
@@ -360,26 +360,27 @@
       gap: 0.4rem;
     }
 
-    /* Menu Language Switcher Buttons */
+    /* Menu 3-Language Switcher Buttons */
     .menu-toggle-switch {
       display: flex;
       justify-content: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
       margin-bottom: 1.4rem;
+      flex-wrap: wrap;
     }
 
     .menu-lang-btn {
       background: var(--card-soft);
       border: 1.5px solid var(--pink-border);
       color: var(--text-main);
-      padding: 0.6rem 1.4rem;
+      padding: 0.55rem 1.1rem;
       border-radius: 50px;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 800;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       transition: all 0.3s ease;
       font-family: inherit;
     }
@@ -927,7 +928,7 @@
       </a>
     </div>
 
-    <!-- MENU SHOWCASE SECTION WITH 3D FLIP EFFECT -->
+    <!-- MENU SHOWCASE SECTION WITH 3D FLIP EFFECT & 3 LANGUAGES -->
     <section class="menu-section animate-in" style="animation-delay: 0.15s;">
       <div class="menu-section-header">
         <div class="menu-section-title">
@@ -935,12 +936,12 @@
           <span>قائمة الطعام الرسمية (المنيو)</span>
         </div>
         <p class="menu-section-desc">
-          <span>اضغطي على الأزرار أو الصورة لقلب الصفحة بين العربي والإنجليزية</span>
+          <span>اختر اللغة أو انقر على الصورة لقلب المنيو</span>
           <i class="fas fa-sync-alt"></i>
         </p>
       </div>
 
-      <!-- Language Switch Buttons -->
+      <!-- 3-Language Switch Buttons -->
       <div class="menu-toggle-switch">
         <button type="button" class="menu-lang-btn active" id="btn-lang-ar" onclick="setMenuLang('ar')">
           <i class="fas fa-globe-asia"></i>
@@ -950,20 +951,24 @@
           <i class="fas fa-globe"></i>
           <span>English Menu</span>
         </button>
+        <button type="button" class="menu-lang-btn" id="btn-lang-he" onclick="setMenuLang('he')">
+          <i class="fas fa-language"></i>
+          <span>תפריט בעברית</span>
+        </button>
       </div>
 
       <!-- 3D Flip Card Container -->
       <div class="menu-flip-wrapper">
-        <div class="menu-flip-card" id="menu-card" onclick="toggleMenuFlip()" title="اضغطي لقلب المنيو بين العربي والإنكليزي">
+        <div class="menu-flip-card" id="menu-card" onclick="toggleMenuFlip()" title="اضغطي لقلب المنيو بين اللغات الثلاث">
           
-          <!-- Front Face: Arabic Menu -->
+          <!-- Front Face Image -->
           <div class="menu-face front">
-            <img src="menu_ar.jpg" alt="Dania Sushi Arabic Menu - منيو دانية سوشي بالعربي" />
+            <img id="menu-img-front" src="menu_ar.jpg" alt="Dania Sushi Arabic Menu" />
           </div>
 
-          <!-- Back Face: English Menu -->
+          <!-- Back Face Image -->
           <div class="menu-face back">
-            <img src="menu_en.jpg" alt="Dania Sushi English Menu - Dania Sushi Menu English" />
+            <img id="menu-img-back" src="menu_en.jpg" alt="Dania Sushi Menu" />
           </div>
 
         </div>
@@ -975,7 +980,7 @@
           <i class="fas fa-search-plus"></i> تكبير المنيو
         </button>
         <button type="button" class="menu-action-btn" onclick="toggleMenuFlip()">
-          <i class="fas fa-sync-alt"></i> قلب المنيو (عربي / English)
+          <i class="fas fa-sync-alt"></i> تبديل اللغة (عربي / English / עברית)
         </button>
       </div>
     </section>
@@ -1157,39 +1162,59 @@
   </div>
 
   <script>
-    // Menu Flip & Language Toggle Logic
+    // Menu 3-Way Flip & Language Logic
     let currentMenuLang = 'ar';
 
-    function setMenuLang(lang) {
-      currentMenuLang = lang;
-      const menuCard = document.getElementById('menu-card');
-      const btnAr = document.getElementById('btn-lang-ar');
-      const btnEn = document.getElementById('btn-lang-en');
+    const menuImages = {
+      'ar': 'menu_ar.jpg',
+      'en': 'menu_en.jpg',
+      'he': 'menu_he.jpg'
+    };
 
-      if (lang === 'en') {
-        menuCard.classList.add('flipped');
-        btnEn.classList.add('active');
-        btnAr.classList.remove('active');
-        showToast("English Menu");
-      } else {
-        menuCard.classList.remove('flipped');
-        btnAr.classList.add('active');
-        btnEn.classList.remove('active');
-        showToast("المنيو بالعربية");
+    const menuTitles = {
+      'ar': 'المنيو الرسمي بالعربية - Dania Sushi',
+      'en': 'Dania Sushi Official English Menu',
+      'he': 'תפריט דניה סושי בעברית'
+    };
+
+    function setMenuLang(lang) {
+      if (currentMenuLang === lang && document.querySelector(`.menu-lang-btn.active#btn-lang-${lang}`)) {
+        return;
       }
+
+      const menuCard = document.getElementById('menu-card');
+      const frontImg = document.getElementById('menu-img-front');
+      const backImg = document.getElementById('menu-img-back');
+
+      document.querySelectorAll('.menu-lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(`btn-lang-${lang}`).classList.add('active');
+
+      const isFlipped = menuCard.classList.contains('flipped');
+      const nextImgSrc = menuImages[lang];
+
+      if (isFlipped) {
+        frontImg.src = nextImgSrc;
+        menuCard.classList.remove('flipped');
+      } else {
+        backImg.src = nextImgSrc;
+        menuCard.classList.add('flipped');
+      }
+
+      currentMenuLang = lang;
+      
+      let langLabel = lang === 'ar' ? 'المنيو بالعربية' : (lang === 'en' ? 'English Menu' : 'תפריט בעברית');
+      showToast(langLabel);
     }
 
     function toggleMenuFlip() {
-      if (currentMenuLang === 'ar') {
-        setMenuLang('en');
-      } else {
-        setMenuLang('ar');
-      }
+      const order = ['ar', 'en', 'he'];
+      let nextIdx = (order.indexOf(currentMenuLang) + 1) % order.length;
+      setMenuLang(order[nextIdx]);
     }
 
     function zoomCurrentMenu() {
-      const currentSrc = currentMenuLang === 'ar' ? 'menu_ar.jpg' : 'menu_en.jpg';
-      const caption = currentMenuLang === 'ar' ? 'المنيو الرسمي بالعربية - Dania Sushi' : 'Dania Sushi Official English Menu';
+      const currentSrc = menuImages[currentMenuLang];
+      const caption = menuTitles[currentMenuLang];
       openLightbox(currentSrc, caption);
     }
 
