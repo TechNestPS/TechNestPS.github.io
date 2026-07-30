@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لآية حبيبتي 🌹</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#5c0e24;
+    --wine-dark:#3a0818;
+    --rose:#c81e45;
+    --blush:#f7dde2;
+    --cream:#fff8f4;
+    --gold:#c9a227;
+    --ink:#2c0f16;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Tajawal',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    overflow-x:hidden;
+    cursor:default;
+  }
+  h1,h2,h3,.display{font-family:'Aref Ruqaa',serif;}
+  ::selection{background:var(--rose);color:#fff;}
+  img{max-width:100%;display:block;}
+
+  /* ---------- EMOJI & ICON UNIVERSAL STYLING ---------- */
+  .icon, .thursday-badge, .voucher-icon, .dream-emoji, 
+  .pin-icon, .candle-icon, .lock-icon, .passion-icon, .envelope-seal {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.35s ease !important;
+  }
+  .icon:hover, .thursday-badge:hover, .voucher-icon:hover, .dream-emoji:hover, 
+  .pin-icon:hover, .candle-icon:hover, .lock-icon:hover, .passion-icon:hover, .envelope-seal:hover {
+    transform: scale(1.25) rotate(6deg) !important;
+    filter: drop-shadow(0 6px 12px rgba(200, 30, 69, 0.4)) !important;
+  }
+
+  /* ---------- preloader ---------- */
+  #preloader{
+    position:fixed;inset:0;z-index:999;
+    background:var(--wine-dark);
+    display:flex;align-items:center;justify-content:center;
+    flex-direction:column;
+    gap:18px;
+    transition:opacity .8s ease, visibility .8s ease;
+  }
+  #preloader.hide{opacity:0;visibility:hidden;}
+  #preloader svg{width:80px;height:80px;}
+  #preloader path{
+    fill:none;stroke:var(--rose);stroke-width:4;
+    stroke-dasharray:300;stroke-dashoffset:300;
+    animation:drawHeart 1.6s ease forwards infinite alternate;
+  }
+  @keyframes drawHeart{ to{stroke-dashoffset:0; fill:var(--rose);} }
+  #preloader span{color:var(--blush);font-size:15px;letter-spacing:1px;}
+
+  /* ---------- scroll progress ---------- */
+  #progressBar{
+    position:fixed;top:0;right:0;left:0;height:4px;z-index:500;
+    background:transparent;
+  }
+  #progressFill{
+    height:100%;width:0%;
+    background:linear-gradient(90deg,var(--gold),var(--rose),var(--wine));
+    transition:width .1s linear;
+  }
+
+  /* ---------- cursor hearts ---------- */
+  .cursor-heart{
+    position:fixed;
+    pointer-events:none;
+    z-index:400;
+    font-size:14px;
+    color:var(--rose);
+    animation:cursorFade 1s ease forwards;
+  }
+  @keyframes cursorFade{
+    0%{opacity:.8;transform:translate(-50%,-50%) scale(1);}
+    100%{opacity:0;transform:translate(-50%,-140%) scale(.4);}
+  }
+
+  /* ---------- floating hearts bg ---------- */
+  .hearts-bg{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden;}
+  .heart{position:absolute;bottom:-10%;font-size:20px;color:var(--rose);opacity:.3;animation:floatUp linear infinite;}
+  @keyframes floatUp{
+    0%{transform:translateY(0) rotate(0deg);opacity:0;}
+    10%{opacity:.35;} 90%{opacity:.35;}
+    100%{transform:translateY(-115vh) rotate(25deg);opacity:0;}
+  }
+
+  section{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px;text-align:center;}
+
+  .eyebrow{letter-spacing:2px;color:var(--rose);font-weight:700;font-size:15px;margin-bottom:18px;}
+  .section-lead{color:#7a3a44;max-width:580px;margin-bottom:46px;font-size:16.5px;line-height:1.9;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:linear-gradient(160deg, var(--blush), var(--cream) 55%, var(--blush)); background-size:200% 200%; animation:gradientShift 12s ease infinite;}
+  @keyframes gradientShift{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+  .hero h1{font-size:clamp(52px,11vw,130px);color:var(--wine);line-height:1;margin-bottom:22px;opacity:0;animation:riseIn 1.4s ease forwards .3s;}
+  .hero .typewriter{font-size:clamp(17px,2.3vw,23px);color:#7a3a44;max-width:640px;min-height:65px;border-left:3px solid var(--rose);padding-left:10px;line-height:1.8;}
+  @keyframes riseIn{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+  .scroll-hint{position:absolute;bottom:36px;font-size:15px;color:var(--rose);display:flex;flex-direction:column;align-items:center;gap:8px;animation:bounce 2s infinite;opacity:.9;font-weight:bold;}
+  @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(10px);}}
+
+  /* ---------- LETTER ---------- */
+  .letter-section{background:var(--wine);color:var(--blush);}
+  .letter-section .eyebrow{color:var(--gold);}
+  .letter-section h2{font-size:clamp(34px,6vw,58px);color:#fff;margin-bottom:36px;}
+  .envelope-wrap{perspective:1200px;width:min(90vw,420px);cursor:pointer;margin-bottom:20px;transition:transform .3s;}
+  .envelope-wrap:hover{transform:scale(1.02);}
+  .envelope{position:relative;width:100%;height:260px;background:linear-gradient(135deg,#fff,var(--blush));border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;}
+  .envelope-flap{position:absolute;top:0;left:0;width:100%;height:130px;background:linear-gradient(135deg,var(--rose),var(--wine));clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s cubic-bezier(.6,-0.3,.4,1.3);z-index:3;}
+  .envelope-wrap.open .envelope-flap{transform:rotateX(180deg);}
+  .envelope-seal{width:56px;height:56px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;z-index:4;position:relative;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:opacity .4s;}
+  .envelope-wrap.open .envelope-seal{opacity:0;}
+  .envelope-hint{font-size:15px;color:var(--gold);margin-top:14px;letter-spacing:1px;}
+  .letter-paper{max-width:640px;background:var(--cream);color:var(--ink);border-radius:12px;padding:0 34px;box-shadow:0 30px 80px rgba(0,0,0,.35);margin-top:0;text-align:right;max-height:0;overflow:hidden;opacity:0;transition:max-height 1.1s ease, opacity 1s ease, padding 1s ease, margin 1s ease;}
+  .letter-paper.show{max-height:1000px;opacity:1;padding:44px 34px;margin-top:36px;}
+  .letter-paper p{font-size:18px;line-height:2.05;margin-bottom:18px;color:#3a1620;opacity:0;transform:translateY(10px);transition:opacity .6s ease, transform .6s ease;}
+  .letter-paper.show p{opacity:1;transform:translateY(0);}
+  .letter-paper.show p:nth-child(1){transition-delay:.2s;}
+  .letter-paper.show p:nth-child(2){transition-delay:.5s;}
+  .letter-paper.show p:nth-child(3){transition-delay:.8s;}
+  .letter-paper.show p:nth-child(4){transition-delay:1.1s;}
+  .letter-paper.show p:nth-child(5){transition-delay:1.4s;}
+  .letter-signature{font-family:'Aref Ruqaa',serif;font-size:32px;color:var(--rose);margin-top:14px;}
+
+  /* ---------- REASONS (flip) ---------- */
+  .reasons-section{background:var(--cream);}
+  .reasons-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .reasons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;max-width:1000px;width:100%;}
+  .flip-card{background:transparent;perspective:1000px;height:195px;opacity:0;transform:translateY(30px);transition:opacity .7s ease, transform .7s ease;}
+  .flip-card.visible{opacity:1;transform:translateY(0);}
+  .flip-inner{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;cursor:pointer;}
+  .flip-card.flipped .flip-inner, .flip-card:hover .flip-inner{transform:rotateY(180deg);}
+  .flip-front,.flip-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;}
+  .flip-front{background:#fff;border:1px solid var(--blush);box-shadow:0 8px 24px rgba(92,14,36,.08);}
+  .flip-front .icon{font-size:36px;margin-bottom:10px;}
+  .flip-front span{color:var(--wine);font-size:16px;font-weight:700;}
+  .flip-back{background:linear-gradient(135deg,var(--rose),var(--wine));color:#fff;transform:rotateY(180deg);text-align:right;}
+  .flip-back p{font-size:15.5px;line-height:1.85;}
+
+  /* ---------- QUIZ ---------- */
+  .quiz-section{background:var(--blush);}
+  .quiz-section h2{font-size:clamp(32px,5.5vw,50px);color:var(--wine);margin-bottom:10px;}
+  .quiz-card{background:#fff;border-radius:20px;max-width:580px;width:100%;padding:34px 28px;box-shadow:0 16px 40px rgba(92,14,36,.12);margin-bottom:24px;text-align:right;}
+  .quiz-q{font-family:'Aref Ruqaa',serif;font-size:25px;color:var(--wine);margin-bottom:20px;}
+  .quiz-options{display:flex;flex-direction:column;gap:12px;}
+  .quiz-opt{background:var(--cream);border:1.5px solid var(--blush);border-radius:12px;padding:14px 18px;font-size:16.5px;text-align:right;cursor:pointer;transition:all .3s ease;font-family:'Tajawal';color:var(--ink);font-weight:500;}
+  .quiz-opt:hover{background:var(--blush);border-color:var(--rose);}
+  .quiz-opt.chosen{background:var(--rose);color:#fff;border-color:var(--rose);transform:scale(1.01);}
+  .quiz-response{margin-top:16px;font-size:16px;color:var(--wine);background:var(--blush);padding:12px 16px;border-radius:10px;min-height:24px;opacity:0;transition:opacity .4s ease;font-weight:bold;}
+  .quiz-response.show{opacity:1;}
+  .quiz-nav{display:flex;justify-content:space-between;max-width:580px;width:100%;align-items:center;}
+  .quiz-btn{background:var(--wine);color:#fff;border:none;padding:12px 26px;border-radius:30px;font-family:'Tajawal';font-size:15px;font-weight:700;cursor:pointer;transition:background .3s;}
+  .quiz-btn:hover{background:var(--rose);}
+  .quiz-btn:disabled{opacity:.35;cursor:default;}
+
+  /* ---------- SECTION 1: LOVE CODEX (دستور غرامنا الأونلاين) ---------- */
+  .codex-section{background:var(--cream);}
+  .codex-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .codex-list{max-width:700px;width:100%;display:flex;flex-direction:column;gap:16px;}
+  .codex-item{background:#fff;border-radius:14px;padding:18px 22px;box-shadow:0 8px 24px rgba(92,14,36,.08);border:1px solid var(--blush);display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:right;cursor:pointer;transition:all .3s ease;}
+  .codex-item:hover{transform:translateX(-6px);border-color:var(--rose);}
+  .codex-item.active{background:linear-gradient(135deg,var(--rose),var(--wine));color:#fff;border-color:var(--wine);}
+  .codex-item.active .codex-title{color:var(--gold);}
+  .codex-text{flex:1;}
+  .codex-title{font-family:'Aref Ruqaa',serif;font-size:21px;color:var(--rose);margin-bottom:4px;transition:color .3s;}
+  .codex-desc{font-size:15.5px;line-height:1.7;}
+  .codex-badge{width:36px;height:36px;border-radius:50%;background:var(--blush);color:var(--wine);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:all .3s;}
+  .codex-item.active .codex-badge{background:var(--gold);color:#fff;transform:scale(1.15);}
+
+  /* ---------- SECTION 2: VOUCHERS (كوبونات الدلع الأونلاين والمستقبل) ---------- */
+  .vouchers-section{background:var(--wine);color:#fff;}
+  .vouchers-section .eyebrow{color:var(--gold);}
+  .vouchers-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;}
+  .vouchers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:960px;width:100%;}
+  .voucher-card{background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1.5px dashed var(--gold);border-radius:18px;padding:24px;text-align:right;position:relative;overflow:hidden;backdrop-filter:blur(6px);transition:transform .3s ease, box-shadow .3s ease;}
+  .voucher-card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(0,0,0,.4);}
+  .voucher-icon{font-size:38px;margin-bottom:12px;}
+  .voucher-title{font-family:'Aref Ruqaa',serif;font-size:23px;color:var(--gold);margin-bottom:8px;}
+  .voucher-desc{font-size:15px;line-height:1.8;color:var(--blush);margin-bottom:18px;}
+  .voucher-btn{background:var(--gold);color:var(--wine-dark);border:none;padding:10px 20px;border-radius:25px;font-family:'Tajawal';font-weight:700;font-size:14.5px;cursor:pointer;transition:all .3s ease;}
+  .voucher-btn:hover{background:#fff;color:var(--rose);transform:scale(1.05);}
+  .voucher-btn.redeemed{background:var(--rose);color:#fff;cursor:default;}
+
+  /* ---------- SECTION 3: LOVE METER (قياس غلاوتك) ---------- */
+  .meter-section{background:var(--blush);}
+  .meter-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .meter-card{background:#fff;border-radius:24px;padding:36px 28px;max-width:580px;width:100%;box-shadow:0 16px 40px rgba(92,14,36,.12);text-align:center;}
+  .meter-display{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--wine));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 12px 30px rgba(200,30,69,.3);position:relative;}
+  .meter-num{font-family:'Aref Ruqaa',serif;font-size:42px;font-weight:bold;line-height:1;}
+  .meter-unit{font-size:13px;color:var(--gold);margin-top:2px;}
+  .meter-bar-outer{width:100%;height:16px;background:var(--cream);border-radius:10px;overflow:hidden;border:1px solid var(--blush);margin-bottom:24px;}
+  .meter-bar-inner{height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--rose),var(--wine));transition:width 2.5s cubic-bezier(.1,.7,.1,1);}
+  .meter-btn{background:var(--wine);color:#fff;border:none;padding:14px 34px;border-radius:35px;font-family:'Tajawal';font-weight:700;font-size:16px;cursor:pointer;transition:all .3s ease;box-shadow:0 8px 20px rgba(92,14,36,.2);}
+  .meter-btn:hover{background:var(--rose);transform:scale(1.04);}
+  .meter-result{margin-top:20px;font-size:16.5px;color:var(--wine);font-weight:bold;min-height:30px;opacity:0;transition:opacity .5s ease;}
+  .meter-result.show{opacity:1;}
+
+  /* ---------- SECTION 4: CONFESSIONS (اعترافات سرية) ---------- */
+  .confess-section{background:var(--wine-dark);color:#fff;}
+  .confess-section .eyebrow{color:var(--gold);}
+  .confess-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;}
+  .confess-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;max-width:960px;width:100%;}
+  .confess-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:26px;text-align:right;cursor:pointer;transition:all .4s ease;min-height:180px;display:flex;flex-direction:column;justify-content:center;}
+  .confess-card:hover{background:rgba(200,30,69,.25);border-color:var(--rose);transform:scale(1.02);}
+  .confess-card .icon{font-size:32px;margin-bottom:12px;color:var(--gold);}
+  .confess-card .teaser{font-family:'Aref Ruqaa',serif;font-size:21px;color:var(--blush);}
+  .confess-card .secret{font-size:16px;line-height:1.9;color:#fff;display:none;margin-top:10px;animation:fadeIn .6s ease;}
+  .confess-card.revealed{background:linear-gradient(135deg,var(--rose),var(--wine));border-color:var(--gold);}
+  .confess-card.revealed .teaser{display:none;}
+  .confess-card.revealed .secret{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+  /* ---------- SECTION 5: DREAMS (أحلامنا سوا) ---------- */
+  .dreams-section{background:var(--cream);}
+  .dreams-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .dreams-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:980px;width:100%;}
+  .dream-box{background:#fff;border-radius:18px;padding:26px 20px;box-shadow:0 10px 28px rgba(92,14,36,.09);border:1px solid var(--blush);text-align:center;transition:all .3s ease;}
+  .dream-box:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(200,30,69,.18);border-color:var(--rose);}
+  .dream-emoji{font-size:42px;margin-bottom:12px;}
+  .dream-title{font-family:'Aref Ruqaa',serif;font-size:23px;color:var(--wine);margin-bottom:8px;}
+  .dream-desc{font-size:15px;line-height:1.8;color:#5c2430;}
+
+  /* ---------- SECTION 6: KISS & HUG BANK (بنك البوسات الإلكتروني) ---------- */
+  .kiss-section{background:var(--wine);color:#fff;}
+  .kiss-section .eyebrow{color:var(--gold);}
+  .kiss-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;}
+  .kiss-box{background:rgba(255,255,255,.08);border:2px solid var(--rose);border-radius:24px;padding:36px 28px;max-width:560px;width:100%;backdrop-filter:blur(8px);text-align:center;}
+  .kiss-count-display{font-family:'Aref Ruqaa',serif;font-size:56px;color:var(--gold);margin:10px 0;}
+  .kiss-btn{background:var(--rose);color:#fff;border:none;width:90px;height:90px;border-radius:50%;font-size:42px;cursor:pointer;transition:transform .2s ease, background .3s ease;box-shadow:0 10px 25px rgba(200,30,69,.4);margin-bottom:16px;}
+  .kiss-btn:active{transform:scale(0.88);}
+  .kiss-btn:hover{transform:scale(1.08);}
+  .kiss-note{font-size:16px;color:var(--blush);min-height:30px;font-weight:bold;}
+
+  /* ---------- SECTION 7: LOVE JUKEBOX (أغانينا بالمكالمات) ---------- */
+  /* ---------- SECTION 7: LOVE JUKEBOX (أغنية تامر عاشور - خليني في حضنك) ---------- */
+  .jukebox-section{background:var(--cream);}
+  .jukebox-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .juke-player-card{background:#fff;border-radius:24px;padding:28px 24px;max-width:680px;width:100%;box-shadow:0 16px 40px rgba(92,14,36,.12);border:2px solid var(--blush);text-align:center;}
+  .yt-video-wrap{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:16px;overflow:hidden;box-shadow:0 12px 30px rgba(92,14,36,.2);margin-bottom:20px;border:2px solid var(--gold);}
+  .yt-video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+  .song-lyrics-box{background:var(--blush);border-radius:16px;padding:20px;text-align:center;}
+  .lyric-line{font-family:'Aref Ruqaa',serif;font-size:24px;color:var(--wine);margin-bottom:8px;font-weight:bold;}
+  .lyric-sub{font-size:16px;color:var(--rose);font-weight:500;}
+
+  /* ---------- SECTION 8: RADAR (رادار الغيرة والدلع أونلاين) ---------- */
+  .radar-section{background:var(--blush);}
+  .radar-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .radar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:850px;width:100%;}
+  .radar-card{background:#fff;border-radius:20px;padding:30px 24px;box-shadow:0 12px 30px rgba(92,14,36,.1);text-align:center;}
+  .radar-title{font-family:'Aref Ruqaa',serif;font-size:24px;color:var(--wine);margin-bottom:14px;}
+  .radar-meter-out{width:100%;height:18px;background:var(--cream);border-radius:10px;overflow:hidden;border:1px solid var(--blush);margin-bottom:16px;}
+  .radar-meter-in{height:100%;width:0%;background:linear-gradient(90deg,var(--rose),var(--wine));transition:width 1.8s ease-in-out;}
+  .radar-btn{background:var(--wine);color:#fff;border:none;padding:10px 22px;border-radius:25px;font-family:'Tajawal';font-weight:700;font-size:14px;cursor:pointer;transition:all .3s;}
+  .radar-btn:hover{background:var(--rose);}
+  .radar-text{margin-top:12px;font-size:15px;color:var(--rose);font-weight:bold;min-height:24px;}
+
+  /* ---------- SECTION 9: DATE BUCKET LIST (أحلام القعدة والجايات) ---------- */
+  .dates-section{background:var(--wine-dark);color:#fff;}
+  .dates-section .eyebrow{color:var(--gold);}
+  .dates-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;}
+  .dates-list{max-width:680px;width:100%;display:flex;flex-direction:column;gap:14px;}
+  .date-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;text-align:right;cursor:pointer;transition:all .3s ease;}
+  .date-item:hover{background:rgba(200,30,69,.25);border-color:var(--gold);}
+  .date-item.checked{background:linear-gradient(135deg,var(--rose),var(--wine));border-color:var(--gold);}
+  .date-text{font-size:16px;line-height:1.7;}
+  .date-check{width:28px;height:28px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+  .date-item.checked .date-check{background:var(--gold);color:var(--wine-dark);}
+
+  /* ---------- SECTION 10: Q&A ROMANCE (أسئلة وأجوبة) ---------- */
+  .qa-section{background:var(--cream);}
+  .qa-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .qa-container{max-width:720px;width:100%;display:flex;flex-direction:column;gap:16px;}
+  .qa-card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 8px 24px rgba(92,14,36,.08);border:1px solid var(--blush);text-align:right;cursor:pointer;transition:all .3s ease;}
+  .qa-card:hover{border-color:var(--rose);}
+  .qa-q{font-family:'Aref Ruqaa',serif;font-size:22px;color:var(--wine);margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;}
+  .qa-a{font-size:16px;color:#5c2430;line-height:1.85;display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--blush);animation:fadeIn .4s ease;}
+  .qa-card.open .qa-a{display:block;}
+
+  /* ---------- SECTION 11: WHEEL OF FORTUNE (دولاب الغزل أونلاين) ---------- */
+  .wheel-section{background:var(--wine);color:#fff;}
+  .wheel-section .eyebrow{color:var(--gold);}
+  .wheel-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;}
+  .wheel-box{background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.02));border:2px dashed var(--gold);border-radius:24px;padding:36px 24px;max-width:600px;width:100%;backdrop-filter:blur(8px);text-align:center;}
+  .wheel-spinner-btn{background:var(--gold);color:var(--wine-dark);border:none;padding:16px 36px;border-radius:40px;font-family:'Tajawal';font-weight:900;font-size:18px;cursor:pointer;transition:all .3s ease;box-shadow:0 10px 25px rgba(0,0,0,.3);}
+  .wheel-spinner-btn:hover{background:#fff;color:var(--rose);transform:scale(1.05);}
+  .wheel-result-text{margin-top:24px;font-family:'Aref Ruqaa',serif;font-size:24px;color:var(--blush);min-height:70px;line-height:1.7;display:flex;align-items:center;justify-content:center;}
+
+  /* ---------- SECTION 12: MEMORY MAP (خريطة الذكريات الواقعية والأونلاين) ---------- */
+  .map-section{background:var(--blush);}
+  .map-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .map-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:960px;width:100%;}
+  .map-pin-card{background:#fff;border-radius:18px;padding:24px 20px;box-shadow:0 10px 28px rgba(92,14,36,.09);border:1px solid var(--blush);text-align:right;cursor:pointer;transition:all .3s ease;}
+  .map-pin-card:hover{transform:translateY(-6px);border-color:var(--rose);}
+  .map-pin-card .pin-icon{font-size:32px;margin-bottom:8px;color:var(--rose);}
+  .map-pin-card .pin-title{font-family:'Aref Ruqaa',serif;font-size:22px;color:var(--wine);margin-bottom:6px;}
+  .map-pin-card .pin-desc{font-size:15px;color:#5c2430;line-height:1.75;}
+
+  /* ---------- SECTION 13: AUTO QUOTE GENERATOR (مولد الغزل) ---------- */
+  .quote-gen-section{background:var(--cream);}
+  .quote-gen-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .quote-box{background:#fff;border-radius:24px;padding:40px 30px;max-width:620px;width:100%;box-shadow:0 16px 40px rgba(92,14,36,.12);border:1px solid var(--blush);text-align:center;}
+  .quote-text-display{font-family:'Aref Ruqaa',serif;font-size:26px;color:var(--wine);min-height:90px;line-height:1.8;display:flex;align-items:center;justify-content:center;margin-bottom:24px;}
+  .quote-gen-btn{background:var(--rose);color:#fff;border:none;padding:14px 32px;border-radius:35px;font-family:'Tajawal';font-weight:700;font-size:16px;cursor:pointer;transition:all .3s ease;box-shadow:0 8px 22px rgba(200,30,69,.3);}
+  .quote-gen-btn:hover{background:var(--wine);transform:scale(1.04);}
+
+  /* ---------- SECTION 14: WEEKLY ROUTINE (جدول التواصل الأسبوعي) ---------- */
+  .week-section{background:var(--wine-dark);color:#fff;}
+  .week-section .eyebrow{color:var(--gold);}
+  .week-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;}
+  .week-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:980px;width:100%;}
+  .week-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:20px 16px;text-align:right;transition:all .3s ease;}
+  .week-card:hover{background:rgba(200,30,69,.3);border-color:var(--gold);transform:translateY(-5px);}
+  .week-day{font-family:'Aref Ruqaa',serif;font-size:22px;color:var(--gold);margin-bottom:6px;}
+  .week-activity{font-size:15px;line-height:1.7;color:var(--blush);}
+
+  /* ---------- SECTION 15: LIVE STATS (عداد اللحظات) ---------- */
+  .stats-section{background:var(--blush);}
+  .stats-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;max-width:900px;width:100%;}
+  .stat-card{background:#fff;border-radius:20px;padding:26px 18px;box-shadow:0 12px 30px rgba(92,14,36,.1);text-align:center;}
+  .stat-num{font-family:'Aref Ruqaa',serif;font-size:38px;color:var(--rose);font-weight:bold;margin-bottom:4px;}
+  .stat-label{font-size:15px;color:var(--wine);font-weight:700;}
+
+  /* ---------- SECTION 16: WISH CANDLE (شمعة الأمنيات) ---------- */
+  .candle-section{background:var(--wine);color:#fff;}
+  .candle-section .eyebrow{color:var(--gold);}
+  .candle-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;}
+  .candle-box{background:rgba(255,255,255,.06);border:1.5px solid var(--gold);border-radius:24px;padding:36px 24px;max-width:540px;width:100%;backdrop-filter:blur(8px);text-align:center;}
+  .candle-icon{font-size:64px;margin-bottom:14px;cursor:pointer;transition:transform .3s ease;}
+  .candle-icon:hover{transform:scale(1.15);}
+  .candle-btn{background:var(--gold);color:var(--wine-dark);border:none;padding:12px 28px;border-radius:30px;font-family:'Tajawal';font-weight:900;font-size:16px;cursor:pointer;transition:all .3s;}
+  .candle-btn:hover{background:#fff;color:var(--rose);}
+  .candle-text{margin-top:20px;font-family:'Aref Ruqaa',serif;font-size:24px;color:var(--blush);min-height:50px;line-height:1.7;}
+
+  /* ---------- NEW SECTION 17: CHAT SIMULATION (شات المحادثة التفاعلي) ---------- */
+  .chat-sim-section{background:var(--cream);}
+  .chat-sim-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .chat-box{background:#fff5f7;border-radius:24px;padding:24px 18px;max-width:520px;width:100%;box-shadow:0 16px 40px rgba(92,14,36,.12);border:2px solid var(--blush);text-align:right;}
+  .chat-header{background:var(--wine);color:#fff;padding:14px 18px;border-radius:14px;display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .chat-avatar{width:42px;height:42px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;}
+  .chat-name{font-weight:bold;font-size:16px;}
+  .chat-messages{display:flex;flex-direction:column;gap:12px;max-height:300px;overflow-y:auto;padding-right:6px;}
+  .msg-bubble{max-width:80%;padding:10px 14px;border-radius:12px;font-size:15px;line-height:1.6;position:relative;}
+  .msg-left{background:#fff;align-self:flex-start;color:#333;border-bottom-left-radius:2px;border:1px solid var(--blush);}
+  .msg-right{background:var(--blush);align-self:flex-end;color:var(--wine-dark);border-bottom-right-radius:2px;}
+  .chat-btn-wrap{margin-top:20px;text-align:center;}
+  .chat-sim-btn{background:var(--wine);color:#fff;border:none;padding:12px 26px;border-radius:30px;font-family:'Tajawal';font-weight:700;font-size:15px;cursor:pointer;transition:all .3s;}
+  .chat-sim-btn:hover{background:var(--rose);}
+
+
+  /* ---------- NEW SECTION 19: LATE NIGHT CALL (مكالمات الليل) ---------- */
+  .call-section{background:var(--wine-dark);color:#fff;}
+  .call-section .eyebrow{color:var(--gold);}
+  .call-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;}
+  .call-box{background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(200,30,69,.2));border:2px solid var(--rose);border-radius:24px;padding:36px 24px;max-width:540px;width:100%;text-align:center;}
+  .call-status{font-family:'Aref Ruqaa',serif;font-size:28px;color:var(--gold);margin-bottom:16px;}
+  .call-icon-wrap{width:90px;height:90px;border-radius:50%;background:var(--rose);color:#fff;display:flex;align-items:center;justify-content:center;font-size:40px;margin:0 auto 20px;animation:pulse 2s infinite;cursor:pointer;}
+  .call-note{font-size:16px;color:#fff;line-height:1.8;min-height:60px;}
+
+  /* ---------- NEW SECTION 20: TRUTH OR DARE (لعبة الصراحة مع محمود) ---------- */
+  .truth-section{background:var(--blush);}
+  .truth-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .truth-box{background:#fff;border-radius:24px;padding:36px 26px;max-width:600px;width:100%;box-shadow:0 14px 36px rgba(92,14,36,.12);text-align:center;}
+  .truth-btn{background:var(--wine);color:#fff;border:none;padding:14px 32px;border-radius:35px;font-family:'Tajawal';font-weight:700;font-size:16px;cursor:pointer;transition:all .3s ease;}
+  .truth-btn:hover{background:var(--rose);transform:scale(1.04);}
+  .truth-text{margin-top:24px;font-family:'Aref Ruqaa',serif;font-size:23px;color:var(--wine);min-height:80px;line-height:1.8;}
+
+  /* ---------- NEW SECTION 21: LOVE LOCK (قفل الحب الأبدي) ---------- */
+  .lock-section{background:var(--cream);}
+  .lock-section h2{font-size:clamp(32px,5.5vw,52px);color:var(--wine);margin-bottom:12px;}
+  .lock-box{background:#fff;border-radius:24px;padding:40px 28px;max-width:540px;width:100%;box-shadow:0 16px 40px rgba(92,14,36,.12);border:1px solid var(--blush);text-align:center;}
+  .lock-icon{font-size:72px;margin-bottom:16px;cursor:pointer;transition:transform .3s;}
+  .lock-icon:hover{transform:scale(1.1);}
+  .lock-btn{background:var(--rose);color:#fff;border:none;padding:14px 34px;border-radius:35px;font-family:'Tajawal';font-weight:900;font-size:17px;cursor:pointer;transition:all .3s ease;}
+  .lock-btn:hover{background:var(--wine);}
+  .lock-text{margin-top:20px;font-family:'Aref Ruqaa',serif;font-size:25px;color:var(--rose);min-height:50px;}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline-section{background:var(--cream);}
+  .timeline-section h2{color:var(--wine);font-size:clamp(32px,5.5vw,52px);margin-bottom:10px;}
+  .timeline{position:relative;max-width:640px;width:100%;}
+  .timeline::before{content:'';position:absolute;top:0;bottom:0;right:50%;width:2px;background:var(--rose);opacity:.4;}
+  .t-item{position:relative;width:100%;display:flex;justify-content:flex-end;padding:26px 0;opacity:0;transform:translateY(20px) scale(.9);transition:opacity .7s ease, transform .7s ease;}
+  .t-item.visible{opacity:1;transform:translateY(0) scale(1);}
+  .t-item:nth-child(even){justify-content:flex-start;}
+  .t-card{background:#fff;border-radius:14px;padding:20px 22px;max-width:270px;box-shadow:0 10px 26px rgba(92,14,36,.1);text-align:right;}
+  .t-item:nth-child(even) .t-card{text-align:left;}
+  .t-card .t-title{font-family:'Aref Ruqaa',serif;color:var(--rose);font-size:20px;margin-bottom:6px;}
+  .t-card p{font-size:15px;line-height:1.8;color:#4a1f2b;}
+  .t-dot{position:absolute;top:30px;right:calc(50% - 6px);width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--cream), 0 0 0 6px var(--rose);}
+
+  /* ---------- GALLERY ---------- */
+  .gallery-section{background:var(--blush);}
+  .gallery-section h2{color:var(--wine);font-size:clamp(32px,5.5vw,50px);margin-bottom:10px;}
+  .single-photo-wrap{max-width:440px;width:100%;margin:0 auto;}
+  .polaroid-single{background:#fff;padding:16px 16px 28px;border-radius:16px;box-shadow:0 20px 50px rgba(92,14,36,.22);border:1px solid var(--blush);transition:transform .4s ease, box-shadow .4s ease;cursor:pointer;}
+  .polaroid-single:hover{transform:scale(1.03) rotate(-1deg);box-shadow:0 28px 60px rgba(92,14,36,.32);}
+  .polaroid-img-box{width:100%;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.15);border:3px solid var(--cream);}
+  .polaroid-img-box img{width:100%;height:auto;display:block;object-fit:cover;}
+  .polaroid-cap-single{margin-top:16px;font-family:'Aref Ruqaa',serif;color:var(--wine);font-size:24px;text-align:center;line-height:1.6;}
+  .polaroid-sub-single{font-size:15px;color:var(--rose);text-align:center;margin-top:4px;font-weight:bold;}
+
+  /* ---------- SCRATCH CARD ---------- */
+  .scratch-section{background:var(--wine-dark);color:#fff;}
+  .scratch-section .eyebrow{color:var(--gold);}
+  .scratch-section h2{font-size:clamp(30px,5vw,46px);margin-bottom:8px;}
+  .scratch-wrap{position:relative;width:min(90vw,420px);height:220px;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);margin-top:20px;}
+  .scratch-message{position:absolute;inset:0;background:linear-gradient(135deg,var(--rose),var(--gold));display:flex;align-items:center;justify-content:center;padding:22px;text-align:center;font-family:'Aref Ruqaa',serif;font-size:23px;color:#fff;line-height:1.6;}
+  #scratchCanvas{position:absolute;inset:0;cursor:grab;touch-action:none;}
+  .scratch-hint{margin-top:16px;font-size:14px;color:var(--gold);letter-spacing:1px;}
+
+  /* ---------- SURPRISE / PROMISES ---------- */
+  .surprise-section{background:linear-gradient(160deg,var(--wine),var(--wine-dark));color:#fff;}
+  .surprise-section .eyebrow{color:var(--gold);}
+  .surprise-section h2{font-size:clamp(30px,5vw,46px);margin-bottom:26px;}
+  .heart-btn{background:none;border:2px solid var(--rose);color:#fff;font-size:40px;width:100px;height:100px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .3s ease, background .3s ease;animation:pulse 2.4s infinite;}
+  .heart-btn:hover{transform:scale(1.08);}
+  .heart-btn.clicked{background:var(--rose);animation:none;}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,30,69,.5);}50%{box-shadow:0 0 0 18px rgba(200,30,69,0);}}
+  .promises{margin-top:40px;max-width:540px;display:flex;flex-direction:column;gap:16px;}
+  .promise-line{background:rgba(255,255,255,.08);border-right:4px solid var(--gold);padding:16px 20px;border-radius:10px;text-align:right;font-size:16.5px;line-height:1.9;opacity:0;transform:translateX(-16px);transition:opacity .6s ease, transform .6s ease;}
+  .promise-line.show{opacity:1;transform:translateX(0);}
+  /* ---------- THURSDAY NIGHT SPECIAL ---------- */
+  .thursday-section{background:linear-gradient(160deg, var(--wine-dark), var(--wine), #2a0510);color:#fff;position:relative;overflow:hidden;}
+  .thursday-section .eyebrow{color:var(--gold);}
+  .thursday-section h2{font-size:clamp(34px,6vw,56px);margin-bottom:14px;color:#fff;}
+  .thursday-card{background:rgba(255,255,255,.07);border:2px solid var(--gold);border-radius:26px;padding:40px 30px;max-width:680px;width:100%;backdrop-filter:blur(10px);box-shadow:0 20px 60px rgba(0,0,0,.4);text-align:center;position:relative;}
+  .thursday-badge{display:inline-block;background:linear-gradient(135deg,var(--rose),var(--wine));color:#fff;padding:8px 18px;border-radius:20px;font-weight:bold;font-size:15px;margin:6px;border:1px solid var(--gold);}
+  .thursday-title{font-family:'Aref Ruqaa',serif;font-size:30px;color:var(--gold);margin:18px 0 12px;}
+  .thursday-text{font-size:17.5px;line-height:2.0;color:var(--blush);margin-bottom:24px;text-align:right;}
+  .thursday-rules{background:rgba(200,30,69,.25);border-right:4px solid var(--gold);padding:18px 22px;border-radius:14px;text-align:right;margin-bottom:26px;}
+  .thursday-rules p{font-size:16.5px;line-height:1.9;color:#fff;margin-bottom:8px;}
+  .thursday-rules p:last-child{margin-bottom:0;}
+  .thursday-btn{background:linear-gradient(135deg,var(--gold),#e0b638);color:var(--wine-dark);border:none;padding:16px 38px;border-radius:40px;font-family:'Tajawal';font-weight:900;font-size:18px;cursor:pointer;transition:all .3s ease;box-shadow:0 10px 30px rgba(201,162,39,.35);}
+  .thursday-btn:hover{transform:scale(1.05);background:#fff;color:var(--rose);}
+  .thursday-btn.accepted{background:var(--rose);color:#fff;cursor:default;}
+  .thursday-res{margin-top:20px;font-family:'Aref Ruqaa',serif;font-size:24px;color:var(--gold);min-height:40px;opacity:0;transition:opacity .5s ease;}
+  .thursday-res.show{opacity:1;}
+
+  /* ---------- PASSION & INTIMACY SECTION ---------- */
+  .passion-section{background:linear-gradient(135deg, #3a0818, var(--wine), #5c0e24);color:#fff;}
+  .passion-section .eyebrow{color:var(--gold);}
+  .passion-section h2{font-size:clamp(32px,5.5vw,52px);margin-bottom:12px;color:#fff;}
+  .passion-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:980px;width:100%;}
+  .passion-card{background:rgba(255,255,255,.08);border:1.5px solid var(--rose);border-radius:22px;padding:30px 22px;text-align:right;cursor:pointer;transition:all .4s ease;box-shadow:0 12px 30px rgba(0,0,0,.3);backdrop-filter:blur(6px);}
+  .passion-card:hover{background:linear-gradient(135deg,rgba(200,30,69,.4),rgba(92,14,36,.6));border-color:var(--gold);transform:translateY(-8px) scale(1.02);box-shadow:0 20px 45px rgba(200,30,69,.3);}
+  .passion-icon{font-size:42px;margin-bottom:12px;text-align:center;}
+  .passion-title{font-family:'Aref Ruqaa',serif;font-size:24px;color:var(--gold);margin-bottom:10px;text-align:center;}
+  .passion-desc{font-size:16px;line-height:1.9;color:var(--blush);}
+
+  /* ---------- CLOSING ---------- */
+  .closing-section{background:var(--cream);position:relative;overflow:hidden;}
+  .closing-section h2{font-size:clamp(22px,3.5vw,28px);color:#7a3a44;font-weight:400;margin-bottom:8px;}
+  .closing-big{font-family:'Aref Ruqaa',serif;font-size:clamp(54px,12vw,140px);color:var(--rose);line-height:1;margin:14px 0;}
+  .fireworks-btn{margin-top:26px;background:var(--wine);color:#fff;border:none;padding:16px 38px;border-radius:40px;font-family:'Tajawal';font-size:17px;font-weight:700;cursor:pointer;box-shadow:0 12px 30px rgba(92,14,36,.3);transition:all .3s Ease;}
+  .fireworks-btn:hover{transform:translateY(-3px) scale(1.03);background:var(--rose);}
+  #fireCanvas{position:fixed;inset:0;pointer-events:none;z-index:600;}
+  .closing-names{margin-top:30px;font-size:20px;color:var(--wine);letter-spacing:2px;font-weight:bold;}
+  .closing-note{margin-top:50px;font-size:14.5px;color:#b98a93;max-width:440px;line-height:1.8;}
+
+  /* ---------- 100% RESPONSIVE MOBILE & TABLET STYLING ---------- */
+  @media (prefers-reduced-motion: reduce){*{animation:none !important; transition:none !important;}}
+
+  @media (max-width: 768px) {
+    section { padding: 60px 16px !important; width: 100% !important; max-width: 100vw !important; overflow-x: hidden !important; }
+    h2 { font-size: clamp(26px, 6.5vw, 42px) !important; margin-bottom: 12px !important; line-height: 1.3 !important; }
+    .eyebrow { font-size: 13.5px !important; letter-spacing: 1px !important; margin-bottom: 12px !important; }
+    .section-lead { font-size: 15px !important; margin-bottom: 28px !important; padding: 0 6px !important; line-height: 1.75 !important; }
+    
+    /* Hero */
+    .hero h1 { font-size: clamp(38px, 10vw, 76px) !important; margin-bottom: 16px !important; }
+    .hero .typewriter { font-size: clamp(15px, 4vw, 19px) !important; padding-left: 6px !important; min-height: auto !important; }
+    
+    /* Letter & Envelope */
+    .envelope-wrap { width: min(92vw, 380px) !important; margin-bottom: 16px !important; }
+    .envelope { height: 210px !important; }
+    .letter-paper { width: 92vw !important; max-width: 540px !important; padding: 0 18px !important; }
+    .letter-paper.show { padding: 26px 18px !important; margin-top: 24px !important; }
+    .letter-paper p { font-size: 15.5px !important; line-height: 1.9 !important; margin-bottom: 14px !important; }
+    .letter-signature { font-size: 25px !important; margin-top: 10px !important; }
+
+    /* Grids Auto Responsiveness */
+    .reasons-grid, .vouchers-grid, .confess-grid, .dreams-container, 
+    .radar-grid, .map-grid, .week-grid, .stats-grid, .passion-grid { 
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)) !important; 
+      gap: 16px !important; 
+      width: 100% !important; 
+    }
+    
+    /* Cards & Modules Containers */
+    .quiz-card, .meter-card, .kiss-box, .chat-box, .call-box, 
+    .truth-box, .lock-box, .wheel-box, .quote-box, .candle-box, 
+    .juke-player-card, .thursday-card { 
+      width: 100% !important; 
+      max-width: min(94vw, 560px) !important; 
+      padding: 24px 16px !important; 
+      border-radius: 18px !important; 
+    }
+
+    /* Quiz */
+    .quiz-q { font-size: 21px !important; }
+    .quiz-opt { font-size: 15px !important; padding: 12px 14px !important; }
+
+    /* Thursday Night Card */
+    .thursday-card { padding: 26px 16px !important; }
+    .thursday-title { font-size: 23px !important; margin: 12px 0 10px !important; }
+    .thursday-text { font-size: 15px !important; line-height: 1.85 !important; }
+    .thursday-rules { padding: 14px 14px !important; }
+    .thursday-rules p { font-size: 14.5px !important; line-height: 1.8 !important; }
+    .thursday-badge { font-size: 13px !important; padding: 6px 12px !important; margin: 3px !important; }
+
+    /* Timeline Mobile Alignment */
+    .timeline::before { right: 16px !important; }
+    .t-item, .t-item:nth-child(even) { 
+      justify-content: flex-start !important; 
+      padding-right: 36px !important; 
+      padding-left: 0 !important; 
+      width: 100% !important;
+    }
+    .t-dot { right: 10px !important; }
+    .t-card, .t-item:nth-child(even) .t-card { 
+      max-width: 100% !important; 
+      text-align: right !important; 
+      padding: 16px 18px !important;
+    }
+
+    /* Scratch Card & Single Photo */
+    .scratch-wrap { width: min(92vw, 380px) !important; height: 190px !important; }
+    .scratch-message { font-size: 19px !important; padding: 16px !important; }
+    .single-photo-wrap { width: min(92vw, 400px) !important; }
+    .polaroid-single { padding: 12px 12px 20px !important; }
+    .polaroid-cap-single { font-size: 20px !important; margin-top: 12px !important; }
+
+    /* Global Buttons Fluidity */
+    .meter-btn, .quiz-btn, .voucher-btn, .radar-btn, .quote-gen-btn, 
+    .candle-btn, .chat-sim-btn, .truth-btn, .lock-btn, .wheel-spinner-btn, 
+    .juke-play-btn, .thursday-btn, .fireworks-btn { 
+      white-space: normal !important; 
+      max-width: 100% !important; 
+      font-size: 15px !important; 
+      padding: 12px 22px !important; 
+      line-height: 1.4 !important;
+    }
+
+    /* Closing */
+    .closing-big { font-size: clamp(38px, 10vw, 84px) !important; }
+    .closing-note { font-size: 13.5px !important; padding: 0 10px !important; }
+  }
+
+  @media (max-width: 380px) {
+    section { padding: 48px 12px !important; }
+    h2 { font-size: 24px !important; }
+    .envelope { height: 180px !important; }
+    .kiss-btn { width: 75px !important; height: 75px !important; font-size: 34px !important; }
+    .kiss-count-display { font-size: 44px !important; }
+    .thursday-btn, .fireworks-btn { font-size: 14px !important; padding: 12px 18px !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="preloader">
+  <svg viewBox="0 0 32 29"><path d="M23.6 0c-3.4 0-6.3 2-7.6 5C14.7 2 11.8 0 8.4 0 3.8 0 0 3.8 0 8.4c0 8.5 15 17.6 16 20.6 1-3 16-12.1 16-20.6C32 3.8 28.2 0 23.6 0z"/></svg>
+  <span>عم بنجهّزلك شي حلو من القلب... 🌹</span>
+</div>
+
+<div id="progressBar"><div id="progressFill"></div></div>
+<div class="hearts-bg" id="heartsBg"></div>
+<canvas id="fireCanvas"></canvas>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">إلى أحلى آية بالدنيا 🌹</div>
+  <h1>أنا آسف يا روحي</h1>
+  <p class="typewriter" id="typewriter"></p>
+  <div class="scroll-hint">انزلي معي لتحت 💖<br>↓</div>
+</section>
+
+<!-- LETTER -->
+<section class="letter-section">
+  <div class="eyebrow">رسالة من جوّات القلب</div>
+  <h2>افتحي الظرف 💌</h2>
+  <div class="envelope-wrap" id="envelopeWrap">
+    <div class="envelope"><div class="envelope-seal">💌</div><div class="envelope-flap"></div></div>
+  </div>
+  <div class="envelope-hint">دوسي على الظرف لتقري الحكي</div>
+  <div class="letter-paper" id="letterPaper">
+    <p>يا عيون آية وسكر حياتي،</p>
+    <p>بعرف إني زعّلتك، وحتى لو المسافة بيننا والحكي كله عالتلفون والرسايل، زعلتك عقلبي ثقيلة كتير... قعدتنا المرة كانت أحلى ساعة بعمري كله، وكل مسج وكلمة منك بتردلي الروح.</p>
+    <p>أنا مش كامل، ومرات بغلط بطريقة حكيي أو بتصرف بدون ما أفكّر، بس والله ما بكون قصدي أجرحك أو أنكد عليكي.</p>
+    <p>اللي متأكد منه : قلبي كله إلك، وما رح يهدالي بال ولا يرتاح بالي لحد ما أشوف ضحكتك اللي بتاخد العقل رجعت نورت وجهك.</p>
+    <p class="letter-signature">مشتاقلك قد الدنيا، وآسف من كل قلبي — محمود ❤️</p>
+  </div>
+</section>
+
+<!-- REASONS (flip) -->
+<section class="reasons-section">
+  <div class="eyebrow">عشان تكوني عارفة بس</div>
+  <h2>ليش بموت فيكي يا آية ❤️</h2>
+  <p class="section-lead">اكبتي على أي كرت حتى يقلب وتشوفيش شو خبيتلِك</p>
+  <div class="reasons-grid" id="reasonsGrid">
+    <div class="flip-card"><div class="flip-inner"><div class="flip-front"><span class="icon">😄</span><span>ضحكتك بالمكالمة</span></div><div class="flip-back"><p>صوتك وضحكتك بالمكالمات بتخليني أبتسم لحالي كأني قاعد معك!</p></div></div></div>
+    <div class="flip-card"><div class="flip-inner"><div class="flip-front"><span class="icon">👀</span><span>قعدتنا الحلوة</span></div><div class="flip-back"><p>المرة الوحيدة اللي قعدنا فيها سوا انحفرت بقلبي وما بتروح من بالي</p></div></div></div>
+    <div class="flip-card"><div class="flip-inner"><div class="flip-front"><span class="icon">💬</span><span>رسايلك الحلوة</span></div><div class="flip-back"><p>كل مسج صغيرة بتبعتيها، بقراها 100 مرة وبحفظها بقلبي</p></div></div></div>
+    <div class="flip-card"><div class="flip-inner"><div class="flip-front"><span class="icon">🌙</span><span>مكالمات الليل</span></div><div class="flip-back"><p>الساعات اللي بنحكي فيها عالتلفون بالليل وبننسى الوقت والتعب</p></div></div></div>
+    <div class="flip-card"><div class="flip-inner"><div class="flip-front"><span class="icon">🎯</span><span>صراحتك بالشات</span></div><div class="flip-back"><p>بتصارحيني دايماً برسايلك بدون فلاتر، وهاد أكتر شي بحترمه وبحبه فيكي</p></div></div></div>
+    <div class="flip-card"><div class="flip-inner"><div class="flip-front"><span class="icon">😂</span><span>هبلك ونكتك</span></div><div class="flip-back"><p>عندك نكت ومسجات بيجننوا بالشات، وبضل أذكر كلامك وأضحك من قلبي</p></div></div></div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz-section">
+  <div class="eyebrow">مفاجأة وامتحان خفيف</div>
+  <h2>امتحان محمود لعيون آية 📝</h2>
+  <p class="section-lead">مش امتحان دراسة، هاد امتحان دلع وضحك لنسرق منك ابتسامة 😌</p>
+  <div class="quiz-card" id="quizCard">
+    <div class="quiz-q" id="quizQ">شو أكتر شي بموت عليه فيكي؟</div>
+    <div class="quiz-options" id="quizOptions">
+      <button class="quiz-opt">عيونك 👁️</button>
+      <button class="quiz-opt">شعرك 💇‍♀️</button>
+      <button class="quiz-opt">صدرك 💖</button>
+      <button class="quiz-opt">كل شي 🔥❤️</button>
+    </div>
+    <div class="quiz-response" id="quizResponse"></div>
+  </div>
+  <div class="quiz-nav">
+    <button class="quiz-btn" id="quizNext" disabled>السؤال التالي ➔</button>
+    <span></span>
+  </div>
+</section>
+
+<!-- SECTION 1: LOVE CODEX (دستور غرامنا الأونلاين) -->
+<section class="codex-section">
+  <div class="eyebrow">شروط وقوانين رسمية</div>
+  <h2>دستور غرامنا الخاص 📜</h2>
+  <p class="section-lead">قوانين مشددة وممنوع اختراقها بين محمود وآية، اكبسي على القانون للالتزام به 💖</p>
+  <div class="codex-list">
+    <div class="codex-item" onclick="toggleCodex(this)">
+      <div class="codex-text">
+        <div class="codex-title">القانون الأول: ممنوع يطول الزعل ⏱️</div>
+        <div class="codex-desc">زعل آية ممنوع يستمر أكتر من 5 دقائق، وبعدها إجباري مكالمة ودلع.</div>
+      </div>
+      <div class="codex-badge">❤️</div>
+    </div>
+    <div class="codex-item" onclick="toggleCodex(this)">
+      <div class="codex-text">
+        <div class="codex-title">القانون الثاني: قعدتنا الجاي 🎓</div>
+        <div class="codex-desc">قعدتنا الجاي إجباري فيها حضن وبوسات لعيونك بدون أي خجل أو اعتراض!</div>
+      </div>
+      <div class="codex-badge">❤️</div>
+    </div>
+    <div class="codex-item" onclick="toggleCodex(this)">
+      <div class="codex-text">
+        <div class="codex-title">القانون الثالث: آية صح دايماً 👑</div>
+        <div class="codex-desc">آية دايماً على حق برسايلها وحكيها... وحتى لو كانت غلطانة، بضل آية صح ومحمود غلطان!</div>
+      </div>
+      <div class="codex-badge">❤️</div>
+    </div>
+    <div class="codex-item" onclick="toggleCodex(this)">
+      <div class="codex-text">
+        <div class="codex-title">القانون الرابع: حل الزعل بمكالمة دافية 📞</div>
+        <div class="codex-desc">أي نكد أو زعل بالرسايل بنحل فوراً بمكالمة دافية من محمود نرجع نضحك فيها.</div>
+      </div>
+      <div class="codex-badge">❤️</div>
+    </div>
+    <div class="codex-item" onclick="toggleCodex(this)">
+      <div class="codex-text">
+        <div class="codex-title">القانون الخامس: الدلع 24 ساعة 📱</div>
+        <div class="codex-desc">محمود إله كل الحق يدلع آية ويموت فيها بالرسايل والمكالمات وبكرة بالحقيقة للأبد.</div>
+      </div>
+      <div class="codex-badge">❤️</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: VOUCHERS (كوبونات الدلع والصلحة) -->
+<section class="vouchers-section">
+  <div class="eyebrow">مخصصة إلك بالحب</div>
+  <h2>كوبونات الدلع والصلحة 🎟️</h2>
+  <p class="section-lead">كوبونات حصرية لآية بس! اكبسي على الكوبون حتى تصرفيه هسا 🎁</p>
+  <div class="vouchers-grid">
+    <div class="voucher-card">
+      <div class="voucher-icon">📞</div>
+      <div class="voucher-title">كوبون مكالمة ليلية مفتوحة</div>
+      <div class="voucher-desc">سهرة عالتلفون بدون وقت محدد لحد ما ننام سوا وعم نسمع أنفاس بعض.</div>
+      <button class="voucher-btn" onclick="redeemVoucher(this)">استخدام الكوبون 🎟️</button>
+    </div>
+    <div class="voucher-card">
+      <div class="voucher-icon">💬</div>
+      <div class="voucher-title">كوبون كلام حنون وحكي غزل</div>
+      <div class="voucher-desc">كلام دافي وغزل حنون بصوت محمود وهو عم يتغزل بعيونك وصوتك وشعرك.</div>
+      <button class="voucher-btn" onclick="redeemVoucher(this)">استخدام الكوبون 🎟️</button>
+    </div>
+    <div class="voucher-card">
+      <div class="voucher-icon">❤️</div>
+      <div class="voucher-title">كوبون صلح وضحكة حلوة</div>
+      <div class="voucher-desc">صلحة سريعة وبدون أي نكد لحد ما ترجع ضحكتك تنوّر وجهك.</div>
+      <button class="voucher-btn" onclick="redeemVoucher(this)">استخدام الكوبون 🎟️</button>
+    </div>
+    <div class="voucher-card">
+      <div class="voucher-icon">💬</div>
+      <div class="voucher-title">كوبون ليلة اعترافات وحكي حلو</div>
+      <div class="voucher-desc">سهرة خاصة نحكي فيها عن كل الأسرار والمشاعر الدافية بقلبنا.</div>
+      <button class="voucher-btn" onclick="redeemVoucher(this)">استخدام الكوبون 🎟️</button>
+    </div>
+    <div class="voucher-card">
+      <div class="voucher-icon">🎵</div>
+      <div class="voucher-title">كوبون إهداء أغنية وسهرة رايقة</div>
+      <div class="voucher-desc">أغنية حنونة بنسمعها عالتلفون سوا ونعيش كلماتها لحظة بلحظة.</div>
+      <button class="voucher-btn" onclick="redeemVoucher(this)">استخدام الكوبون 🎟️</button>
+    </div>
+    <div class="voucher-card">
+      <div class="voucher-icon">👑</div>
+      <div class="voucher-title">كوبون دلال وحظر النكد 24 ساعة</div>
+      <div class="voucher-desc">يوم كامل تتدلعي فيه وتتشرّطي ومحمود يلبّي كل أوامرك بدون تردد.</div>
+      <button class="voucher-btn" onclick="redeemVoucher(this)">استخدام الكوبون 🎟️</button>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: LOVE METER (قياس غلاوتك) -->
+<section class="meter-section">
+  <div class="eyebrow">فحص النبض والغلاوة عبر الشاشات</div>
+  <h2>قديش محمود بيحب آية؟ 💓</h2>
+  <p class="section-lead">اكبتي على الزر وشوفي جهاز فحص الحب أونلاين شو رح يطلع نتيجة 🔥</p>
+  <div class="meter-card">
+    <div class="meter-display">
+      <div class="meter-num" id="meterNum">0%</div>
+      <div class="meter-unit">مستوى العشق</div>
+    </div>
+    <div class="meter-bar-outer">
+      <div class="meter-bar-inner" id="meterBar"></div>
+    </div>
+    <button class="meter-btn" id="meterBtn" onclick="runLoveMeter()">احسبي النبض والحب 🔥</button>
+    <div class="meter-result" id="meterResult">النتيجة: الحب تجاوز كل المسافات والأجهزة! بموت فيكي للما لا نهاية ❤️🔥</div>
+  </div>
+</section>
+
+<!-- SECTION 4: CONFESSIONS (اعترافات سرية) -->
+<section class="confess-section">
+  <div class="eyebrow">اعترافات من جوّات القلب</div>
+  <h2>أشياء أول مرة بعترفلك فيها 🤫</h2>
+  <p class="section-lead">اكبسي على الكرت حتى ينفتح وتشوفي شو مخبيلِك بقلبي</p>
+  <div class="confess-grid">
+    <div class="confess-card" onclick="revealConfess(this)">
+      <div class="icon">🎓</div>
+      <div class="teaser">أول مرة قعدنا سوا...</div>
+      <div class="secret">حسيت قلبي عم يدق 200 نبضة وميت خوف وخجل، وعرفت إنك أنتِ أماني وحبي الأول والأخير اللي ما في منه بالدنيا.</div>
+    </div>
+    <div class="confess-card" onclick="revealConfess(this)">
+      <div class="icon">📞</div>
+      <div class="teaser">لما نكون عم نحكي عالتلفون بالليل...</div>
+      <div class="secret">بتمنى الوقت يوقف وما يخلص الحكي، وصوتك الهادي وهو عم يحكي بيخليني أنسى كل تعب أو ضغط بالكون.</div>
+    </div>
+    <div class="confess-card" onclick="revealConfess(this)">
+      <div class="icon">📱</div>
+      <div class="teaser">لما تكوني زعلانة مني بالرسايل...</div>
+      <div class="secret">الدنيا كلها بتظلم بعيني، وما بقدر أركز بشيء، وبضل أطلع على التلفون مستني رسالة منك تردلي الروح.</div>
+    </div>
+    <div class="confess-card" onclick="revealConfess(this)">
+      <div class="icon">👑</div>
+      <div class="teaser">حقيقتي المعترفة أمامك...</div>
+      <div class="secret">أنا بعشق كل تفصيلة فيكي... من عيونك لشعرك لصدرك لصوتك الدافئ! أنتِ مميزة وما في من جمالك ورقتك.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: DREAMS (أحلامنا سوا) -->
+<section class="dreams-section">
+  <div class="eyebrow">بكرة وأيامه الحلوة</div>
+  <h2>أحلام رح نعيشها سوا 🌌</h2>
+  <p class="section-lead">أشياء وأيام حلوة مستني الأيام تجمعنا فيها وتكمل فرحتنا</p>
+  <div class="dreams-container">
+    <div class="dream-box">
+      <div class="dream-emoji">🎓</div>
+      <div class="dream-title">قعدة ثانية سوا</div>
+      <div class="dream-desc">نقعد فيها عمهلنا براحتنا بدون خوف أو عجلة ونمسك إيدين بعض.</div>
+    </div>
+    <div class="dream-box">
+      <div class="dream-emoji">📱</div>
+      <div class="dream-title">سهرة فيديو كول</div>
+      <div class="dream-desc">نقعد نحكي ونطلع ببعض ونضحك ونشوف عيونك الحلوين عالشاشة.</div>
+    </div>
+    <div class="dream-box">
+      <div class="dream-emoji">✨</div>
+      <div class="dream-title">أول مشوار بالحقيقة</div>
+      <div class="dream-desc">اليوم اللي رح نقدر نلتقي فيه ونطلع سوا ونمشي ونعيش أحلى لحظات.</div>
+    </div>
+    <div class="dream-box">
+      <div class="dream-emoji">🏡</div>
+      <div class="dream-title">عش الزوجية الدافي</div>
+      <div class="dream-desc">بيتنا الصغير اللي رح يجمعنا تحت سقف واحد ونخلص من شاشات التلفون.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: KISS & HUG BANK (بنك البوسات الإلكتروني) -->
+<section class="kiss-section">
+  <div class="eyebrow">رصيدك عالي أونلاين</div>
+  <h2>بنك البوسات والأحضان 💋</h2>
+  <p class="section-lead">اجمعي بوسات لعيونك وراسك وصدرك أونلاين لحتى تصرفيهم بالحقيقة بس نلتقي 😘❤️</p>
+  <div class="kiss-box">
+    <button class="kiss-btn" id="kissBtn" onclick="addKiss()">💋</button>
+    <div class="kiss-count-display" id="kissCount">0</div>
+    <div class="kiss-note" id="kissNote">اكبتي فوق واجمعي بوسات أونلاين لعيونك الحلوين 😘</div>
+  </div>
+</section>
+
+<!-- NEW SECTION 17: CHAT SIMULATION (شات المحادثة التفاعلي) -->
+<section class="chat-sim-section">
+  <div class="eyebrow">محادثتنا الخاصة</div>
+  <h2>شاشة المحادثة التفاعلية 💬</h2>
+  <p class="section-lead">اكبسي الزر حتى تنزل مسجات حب جديدة بين محمود وآية 💖</p>
+  <div class="chat-box">
+    <div class="chat-header">
+      <div class="chat-avatar">👑</div>
+      <div class="chat-name">آية ❤️ (روحي)</div>
+    </div>
+    <div class="chat-messages" id="chatMsgBox">
+      <div class="msg-bubble msg-left">محمود: يا عيون محمود... اشتقتلك قد المسافات وأكتر ❤️</div>
+      <div class="msg-bubble msg-right">آية: وأنا مشتاقتلك أكتر... متى بدنا نرجع نقعد سوا؟ 🥺</div>
+    </div>
+    <div class="chat-btn-wrap">
+      <button class="chat-sim-btn" onclick="sendNextChatMsg()">إرسال مسج جديدة 💬✨</button>
+    </div>
+  </div>
+</section>
+
+<!-- NEW SECTION 19: LATE NIGHT CALL (شاشة مكالمة الليل) -->
+<section class="call-section">
+  <div class="eyebrow">مكالمات السهر</div>
+  <h2>شاشة مكالمات الليل والـ Video Call 📞</h2>
+  <p class="section-lead">اتصلي أو ردي عالمكالمة وشوفي الحكي اللي بيطلع بالليل 🌙</p>
+  <div class="call-box">
+    <div class="call-status" id="callStatusText">مكالمة واردة من محمود ❤️...</div>
+    <div class="call-icon-wrap" onclick="answerCall()">📞</div>
+    <div class="call-note" id="callNoteText">اكبسي للسماعة حتى تردي عالمكالمة 💖</div>
+  </div>
+</section>
+
+<!-- NEW SECTION 20: TRUTH OR DARE (لعبة الصراحة مع محمود) -->
+<section class="truth-section">
+  <div class="eyebrow">صراحة بدون خجل</div>
+  <h2>لعبة أسئلة الصراحة مع محمود 🎯</h2>
+  <p class="section-lead">اسألي محمود أي سؤال صريح وشوفي الجواب المباشر والطالع من القلب 😌</p>
+  <div class="truth-box">
+    <button class="truth-btn" onclick="askTruthQuestion()">اسألي محمود سؤال صريح 🎯✨</button>
+    <div class="truth-text" id="truthResultText">اكبسي الزر حتى يظهر السؤال وإجابته الصريحة 💖</div>
+  </div>
+</section>
+
+<!-- NEW SECTION 21: LOVE LOCK (قفل الحب الأبدي) -->
+<section class="lock-section">
+  <div class="eyebrow">ختم العشق الأبدي</div>
+  <h2>قفل الحب الأبدي لآية ومحمود 🔒❤️</h2>
+  <p class="section-lead">اكبسي على القفل حتى ينقفل قلب محمود على اسمك للما لا نهاية ✨</p>
+  <div class="lock-box">
+    <div class="lock-icon" id="lockIcon" onclick="lockLoveLock()">🔓</div>
+    <button class="lock-btn" onclick="lockLoveLock()">اقفلي قفل الحب للأبد 🔒💖</button>
+    <div class="lock-text" id="lockTextText"></div>
+  </div>
+</section>
+
+<!-- SECTION 7: LOVE JUKEBOX (أغنية تامر عاشور - خليني في حضنك) -->
+<section class="jukebox-section">
+  <div class="eyebrow">أغنيتنا الخاصة 🎵</div>
+  <h2>تامر عاشور — خليني في حضنك 🎧❤️</h2>
+  <p class="section-lead">الأغنية اللي بتذكرني فيكي وبتعبّر عن كل إحساس بقلبي لآية 💖</p>
+  <div class="juke-player-card">
+    <div class="yt-video-wrap">
+      <iframe id="ytPlayer" src="https://www.youtube.com/embed/SKfi0V8NRhQ?enablejsapi=1&autoplay=0&rel=0" title="تامر عاشور - خليني في حضنك" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="song-lyrics-box">
+      <p class="lyric-line">"خليني في حضنك يا حبيبي... ده أنا في حضنك بكون مبسوط" 🌹</p>
+      <p class="lyric-sub">محمود إلك دايماً وبموت فيكي يا عيون محمود ❤️✨</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: RADAR (رادار الغيرة والدلع أونلاين) -->
+<section class="radar-section">
+  <div class="eyebrow">فحص السلوك عالتلفون</div>
+  <h2>رادار الغيرة والدلع أونلاين 📡</h2>
+  <p class="section-lead">شوفي المقاييس شو بتحكي عن محمود وآية أونلاين 😌</p>
+  <div class="radar-grid">
+    <div class="radar-card">
+      <div class="radar-title">غيرة محمود عالتلفون 😤</div>
+      <div class="radar-meter-out"><div class="radar-meter-in" id="jealousMeter"></div></div>
+      <button class="radar-btn" onclick="runJealous()">افحصي الغيرة 🔥</button>
+      <div class="radar-text" id="jealousText"></div>
+    </div>
+    <div class="radar-card">
+      <div class="radar-title">مستوى دلع آية بالشات 👑</div>
+      <div class="radar-meter-out"><div class="radar-meter-in" id="spoilMeter"></div></div>
+      <button class="radar-btn" onclick="runSpoil()">افحصي الدلع ✨</button>
+      <div class="radar-text" id="spoilText"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: DATE BUCKET LIST (أحلام القعدة والجايات) -->
+<section class="dates-section">
+  <div class="eyebrow">خطط للتنفيذ الجاي</div>
+  <h2>أحلام وأشياء مستني نعملها سوا 📝</h2>
+  <p class="section-lead">اكبسي على الشيء حتى نعلمه كحلم جاهز للتنفيذ أول ما نقدر 💖</p>
+  <div class="dates-list">
+    <div class="date-item" onclick="toggleDate(this)">
+      <div class="date-text">🎓 قعدة ثانية نقعد فيها براحتنا ونحكي عن كل شيء بقلبنا.</div>
+      <div class="date-check">✓</div>
+    </div>
+    <div class="date-item" onclick="toggleDate(this)">
+      <div class="date-text">📞 سهرة مكالمة ليلية للصبح ونحن عم نضحك ونحكي.</div>
+      <div class="date-check">✓</div>
+    </div>
+    <div class="date-item" onclick="toggleDate(this)">
+      <div class="date-text">🎵 نسمع أغاني رايقة سوا بالليل ونحس ببعض.</div>
+      <div class="date-check">✓</div>
+    </div>
+    <div class="date-item" onclick="toggleDate(this)">
+      <div class="date-text">👑 يوم كامل دلال بدون أي نكد يفرح قلبك وضحكتك.</div>
+      <div class="date-check">✓</div>
+    </div>
+    <div class="date-item" onclick="toggleDate(this)">
+      <div class="date-text">✨ أول مشوار وسهرة بنطلع فيها سوا بالحقيقة بس ربك ييسرها.</div>
+      <div class="date-check">✓</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10: Q&A ROMANCE (أسئلة وأجوبة) -->
+<section class="qa-section">
+  <div class="eyebrow">إجابات صريحة</div>
+  <h2>أسئلة وأجوبة من القلب 💬</h2>
+  <p class="section-lead">اكبسي على السؤال لتشوفي الجواب الصريح والمباشر</p>
+  <div class="qa-container">
+    <div class="qa-card" onclick="toggleQA(this)">
+      <div class="qa-q"><span>س: كيف حبنا قوي رغم إننا قعدنا بس مرة وحدة والباقي أونلاين؟ 🤔</span><span>▼</span></div>
+      <div class="qa-a">ج: لأن الحب الحقيقي بالقلوب والأرواح مش بالمسافات، وقعدتنا سوا أثبتتلي إنك كل حياتي! ❤️</div>
+    </div>
+    <div class="qa-card" onclick="toggleQA(this)">
+      <div class="qa-q"><span>س: شو أكتر شي بيسعد محمود خلال اليوم؟ 📱</span><span>▼</span></div>
+      <div class="qa-a">ج: لما يوصلني مسج منك وأسمع ضحكتك ونبرة صوتك عالتلفون. 😘</div>
+    </div>
+    <div class="qa-card" onclick="toggleQA(this)">
+      <div class="qa-q"><span>س: شو حلم محمود الأكبر معك؟ 🏡</span><span>▼</span></div>
+      <div class="qa-a">ج: نخلص من شاشات التلفون ونكون سوا تحت سقف واحد بالأمان والعشق للأبد. 💖</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 11: WHEEL OF FORTUNE (دولاب الغزل أونلاين) -->
+<section class="wheel-section">
+  <div class="eyebrow">مفاجآت وحظ عشوائي</div>
+  <h2>عجلة الغزل لآية 🎡</h2>
+  <p class="section-lead">دوسي على الزر وشوفي العجلة شو رح تختارلك مفاجأة أونلاين 💖</p>
+  <div class="wheel-box">
+    <button class="wheel-spinner-btn" onclick="spinWheel()">لفّي العجلة هسا 🎡✨</button>
+    <div class="wheel-result-text" id="wheelResultText">اكبسي الزر حتى تلف العجلة 💖</div>
+  </div>
+</section>
+
+<!-- SECTION 12: MEMORY MAP (خريطة الذكريات الواقعية والأونلاين) -->
+<section class="map-section">
+  <div class="eyebrow">أماكن وحكايات</div>
+  <h2>خريطة الذكريات والمشاعر 📍</h2>
+  <p class="section-lead">كل مكان ووسيلة جمعتنا إلها مكانة عميقة جداً بقلبي</p>
+  <div class="map-grid">
+    <div class="map-pin-card">
+      <div class="pin-icon">🎓</div>
+      <div class="pin-title">مقعدنا المميز</div>
+      <div class="pin-desc">الشرارة الأولى وأحلى ساعة بعمري كلها لما شفت خجلك وجمال عيونك قدامي.</div>
+    </div>
+    <div class="map-pin-card">
+      <div class="pin-icon">💬</div>
+      <div class="pin-title">الشات والرسايل</div>
+      <div class="pin-desc">بيتنا الصغير المليان رسايل وضحك ومسجات غزل من الصبح للكرك.</div>
+    </div>
+    <div class="map-pin-card">
+      <div class="pin-icon">📞</div>
+      <div class="pin-title">مكالمات الليل بالساعات</div>
+      <div class="pin-desc">الساعات الطويلة اللي بنحكي فيها عن أحلامنا وننام ونحن عم نسمع بعض عالتلفون.</div>
+    </div>
+    <div class="map-pin-card">
+      <div class="pin-icon">📸</div>
+      <div class="pin-title">صور التلفون والرسايل</div>
+      <div class="pin-desc">الصور والرسايل اللي بفتحهم كل يوم لما اشتاق لعيونك وابتسامتك الحلوة.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 13: AUTO QUOTE GENERATOR (مولد الغزل) -->
+<section class="quote-gen-section">
+  <div class="eyebrow">كلام حب ما بيخلص</div>
+  <h2>مولّد الغزل التلقائي لآية 💌</h2>
+  <p class="section-lead">كل كبسة زر رح تطلعلك جملة غزل دافية وجديدة طالعة من قلبي</p>
+  <div class="quote-box">
+    <div class="quote-text-display" id="quoteDisplay">يا سكر حياتي، رسايلك ومكالماتك هما اللي بينوروا يومي ❤️</div>
+    <button class="quote-gen-btn" onclick="generateQuote()">ولدّي كلمة غزل جديدة 💖</button>
+  </div>
+</section>
+
+<!-- SECTION 14: WEEKLY ROUTINE (جدول التواصل الأسبوعي) -->
+<section class="week-section">
+  <div class="eyebrow">جدولنا الأسبوعي</div>
+  <h2>روتيني الأسبوعي مع آية أونلاين 🗓️</h2>
+  <p class="section-lead">جدول الأسبوع المفصل المليان دلال وحب عبر التلفون 😌</p>
+  <div class="week-grid">
+    <div class="week-card">
+      <div class="week-day">الأحد 📱</div>
+      <div class="week-activity">صباح الخير ومسجات غزل من أول ما نصحى بالرسايل.</div>
+    </div>
+    <div class="week-card">
+      <div class="week-day">الاثنين 📞</div>
+      <div class="week-activity">حكي دافي عن يومنا بالساعات عالتلفون.</div>
+    </div>
+    <div class="week-card">
+      <div class="week-day">الثلاثاء 🎓</div>
+      <div class="week-activity">مكالمة بالليل نحكي فيها عن قعدتنا سوا وأحلامنا القادمة.</div>
+    </div>
+    <div class="week-card">
+      <div class="week-day">الأربعاء 📸</div>
+      <div class="week-activity">نتبادل صور ونحكي نكت ونضحك بالشات من كل قلبنا.</div>
+    </div>
+    <div class="week-card">
+      <div class="week-day">الخميس 🎉</div>
+      <div class="week-activity">سهرة الخميس عالتلفون ونشغّل أغانينا سوا ونحس ببعض.</div>
+    </div>
+    <div class="week-card">
+      <div class="week-day">الجمعة والسبت 💖</div>
+      <div class="week-activity">مكالمات طويلة ودلع أونلاين 24 ساعة بدون أي انقطاع!</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 15: LIVE STATS (عداد اللحظات) -->
+<section class="stats-section">
+  <div class="eyebrow">إحصائيات الحب الرسمية</div>
+  <h2>سجلّ المحبة بالقاموس 📊</h2>
+  <p class="section-lead">أرقام حقيقية وموثوقة عن حب محمود لآية 😌</p>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">1</div>
+      <div class="stat-label">قعدة تاريخية بالقلب 🎓</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">+10,000</div>
+      <div class="stat-label">مسج ورسالة حب بالشات 📱</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">حب حقيقي عابر للمسافات الشاشات ❤️</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1</div>
+      <div class="stat-label">آية واحدة بس بالدنيا كلها ✨</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 16: WISH CANDLE (شمعة الأمنيات) -->
+<section class="candle-section">
+  <div class="eyebrow">تمنّي أمنية من قلبك</div>
+  <h2>شمعة أمنية اللقاء والقعدة الجديدة 🕯️</h2>
+  <p class="section-lead">اكبسي على الشمعة وتمني شو ما بدك ومحمود رح يحققلك إياها فوراً ✨</p>
+  <div class="candle-box">
+    <div class="candle-icon" id="candleIcon" onclick="lightCandle()">🕯️</div>
+    <button class="candle-btn" onclick="lightCandle()">شغّلي الشمعة وتمنّي 🕯️✨</button>
+    <div class="candle-text" id="candleText"></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <div class="eyebrow">ذكرياتنا العذبة</div>
+  <h2>محطات ما رح أنساها بحياتي</h2>
+  <p class="section-lead">هاي كم لحظة من كتير — ولو حبيتي، ابعتيلي ذكرياتك المفضلة وبضيفها هون فوراً</p>
+  <div class="timeline" id="timeline">
+    <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-title">أول مسج 📱</div><p>أول مسج أونلاين بيننا لما بلش قلبي يدق بطريقة غريبة وعرفت إنك غير</p></div></div>
+    <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-title">أول مكالمة 📞</div><p>المرة الأولى اللي سمعت فيها نبرة صوتك الخجولة عالتلفون وارتبكت</p></div></div>
+    <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-title">أول قعدة سوا 🎓</div><p>المرة الوحيدة اللي قعدنا فيها سوا وكانت أحلى ساعة بعمري كله!</p></div></div>
+    <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-title">الأيام الحالية 💖</div><p>رسايلنا ومكالماتنا اللي مأنسة حياتي ومصبراني عالمسافات</p></div></div>
+    <div class="t-item"><div class="t-dot"></div><div class="t-card"><div class="t-title">المستقبل 🌹</div><p>اليوم اللي رح نقدر نكون فيه سوا بالحقيقة وبدون أي شاشات أو مسافات</p></div></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="eyebrow">لحظتنا الخالدة 📸</div>
+  <h2>إيد بأيد للأبد 💖</h2>
+  <p class="section-lead">أجمل وأصدق صورة بتجمعنا... مسكة إيدك اللي انحفرت بقلبي وما بتروح من بالي ❤️</p>
+  <div class="single-photo-wrap">
+    <div class="polaroid-single" onclick="burstHearts(this.getBoundingClientRect())">
+      <div class="polaroid-img-box">
+        <img src="holding_hands.jpg" alt="مسكة إيد محمود وآية ❤️" />
+      </div>
+      <div class="polaroid-cap-single">"إيد بأيد... وأنتِ أماني وحبي الأبدي" 🌹</div>
+      <div class="polaroid-sub-single">محمود ❤️ آية — ذكرى أول قعدة وأدفى لمسة إيد دافية ✨</div>
+    </div>
+  </div>
+</section>
+
+<!-- SCRATCH CARD -->
+<section class="scratch-section">
+  <div class="eyebrow">سر مخبا بقلبي</div>
+  <h2>احفّي الكرت واكتشفي السر ✨</h2>
+  <div class="scratch-wrap">
+    <div class="scratch-message">رغم إنه حكينا كله أونلاين وقعدنا بس مرة وحدة سوا، بس أنتِ أصدق وأعمق حب بقلبي ومستحيل أتخلى عنك ❤️</div>
+    <canvas id="scratchCanvas"></canvas>
+  </div>
+  <div class="scratch-hint">حركي إصبعك أو الماوس فوق الكرت ليظهر السر</div>
+</section>
+
+<!-- SURPRISE / PROMISES -->
+<section class="surprise-section">
+  <div class="eyebrow">وعود شرف لعيونك</div>
+  <h2>دوسي على القلب ❤️</h2>
+  <button class="heart-btn" id="heartBtn">❤️</button>
+  <div class="promises" id="promises">
+    <div class="promise-line">وعدك أضل أسمعك بحب وأفهمك بالرسايل والمكالمات قبل ما أرد أو أحكم.</div>
+    <div class="promise-line">وعدك أضل أعبّرلك عن مشاعري وكلام الغزل ودلعي إلك دايماً.</div>
+    <div class="promise-line">وعدك إني أكون سندك وأمانك بالبعيد والقريب وما أخلي خاطرك يضيق أبدًا.</div>
+    <div class="promise-line">وعدك القعدة الجاي تكون أحلى وأدفى قعدة بعمرنا.</div>
+    <div class="promise-line">وعدك أضل أحبك وأموت فيكي لحد ما تجمعنا الأيام سوا بالحقيقة للأبد.</div>
+  </div>
+</section>
+
+<!-- THURSDAY NIGHT SPECIAL -->
+<section class="thursday-section">
+  <div class="eyebrow">ليلة استثنائية خاصة جداً 🍷🌙</div>
+  <h2>سهرة الخميس المليانة حب ومشاعر 🌙🔥</h2>
+  <div class="thursday-card">
+    <div>
+      <span class="thursday-badge">سهرة ليلية دافية 🍷</span>
+      <span class="thursday-badge">على مزاج محمود 100% 👑</span>
+      <span class="thursday-badge">ممنوع تحكي لا! 🚫🛑</span>
+    </div>
+    <div class="thursday-title">دستور ليلة الخميس بين محمود وآية ✨</div>
+    <p class="thursday-text">
+      سهرة ليلة الخميس هاي رح تكون غير عن أي سهرة عشناها! سهرة مليانة مشاعر دافية، غزل، وحب طالع من أعمق مكان بقلبي... بنسهر فيها عالتلفون وننسى العالم والمسافات وما بننام إلا ونحن عيوننا مليانة فرح ودلع 💖.
+    </p>
+    <div class="thursday-rules">
+      <p>🔥 <strong>القانون الصارم لليلة:</strong> سهرة الليلة رح تكون **على مزاج محمود بالكامل**، وممنوع منعاّ باتاً تحكي "لا" أو تعترضي على أي شرط أو طلب دلع وحب 😉❤️!</p>
+      <p>✨ <strong>المطلوب منك:</strong> تروّقي وتجهزي حالك وتستسلمي للدلع والحب التام طوال السهرة 😌🍷.</p>
+    </div>
+    <button class="thursday-btn" id="thursdayBtn" onclick="acceptThursdayNight(this)">
+      الموافقة والاستسلام لسهرة محمود 💖✨
+    </button>
+    <div class="thursday-res" id="thursdayRes"></div>
+<!-- PASSION & INTIMACY SECTION -->
+<section class="passion-section">
+  <div class="eyebrow">حنان وشوق بدون حدود 🔥💋</div>
+  <h2>لحظات الشوق والحنان الدافئ 💋🔥</h2>
+  <p class="section-lead">همسات وحكايات دافية من أعمق مكان بقلبي لعيونك الحلوين 💖</p>
+  <div class="passion-grid">
+    <div class="passion-card" onclick="revealPassion(this)">
+      <div class="passion-icon">🫂🔥</div>
+      <div class="passion-title">دفء الأحضان والهمسات</div>
+      <div class="passion-desc">
+        مستني اليوم اللي أضمك فيه لحضني ضمة طوالية، وأحس بدقات قلبك وأنفاسك الدافية قريبة من رقبتك... وننسى الدنيا كلها بحضن بعض ❤️.
+      </div>
+    </div>
+    <div class="passion-card" onclick="revealPassion(this)">
+      <div class="passion-icon">💋✨</div>
+      <div class="passion-title">بوسات الشوق والدلع</div>
+      <div class="passion-desc">
+        بموت برقتك وشفاهك الحلوين، وكل بوسة ببالي محجوزة لعيونك وخدودك ورأسك وصدرك الدافئ... رصيدك عالي بقلبي ومستني تصرفيه كااامل 😘🔥.
+      </div>
+    </div>
+    <div class="passion-card" onclick="revealPassion(this)">
+      <div class="passion-icon">👑🔥</div>
+      <div class="passion-title">جمالك وسحرك الأنثوي</div>
+      <div class="passion-desc">
+        أنتِ أنثى استثنائية بعيوني... سحر عيونك، شعرك الناعم، وجمال تفاصيلك بياخدوا عقلي وبيخلوني أذوب فيكي عشق وشغف دائم 😍💖.
+      </div>
+    </div>
+    <div class="passion-card" onclick="revealPassion(this)">
+      <div class="passion-icon">🌙💋</div>
+      <div class="passion-title">همسات سهرات نص الليل</div>
+      <div class="passion-desc">
+        أحلى لحظات عشتها لما نكون عم نحكي عالتلفون بالليل، ونهمس لبعض بكلام الغزل والحنان اللي بيخلي قلوبنا تدق 200 نبضة بالدقيقة 😉🔥.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing-section">
+  <h2>بكل بساطة وبدون كذب</h2>
+  <div class="closing-big">بحبك وبموت فيكي يا آية</div>
+  <button class="fireworks-btn" id="fireworksBtn">دوسي هون لتشوفي قد إيش بموت فيكي 🎆🔥</button>
+  <div class="closing-names">محمود ❤️ آية</div>
+  <p class="closing-note">هاد الموقع عملته خصيصاً إلك — حتى لو من وراء الشاشات وقعدنا بس مرة سوا، حبنا حقيقي ومحمود إلك دايماً وما رح يتركك لحد ما ترجع ضحكتك تنور حياتي</p>
+</section>
+
+<script>
+// preloader
+window.addEventListener('load', ()=>{
+  setTimeout(()=> document.getElementById('preloader').classList.add('hide'), 1200);
+});
+
+// scroll progress
+const progressFill = document.getElementById('progressFill');
+window.addEventListener('scroll', ()=>{
+  const h = document.documentElement;
+  const pct = (h.scrollTop)/(h.scrollHeight - h.clientHeight) * 100;
+  progressFill.style.width = pct+'%';
+});
+
+// cursor hearts (throttled)
+let lastCursor = 0;
+window.addEventListener('mousemove', (e)=>{
+  const now = Date.now();
+  if(now - lastCursor < 90) return;
+  lastCursor = now;
+  const h = document.createElement('div');
+  h.className='cursor-heart';
+  h.textContent='♥';
+  h.style.left = e.clientX+'px';
+  h.style.top = e.clientY+'px';
+  document.body.appendChild(h);
+  setTimeout(()=> h.remove(), 1000);
+});
+
+// floating hearts background
+const heartsBg = document.getElementById('heartsBg');
+const heartChars = ['❤️','🌹','💗','✨','📱','🎓'];
+for(let i=0;i<30;i++){
+  const h = document.createElement('div');
+  h.className='heart';
+  h.textContent = heartChars[Math.floor(Math.random()*heartChars.length)];
+  h.style.right = Math.random()*100+'%';
+  h.style.fontSize = (14+Math.random()*24)+'px';
+  h.style.animationDuration = (10+Math.random()*14)+'s';
+  h.style.animationDelay = (Math.random()*14)+'s';
+  heartsBg.appendChild(h);
+}
+
+// typewriter
+const twText = "قبل ما تسكري الصفحة... في حكي طالع من جوّات قلبي بدي ياه يوصلك. حتى لو أغلب حكينا أونلاين، حبك بقلبي حقيقي وأكبر من كل المسافات 🌹";
+const twEl = document.getElementById('typewriter');
+let twI = 0;
+function typeWriter(){
+  if(twI <= twText.length){
+    twEl.textContent = twText.slice(0, twI);
+    twI++;
+    setTimeout(typeWriter, 35);
+  } else {
+    twEl.style.borderLeft = 'none';
+  }
+}
+setTimeout(typeWriter, 1200);
+
+// envelope open
+const envelopeWrap = document.getElementById('envelopeWrap');
+const letterPaper = document.getElementById('letterPaper');
+envelopeWrap.addEventListener('click', ()=>{
+  envelopeWrap.classList.add('open');
+  setTimeout(()=> letterPaper.classList.add('show'), 500);
+  burstHearts(envelopeWrap.getBoundingClientRect());
+});
+
+// generic heart burst (confetti-style)
+function burstHearts(rect){
+  for(let i=0;i<22;i++){
+    const h = document.createElement('div');
+    h.textContent = ['❤️','🌹','✨','🔥','💋','📱'][Math.floor(Math.random()*6)];
+    h.style.position='fixed';
+    h.style.left = (rect.left + rect.width/2)+'px';
+    h.style.top = (rect.top + rect.height/2)+'px';
+    h.style.fontSize = (16+Math.random()*16)+'px';
+    h.style.zIndex = 300;
+    h.style.pointerEvents='none';
+    document.body.appendChild(h);
+    const angle = Math.random()*Math.PI*2;
+    const dist = 80+Math.random()*180;
+    const dx = Math.cos(angle)*dist;
+    const dy = Math.sin(angle)*dist;
+    h.animate([
+      {transform:'translate(0,0) scale(1)', opacity:1},
+      {transform:`translate(${dx}px,${dy}px) scale(.3)`, opacity:0}
+    ], {duration:900+Math.random()*500, easing:'ease-out'});
+    setTimeout(()=> h.remove(), 1500);
+  }
+}
+
+// scroll reveal
+const revealEls = document.querySelectorAll('.flip-card, .t-item, .polaroid');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.15});
+revealEls.forEach(el=>io.observe(el));
+
+// flip cards tap for touch
+document.querySelectorAll('.flip-card').forEach(card=>{
+  card.addEventListener('click', ()=> card.classList.toggle('flipped'));
+});
+
+// QUIZ DATA & LOGIC
+const quizData = [
+  {
+    q: "شو أكتر شي بموت عليه فيكي؟",
+    opts: ["عيونك 👁️", "شعرك 💇‍♀️", "صدرك 💖", "كل شي 🔥❤️"],
+    resp: [
+      "سحر عيونك بياخد عقلي وما بقدر أقاوم جمالهم 😍",
+      "شعرك ونعمومته وريحتك وشكلك بيجننوني وبموت فيهم 🔥",
+      "صدرك ودفاه وحنيته أدفى وأحنّ مكان بالدنيا كلها ❤️🔥",
+      "الجواب الصح 100%! بموت بكل تفصيلة فيكي من رأسك لرجليكي 🔥❤️"
+    ]
+  },
+  {
+    q: "شو أحلى لحظة عشناها سوا بالحقيقة؟",
+    opts: ["قعدتنا سوا 🎓", "أول مرة شفت عيونك فيها 👀", "المرة اللي ضحكنا فيها سوا 💖"],
+    resp: [
+      "قعدتنا سوا كانت أحلى وأصدق لحظة وما رح أنساها طول عمري ❤️",
+      "عيونك وقتها سحروني وخاطفين قلبي لحد اليوم 😍",
+      "ضحكتك الخجولة وقتها بتسوى الدنيا وما فيها 🥺"
+    ]
+  },
+  {
+    q: "كيف أغلب حكينا وذكرياتنا الجميلة؟",
+    opts: ["رسايل الشات والمكالمات 📱", "مكالمات الليل بالساعات 📞", "كل الفوق مع قعدتنا سوا 🎓❤️"],
+    resp: [
+      "كل كلمة ومسج بتبعتيها بتردلي الروح 🥰",
+      "مكالمات الليل معك أصفى وأحلى وقت بيومي كله 🌙",
+      "الجواب الصح! كل لحظة وحرف منك بتسوى الكون ❤️"
+    ]
+  },
+  {
+    q: "شو حلم محمود أول ما نقدر نلتقي بجد؟",
+    opts: ["أبوسك وأضمك ضمة طوالية 😘", "نقعد سوا بدون عجلة 🎓", "كل الفوق وأكتر كمان ❤️"],
+    resp: [
+      "هاد أحلى إثبات حب بالدنيا 😘",
+      "تأمري أمر يا عيون محمود ومالكة قلبه 👑",
+      "أكيد كل الفوق ومستعد أعمل أي شي بالدنيا لترضي وتضحكي ❤️🌹"
+    ]
+  }
+];
+let quizI = 0;
+const quizQ = document.getElementById('quizQ');
+const quizOptions = document.getElementById('quizOptions');
+const quizResponse = document.getElementById('quizResponse');
+const quizNext = document.getElementById('quizNext');
+
+function renderQuiz(){
+  const d = quizData[quizI];
+  quizQ.textContent = d.q;
+  quizOptions.innerHTML = '';
+  quizResponse.classList.remove('show');
+  quizResponse.textContent = '';
+  quizNext.disabled = true;
+  d.opts.forEach((opt, idx)=>{
+    const btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.textContent = opt;
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.quiz-opt').forEach(b=>b.classList.remove('chosen'));
+      btn.classList.add('chosen');
+      quizResponse.textContent = d.resp[idx];
+      quizResponse.classList.add('show');
+      quizNext.disabled = false;
+      burstHearts(btn.getBoundingClientRect());
+    });
+    quizOptions.appendChild(btn);
+  });
+}
+renderQuiz();
+quizNext.addEventListener('click', ()=>{
+  quizI++;
+  if(quizI >= quizData.length){
+    quizQ.textContent = "خلصنا الامتحان 🌹 وطلعتي الفائزة بقلبي للأبد ❤️";
+    quizOptions.innerHTML = '';
+    quizResponse.textContent = 'العلامة: 1000/100 مع مرتبة الشرف الأولى بالعشق! 😘';
+    quizNext.disabled = true;
+    quizNext.textContent = 'تم الامتحان بنجاح 💖';
+    return;
+  }
+  renderQuiz();
+});
+
+// CODEX TOGGLE
+function toggleCodex(el){
+  el.classList.toggle('active');
+  burstHearts(el.getBoundingClientRect());
+}
+
+// VOUCHER REDEEM
+function redeemVoucher(btn){
+  btn.textContent = "تم الصرف فوراً! ✅❤️";
+  btn.classList.add('redeemed');
+  burstHearts(btn.getBoundingClientRect());
+}
+
+// LOVE METER LOGIC
+function runLoveMeter(){
+  const btn = document.getElementById('meterBtn');
+  const num = document.getElementById('meterNum');
+  const bar = document.getElementById('meterBar');
+  const res = document.getElementById('meterResult');
+  
+  btn.disabled = true;
+  btn.textContent = "جاري الحساب والقياس... ⚡";
+  bar.style.width = "0%";
+  res.classList.remove('show');
+  
+  let val = 0;
+  const interval = setInterval(()=>{
+    val += Math.floor(Math.random()*450) + 150;
+    if(val >= 10000){
+      val = 10000;
+      clearInterval(interval);
+      num.textContent = "10000%+";
+      bar.style.width = "100%";
+      res.classList.add('show');
+      btn.textContent = "تم القياس بنجاح 🔥";
+      burstHearts(num.getBoundingClientRect());
+    } else {
+      num.textContent = val + "%";
+      bar.style.width = Math.min((val/10000)*100, 100) + "%";
+    }
+  }, 50);
+}
+
+// CONFESSIONS REVEAL
+function revealConfess(card){
+  card.classList.toggle('revealed');
+  burstHearts(card.getBoundingClientRect());
+}
+
+// KISS BANK LOGIC
+let kissCount = 0;
+const kissNotes = [
+  "أحلى بوسة إلكترونية للخد الوردي 😘",
+  "وهي بوسة لعيونك الحلوين اللي بياخدوا العقل 😍",
+  "حضن دافي طوييييل أونلاين لحد ما نلتقي ❤️",
+  "بوسة على رأسك الحلو يا مالكة قلبي 👑",
+  "صار عندك رصيد بوسات للصبح! تعالي اصرفيهم بس نلتقي سوا 🔥"
+];
+function addKiss(){
+  kissCount++;
+  document.getElementById('kissCount').textContent = kissCount;
+  const noteEl = document.getElementById('kissNote');
+  noteEl.textContent = kissNotes[kissCount % kissNotes.length];
+  burstHearts(document.getElementById('kissBtn').getBoundingClientRect());
+}
+
+// CHAT SIMULATION LOGIC
+const extraChatMsgs = [
+  {sender: 'left', text: 'محمود: متذكر قعدتنا المرة سوا؟ كانت أحلى ساعة بحياتي كله 😍'},
+  {sender: 'right', text: 'آية: وبتذكر كيف كنت خجلان وعم تطلع بعيوني... كانت بتجنن ❤️'},
+  {sender: 'left', text: 'محمود: المرة الجاي رح اضمك ومارح اترك ايدك أبداً 😘'},
+  {sender: 'right', text: 'آية: هههه موعدنا المرة الجاي يا روحي 💖'},
+  {sender: 'left', text: 'محمود: بحبك وبموت بكل تفصيلة فيكي من عيونك لشعرك لصدرك لكل شي 🔥❤️'}
+];
+let chatMsgI = 0;
+function sendNextChatMsg(){
+  if(chatMsgI >= extraChatMsgs.length) chatMsgI = 0;
+  const item = extraChatMsgs[chatMsgI];
+  const box = document.getElementById('chatMsgBox');
+  const div = document.createElement('div');
+  div.className = `msg-bubble ${item.sender === 'left' ? 'msg-left' : 'msg-right'}`;
+  div.textContent = item.text;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+  chatMsgI++;
+  burstHearts(div.getBoundingClientRect());
+}
+
+
+// LATE NIGHT CALL LOGIC
+function answerCall(){
+  const status = document.getElementById('callStatusText');
+  const note = document.getElementById('callNoteText');
+  status.textContent = "مكالمة جارية 📞 01:42:15";
+  note.textContent = "صوتك عالتلفون هو الأمان والراحة الوحيدة اللي بنسى فيها العالم وبنام وأنا عم اسمعك 😴💖";
+  burstHearts(status.getBoundingClientRect());
+}
+
+// TRUTH GAME LOGIC
+const truthQA = [
+  "س: شو أكتر شي بتفكر فيه لما تكون قاعد لحالك بالليل؟ ➔ ج: بفكّر بجمال عيونك وبقعدتنا سوا وشو بدي أعمل لما نلتقي الجاي.",
+  "س: قديش بتتحمل زعل آية؟ ➔ ج: ولا دقيقة! قلبي بيتقطّع لما حسك زعلانة أو ضايقة مني بالرسايل.",
+  "س: شو الشي اللي مستحيل تغيره بحبك لآية؟ ➔ ج: إني متمسك فيكي لأخر نفس بحياتي ومستحيل أتخلى عنك.",
+  "س: شو أحلى كلمة سمعتها من آية؟ ➔ ج: الكلمة اللي حكتلي فيها بحبك ورجعتلي الروح."
+];
+let lastTruthI = -1;
+function askTruthQuestion(){
+  let i = Math.floor(Math.random()*truthQA.length);
+  if(i === lastTruthI) i = (i + 1) % truthQA.length;
+  lastTruthI = i;
+  const res = document.getElementById('truthResultText');
+  res.textContent = truthQA[i];
+  burstHearts(res.getBoundingClientRect());
+}
+
+// LOVE LOCK LOGIC
+function lockLoveLock(){
+  const icon = document.getElementById('lockIcon');
+  const txt = document.getElementById('lockTextText');
+  icon.textContent = "🔒✨❤️";
+  txt.textContent = "تم قفل قلبي على اسم آية للأبد... ممنوع الفتح ولا للما لا نهاية! 🔒👑❤️";
+  burstHearts(icon.getBoundingClientRect());
+}
+
+// JUKEBOX AUDIO PLAYER LOGIC
+let audioCtx = null;
+let isSongPlaying = false;
+let songLoopTimer = null;
+let songOscillators = [];
+
+function toggleLoveSong() {
+  if (isSongPlaying) {
+    stopLoveSong();
+  } else {
+    playLoveSong();
+  }
+}
+
+function playLoveSong() {
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
+  isSongPlaying = true;
+  document.getElementById('jukeDisc').classList.add('spinning');
+  document.getElementById('eqWaves').classList.add('active');
+  document.getElementById('playIcon').textContent = "⏸️";
+  document.getElementById('playText').textContent = "إيقاف الأغنية 🎵";
+  document.getElementById('jukeStatus').textContent = "الموسيقى شغّالة الآن... بتطرب لعيون آية الحلوين 🥰🎶";
+
+  // Sweet romantic chord progression notes (Rhodes / Music Box feel)
+  const melodyNotes = [
+    // Phrase 1 (Sweet Romance)
+    { f: 523.25, d: 0.4 }, { f: 659.25, d: 0.4 }, { f: 783.99, d: 0.4 }, { f: 1046.50, d: 0.8 },
+    { f: 880.00, d: 0.4 }, { f: 783.99, d: 0.4 }, { f: 659.25, d: 0.8 },
+    // Phrase 2 (Gentle Heartbeat)
+    { f: 440.00, d: 0.4 }, { f: 554.37, d: 0.4 }, { f: 659.25, d: 0.4 }, { f: 880.00, d: 0.8 },
+    { f: 739.99, d: 0.4 }, { f: 659.25, d: 0.4 }, { f: 554.37, d: 0.8 },
+    // Phrase 3 (Deep Love)
+    { f: 392.00, d: 0.4 }, { f: 493.88, d: 0.4 }, { f: 587.33, d: 0.4 }, { f: 783.99, d: 0.8 },
+    { f: 659.25, d: 0.4 }, { f: 587.33, d: 0.4 }, { f: 523.25, d: 1.0 }
+  ];
+
+  let now = audioCtx.currentTime + 0.05;
+  let timeOffset = 0;
+
+  function scheduleNote(freq, startTime, duration) {
+    if (!audioCtx) return;
+    const osc = audioCtx.createOscillator();
+    const oscHarmony = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+
+    osc.type = 'sine';
+    oscHarmony.type = 'triangle';
+
+    osc.frequency.setValueAtTime(freq, startTime);
+    oscHarmony.frequency.setValueAtTime(freq * 0.5, startTime); // Bass octave below
+
+    gain.gain.setValueAtTime(0.001, startTime);
+    gain.gain.exponentialRampToValueAtTime(0.2, startTime + 0.05);
+    gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration - 0.01);
+
+    osc.connect(gain);
+    oscHarmony.connect(gain);
+    gain.connect(audioCtx.destination);
+
+    osc.start(startTime);
+    oscHarmony.start(startTime);
+    osc.stop(startTime + duration);
+    oscHarmony.stop(startTime + duration);
+
+    songOscillators.push(osc, oscHarmony);
+  }
+
+  melodyNotes.forEach(n => {
+    scheduleNote(n.f, now + timeOffset, n.d);
+    timeOffset += n.d * 0.85; // Slight overlap for smooth legato melody
+  });
+
+  burstHearts(document.getElementById('jukePlayBtn').getBoundingClientRect());
+
+  songLoopTimer = setTimeout(() => {
+    if (isSongPlaying) {
+      playLoveSong();
+    }
+  }, timeOffset * 1000);
+}
+
+function stopLoveSong() {
+  isSongPlaying = false;
+  if (songLoopTimer) clearTimeout(songLoopTimer);
+  songOscillators.forEach(osc => {
+    try { osc.stop(); } catch(e){}
+  });
+  songOscillators = [];
+  document.getElementById('jukeDisc').classList.remove('spinning');
+  document.getElementById('eqWaves').classList.remove('active');
+  document.getElementById('playIcon').textContent = "▶️";
+  document.getElementById('playText').textContent = "تشغيل أغنية الحب 🎵";
+  document.getElementById('jukeStatus').textContent = "تم إيقاف الأغنية مؤقتاً ✨";
+}
+
+// RADAR LOGIC
+function runJealous(){
+  const bar = document.getElementById('jealousMeter');
+  const txt = document.getElementById('jealousText');
+  bar.style.width = "100%";
+  txt.textContent = "النتيجة: بغار عليكِ من الهوا الطاير ومن أي حد بحكي معك بالرسايل! 😤🔥";
+}
+function runSpoil(){
+  const bar = document.getElementById('spoilMeter');
+  const txt = document.getElementById('spoilText');
+  bar.style.width = "100%";
+  txt.textContent = "النتيجة: أنتِ أميرة قلبي وحقك تتدلعي بالرسايل والمكالمات 24 ساعة! 👑✨";
+}
+
+// DATE LIST TOGGLE
+function toggleDate(el){
+  el.classList.toggle('checked');
+  burstHearts(el.getBoundingClientRect());
+}
+
+// Q&A TOGGLE
+function toggleQA(el){
+  el.classList.toggle('open');
+  burstHearts(el.getBoundingClientRect());
+}
+
+// WHEEL OF FORTUNE LOGIC
+const wheelOptions = [
+  "جلسة حكي وضحك عالتلفون بدون وقت 📞❤️",
+  "مكالمة سهر للصبح عالتلفون بدون ما تسكري 📞✨",
+  "سهرة خاصة ونحكي عن أحلامنا سوا 🌙💖",
+  "قعدة جديدة ووردة حمراء بس نلتقي 🎓🌹",
+  "جلسة حكي ودلع 24 ساعة بالشات بدون نكد 📱🔥",
+  "بوسات طويلة لعيونك ورأسك وصدرك أونلاين 😘❤️"
+];
+function spinWheel(){
+  const resEl = document.getElementById('wheelResultText');
+  resEl.textContent = "عم بتدوّر العجلة... 🎡✨";
+  setTimeout(()=>{
+    const picked = wheelOptions[Math.floor(Math.random()*wheelOptions.length)];
+    resEl.textContent = picked;
+    burstHearts(resEl.getBoundingClientRect());
+  }, 1200);
+}
+
+// AUTO QUOTE GENERATOR LOGIC
+const romanticQuotes = [
+  "رسايلك ومكالماتك هما اللي بينوروا يومي ❤️",
+  "قعدتنا سوا دايماً ببالي وما بتروح من بالي لحظة 😍",
+  "المسافة مش قادرة تغير قطرة وحدة من حبي العميق إلك 👑",
+  "صوتك عالتلفون كفيل ينسيني تعب ومشاكل اليوم كله ✨",
+  "أنتِ مش بس حبيبتي، أنتِ أماني وبيتي حتى لو من وراء الشاشات 🌹",
+  "كل مسج منك بتخلي قلبي يدق كأني عم شوفك قدامي 💖",
+  "خاطرك الغالي عندي تسوى زعل الدنيا كلها يا روحي ❤️",
+  "عيونك والنظرة فيهم بتسوى مية قصيدة عشق 🎓😍"
+];
+let lastQuoteI = -1;
+function generateQuote(){
+  let i = Math.floor(Math.random()*romanticQuotes.length);
+  if(i === lastQuoteI) i = (i + 1) % romanticQuotes.length;
+  lastQuoteI = i;
+  const qEl = document.getElementById('quoteDisplay');
+  qEl.textContent = romanticQuotes[i];
+  burstHearts(qEl.getBoundingClientRect());
+}
+
+// WISH CANDLE LOGIC
+function lightCandle(){
+  const icon = document.getElementById('candleIcon');
+  const txt = document.getElementById('candleText');
+  icon.textContent = "🕯️✨🔥";
+  txt.textContent = "أمنية القعدة الجديدة واللقاء القادم مستجابة بإذن الله... ومحمود مستعد يعمل أي شي بالدنيا ليفرحك! ❤️✨";
+  burstHearts(icon.getBoundingClientRect());
+}
+
+// THURSDAY NIGHT SPECIAL LOGIC
+function acceptThursdayNight(btn){
+  btn.textContent = "تم استسلام آية وسهرة الليلة على مزاجك 100%! 👑❤️";
+  btn.classList.add('accepted');
+  const res = document.getElementById('thursdayRes');
+  res.textContent = "جاهزين لأحلى سهرة خميس بالعمُر كله! بحبك ومستني الليلة بفارغ الصبر 🔥🍷❤️";
+  res.classList.add('show');
+  burstHearts(btn.getBoundingClientRect());
+}
+
+// PASSION CARD TOGGLE LOGIC
+function revealPassion(card){
+  burstHearts(card.getBoundingClientRect());
+}
+
+// scratch card
+const canvas = document.getElementById('scratchCanvas');
+const ctx = canvas.getContext('2d');
+function sizeCanvas(){
+  const wrap = canvas.parentElement;
+  canvas.width = wrap.clientWidth;
+  canvas.height = wrap.clientHeight;
+  ctx.fillStyle = '#7a1430';
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = '#fff';
+  ctx.font = 'bold 16px Tajawal, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('احفّي بإصبعك أو الماوس هون ✨', canvas.width/2, canvas.height/2);
+}
+sizeCanvas();
+window.addEventListener('resize', sizeCanvas);
+
+let scratching = false;
+function getPos(e){
+  const rect = canvas.getBoundingClientRect();
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  return {x: clientX-rect.left, y: clientY-rect.top};
+}
+function scratch(e){
+  const p = getPos(e);
+  ctx.globalCompositeOperation = 'destination-out';
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, 26, 0, Math.PI*2);
+  ctx.fill();
+}
+canvas.addEventListener('mousedown', ()=> scratching=true);
+canvas.addEventListener('mouseup', ()=> scratching=false);
+canvas.addEventListener('mouseleave', ()=> scratching=false);
+canvas.addEventListener('mousemove', (e)=>{ if(scratching) scratch(e); });
+canvas.addEventListener('touchstart', (e)=>{ scratching=true; scratch(e); });
+canvas.addEventListener('touchmove', (e)=>{ e.preventDefault(); scratch(e); }, {passive:false});
+canvas.addEventListener('touchend', ()=> scratching=false);
+
+// heart button reveals promises
+const heartBtn = document.getElementById('heartBtn');
+const promiseLines = document.querySelectorAll('.promise-line');
+heartBtn.addEventListener('click', ()=>{
+  heartBtn.classList.add('clicked');
+  burstHearts(heartBtn.getBoundingClientRect());
+  promiseLines.forEach((line, i)=>{
+    setTimeout(()=> line.classList.add('show'), i*450);
+  });
+});
+
+// fireworks finale
+const fireCanvas = document.getElementById('fireCanvas');
+const fctx = fireCanvas.getContext('2d');
+function sizeFireCanvas(){ fireCanvas.width = window.innerWidth; fireCanvas.height = window.innerHeight; }
+sizeFireCanvas();
+window.addEventListener('resize', sizeFireCanvas);
+
+let particles = [];
+function spawnFirework(x,y){
+  const colors = ['#c81e45','#c9a227','#5c0e24','#f7dde2','#ffffff'];
+  for(let i=0;i<65;i++){
+    const angle = (Math.PI*2/65)*i + Math.random()*0.2;
+    const speed = 2.5+Math.random()*4.5;
+    particles.push({
+      x,y,
+      vx: Math.cos(angle)*speed,
+      vy: Math.sin(angle)*speed,
+      life: 70+Math.random()*35,
+      color: colors[Math.floor(Math.random()*colors.length)]
+    });
+  }
+}
+let fireRunning = false;
+function animateFireworks(){
+  fctx.clearRect(0,0,fireCanvas.width, fireCanvas.height);
+  particles.forEach(p=>{
+    p.x += p.vx; p.y += p.vy; p.vy += 0.04; p.life -= 1;
+    fctx.globalAlpha = Math.max(p.life/95, 0);
+    fctx.fillStyle = p.color;
+    fctx.beginPath();
+    fctx.arc(p.x, p.y, 3.5, 0, Math.PI*2);
+    fctx.fill();
+  });
+  fctx.globalAlpha = 1;
+  particles = particles.filter(p=> p.life > 0);
+  if(particles.length > 0 || fireRunning){
+    requestAnimationFrame(animateFireworks);
+  }
+}
+document.getElementById('fireworksBtn').addEventListener('click', ()=>{
+  fireRunning = true;
+  const w = fireCanvas.width, h = fireCanvas.height;
+  spawnFirework(w*0.3, h*0.35);
+  setTimeout(()=> spawnFirework(w*0.7, h*0.3), 250);
+  setTimeout(()=> spawnFirework(w*0.5, h*0.45), 500);
+  setTimeout(()=> spawnFirework(w*0.2, h*0.55), 750);
+  setTimeout(()=> spawnFirework(w*0.8, h*0.5), 1000);
+  animateFireworks();
+  setTimeout(()=> fireRunning = false, 1300);
+});
+</script>
+</body>
+</html>
