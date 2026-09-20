@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trend Light | تريند لايت – الإنارة والتجهيزات الكهربائية</title>
+<meta name="description" content="Trend Light - تريند لايت | حلول إنارة عصرية وتجهيزات كهربائية في رام الله">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#f31f28;--red-d:#c9141c;--ink:#0b0b0d;--ink-2:#141418;
+  --bg:#f6f6f7;--surface:#ffffff;--text:#0b0b0d;--muted:#6b6b72;--line:#e9e9ec;
+  --shadow:0 18px 50px rgba(0,0,0,.08);
+  --glow:#ffb45e;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0d0d10;--surface:#16161a;--text:#f4f4f5;--muted:#9c9ca5;--line:#26262c;--shadow:0 18px 50px rgba(0,0,0,.45)}
+}
+:root[data-theme="dark"]{--bg:#0d0d10;--surface:#16161a;--text:#f4f4f5;--muted:#9c9ca5;--line:#26262c;--shadow:0 18px 50px rgba(0,0,0,.45)}
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+body{font-family:Cairo,Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.container{width:min(100% - 32px,1160px);margin-inline:auto}
+.red{color:var(--red)}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(11,11,13,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);color:#fff}
+.nav .container{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.3px}
+.brand-mark{width:38px;height:38px;border-radius:11px;background:var(--red);display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:0 8px 22px rgba(243,31,40,.45)}
+.brand-logo{display:none;height:46px;width:auto;max-width:96px;object-fit:contain;background:#fff;border-radius:11px;padding:3px}
+.brand small{font-weight:600;color:rgba(255,255,255,.6);font-size:13px;margin-inline-start:2px}
+.menu{display:flex;gap:26px;font-size:14.5px;font-weight:600;color:rgba(255,255,255,.75)}
+.menu a{position:relative;padding:4px 0;transition:color .2s}
+.menu a:after{content:"";position:absolute;inset-inline:0;bottom:-2px;height:2px;background:var(--red);transform:scaleX(0);transition:transform .25s}
+.menu a:hover{color:#fff}.menu a:hover:after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:inherit;font-weight:700;font-size:15px;padding:12px 22px;border-radius:14px;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;touch-action:manipulation}
+.btn .ic{font-size:19px}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 26px rgba(243,31,40,.38)}
+.btn-red:hover{background:var(--red-d);transform:translateY(-2px)}
+.btn-wa{background:#25D366;color:#06210f;box-shadow:0 10px 26px rgba(37,211,102,.3)}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.18)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.nav .btn{padding:9px 16px;font-size:14px;border-radius:12px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(600px 400px at 85% 10%,rgba(243,31,40,.28),transparent 70%),
+  radial-gradient(500px 380px at 10% 100%,rgba(243,31,40,.14),transparent 70%)}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:linear-gradient(to bottom,#000 0%,transparent 85%);mask-image:linear-gradient(to bottom,#000 0%,transparent 85%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:20px;padding:56px 0 64px;min-height:600px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:600;color:rgba(255,255,255,.85)}
+.chip .ic{color:var(--red);font-size:16px}
+.hero h1{font-size:clamp(34px,6vw,62px);font-weight:900;line-height:1.18;letter-spacing:-1px;margin:18px 0 16px}
+.hero h1 .red{position:relative;white-space:nowrap}
+.hero p.lead{font-size:clamp(15px,2.2vw,18px);color:rgba(255,255,255,.72);max-width:520px;font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:13.5px;color:rgba(255,255,255,.65)}
+.hero-meta b{display:block;color:#fff;font-size:15px}
+.lamp-stage{position:relative;height:520px;display:grid;place-items:start center}
+.lamp-stage svg{width:min(100%,430px);height:100%;overflow:visible}
+.swing{transform-origin:200px 0;animation:swing 6s ease-in-out infinite}
+.pulse{animation:pulse 4s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+@keyframes pulse{0%,100%{opacity:.85}50%{opacity:1}}
+.dust{position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(255,220,170,.8);animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(-24px);opacity:.9}}
+
+/* ---------- Marquee ---------- */
+.strip{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;border-block:1px solid rgba(0,0,0,.15)}
+.strip-track{display:inline-flex;gap:44px;padding:13px 0;animation:marq 32s linear infinite;font-weight:700;font-size:15px}
+.strip-track span{display:inline-flex;align-items:center;gap:44px}
+.strip-track span:after{content:"✦";opacity:.7}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(50%)}}
+
+/* ---------- Sections ---------- */
+section{padding:84px 0}
+.eyebrow{display:inline-block;font-size:13px;font-weight:800;color:var(--red);letter-spacing:.4px;margin-bottom:8px}
+.sec-head{max-width:640px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(26px,4.2vw,40px);font-weight:900;line-height:1.3;letter-spacing:-.5px}
+.sec-head p{margin-top:10px;color:var(--muted);font-size:16px;font-weight:500}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cat{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px 24px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.cat:before{content:"";position:absolute;inset-inline:0;top:0;height:3px;background:linear-gradient(90deg,var(--red),transparent);transform:scaleX(0);transform-origin:right;transition:transform .35s}
+.cat:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(243,31,40,.35)}
+.cat:hover:before{transform:scaleX(1)}
+.cat .ico{width:54px;height:54px;border-radius:16px;background:rgba(243,31,40,.1);color:var(--red);display:grid;place-items:center;font-size:26px;margin-bottom:18px;transition:.3s}
+.cat:hover .ico{background:var(--red);color:#fff;transform:rotate(-4deg) scale(1.05)}
+.cat h3{font-size:18px;font-weight:800;margin-bottom:6px}
+.cat p{font-size:14.5px;color:var(--muted);font-weight:500}
+
+/* ---------- Light demo ---------- */
+.demo{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.demo:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;left:-160px;top:-120px;background:radial-gradient(circle,rgba(243,31,40,.2),transparent 70%)}
+.demo-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;position:relative}
+.demo .sec-head p{color:rgba(255,255,255,.65)}
+.temps{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.temp{display:flex;align-items:center;gap:14px;text-align:start;font-family:inherit;color:#fff;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 16px;cursor:pointer;transition:.25s;touch-action:manipulation}
+.temp:hover{background:rgba(255,255,255,.09)}
+.temp[aria-pressed="true"]{border-color:var(--red);background:rgba(243,31,40,.12);box-shadow:0 0 0 1px var(--red) inset}
+.dot{width:26px;height:26px;border-radius:50%;flex:none;box-shadow:0 0 18px currentColor}
+.temp b{display:block;font-size:15.5px}
+.temp span{font-size:13px;color:rgba(255,255,255,.6)}
+.room{position:relative;aspect-ratio:16/11;border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#0f0f12;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.room .wall{position:absolute;inset:0;background:radial-gradient(ellipse 70% 90% at 50% 0%,color-mix(in srgb,var(--glow) 34%,transparent),transparent 72%);transition:background .5s}
+.room .floor{position:absolute;inset:auto 0 0 0;height:26%;background:linear-gradient(to bottom,#17171b,#0c0c0e);border-top:1px solid rgba(255,255,255,.06)}
+.room .cone{position:absolute;top:13%;left:50%;width:62%;height:92%;transform:translateX(-50%);clip-path:polygon(40% 0,60% 0,100% 100%,0 100%);background:linear-gradient(to bottom,color-mix(in srgb,var(--glow) 62%,transparent),transparent 92%);transition:background .5s;filter:blur(2px)}
+.room .cord{position:absolute;top:0;left:50%;width:2px;height:13%;background:#3a3a42}
+.room .shade{position:absolute;top:12%;left:50%;width:14%;height:8%;transform:translateX(-50%);background:#232329;border-radius:60% 60% 8% 8%/100% 100% 8% 8%;border-bottom:3px solid var(--red)}
+.room .bulb{position:absolute;top:19.3%;left:50%;width:6%;height:3.4%;transform:translateX(-50%);border-radius:50%;background:var(--glow);box-shadow:0 0 40px 12px var(--glow);transition:.5s}
+.room .art{position:absolute;top:36%;left:14%;width:16%;height:24%;border:5px solid #26262c;background:linear-gradient(135deg,color-mix(in srgb,var(--glow) 40%,#1a1a1e),#141418);border-radius:4px;transition:.5s}
+.room .sofa{position:absolute;bottom:20%;left:50%;width:46%;height:20%;transform:translateX(-50%);background:linear-gradient(#26262c,#1a1a1e);border-radius:18px 18px 8px 8px;box-shadow:inset 0 3px 0 color-mix(in srgb,var(--glow) 30%,transparent)}
+.room .sofa:before,.room .sofa:after{content:"";position:absolute;bottom:0;width:9%;height:135%;background:#202026;border-radius:12px 12px 6px 6px}
+.room .sofa:before{left:-4%}.room .sofa:after{right:-4%}
+.room .table{position:absolute;bottom:18%;right:14%;width:9%;height:11%;background:#202026;border-radius:6px;box-shadow:inset 0 3px 0 color-mix(in srgb,var(--glow) 40%,transparent)}
+.room .tag{position:absolute;top:14px;inset-inline-start:14px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);padding:5px 12px;border-radius:999px;font-size:12.5px;font-weight:700;backdrop-filter:blur(8px)}
+.room .tag i{font-style:normal;color:var(--glow)}
+
+/* ---------- Why ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why{padding:8px 4px}
+.why .num{font-size:44px;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--red);line-height:1;margin-bottom:10px}
+.why h3{font-size:17px;font-weight:800;margin-bottom:6px}
+.why p{font-size:14.5px;color:var(--muted);font-weight:500}
+
+/* ---------- Steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px 24px}
+.step:before{counter-increment:s;content:counter(s);position:absolute;top:-16px;inset-inline-start:22px;width:36px;height:36px;border-radius:12px;background:var(--red);color:#fff;font-weight:800;display:grid;place-items:center;box-shadow:0 8px 20px rgba(243,31,40,.4)}
+.step h3{font-size:17px;font-weight:800;margin:6px 0}
+.step p{font-size:14.5px;color:var(--muted);font-weight:500}
+
+/* ---------- CTA band ---------- */
+.band{padding:0 0 84px}
+.band-box{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--ink) 0 62%,var(--red) 62%);color:#fff;border-radius:30px;padding:clamp(28px,5vw,52px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.band-box h2{font-size:clamp(22px,3.6vw,34px);font-weight:900;line-height:1.35;max-width:520px}
+.band-box p{color:rgba(255,255,255,.7);margin-top:6px;font-weight:500}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.c-card{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.c-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(243,31,40,.3)}
+.c-ico{width:50px;height:50px;flex:none;border-radius:15px;display:grid;place-items:center;color:#fff;font-size:24px}
+.c-card strong{display:block;font-size:16px;font-weight:800}
+.c-card span{display:block;font-size:13px;color:var(--muted);font-weight:500;overflow-wrap:anywhere}
+.wa .c-ico{background:#25D366}.tel .c-ico{background:var(--red)}
+.ig .c-ico{background:linear-gradient(135deg,#833AB4,#C13584 40%,#E1306C 60%,#F77737 85%,#FCAF45)}
+.fb .c-ico{background:#1877F2}.mp .c-ico{background:#4285F4}.ad .c-ico{background:var(--ink)}
+.c-card.wide{grid-column:span 1}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:rgba(255,255,255,.65);padding:34px 0;font-size:13.5px}
+footer .container{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+footer b{color:#fff}
+
+.fab{position:fixed;inset-inline-start:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:28px;box-shadow:0 14px 30px rgba(37,211,102,.4);animation:ring 2.6s infinite}
+@keyframes ring{0%,100%{box-shadow:0 14px 30px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,.25)}50%{box-shadow:0 14px 30px rgba(37,211,102,.4),0 0 0 12px rgba(37,211,102,0)}}
+
+/* ---------- Reveal ---------- */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;padding:40px 0 20px;min-height:0;text-align:center}
+  .hero p.lead{margin-inline:auto}.cta-row,.hero-meta{justify-content:center}
+  .lamp-stage{height:400px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .demo-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  .menu{display:none}
+  section{padding:60px 0}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .band-box{background:linear-gradient(160deg,var(--ink) 0 68%,var(--red) 68%)}
+}
+@media (max-width:560px){
+  .cards,.contact-grid{grid-template-columns:1fr}
+  .brand small{display:none}
+  .btn{width:100%}.nav .btn{width:auto}
+  .cta-row{flex-direction:column}
+  .lamp-stage{height:340px}
+  .why-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Nav -->
+<header class="nav">
+  <div class="container">
+    <a href="#top" class="brand" aria-label="Trend Light">
+      <span class="brand-mark"><svg class="ic" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span>
+      <img class="brand-logo" src="logo.png" alt="Trend Light" width="44" height="44" onload="this.style.display='block';this.previousElementSibling.style.display='none'" onerror="this.remove()">
+      <span>Trend <span class="red">Light</span> <small>| تريند لايت</small></span>
+    </a>
+    <nav class="menu" aria-label="القائمة">
+      <a href="#categories">الأقسام</a>
+      <a href="#light">جرّب الإضاءة</a>
+      <a href="#why">ليش تريند لايت</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/970595123330" target="_blank" rel="noopener">
+      <svg class="ic" viewBox="0 0 24 24"><path d="M3 21l1.65-4.8A9 9 0 1 1 8 19.5L3 21z"/><path d="M9 9.5c.4 2.2 2.3 4.4 5 5.3l1.2-1.2a.8.8 0 0 1 .9-.2l1.4.6a.8.8 0 0 1 .5.9c-.2 1.100-1.100 1.800-2.300 1.700-3.400-.4-6.100-3.100-6.600-6.500-.1-1.200.6-2.100 1.700-2.300a.8.8 0 0 1 .9.5l.6 1.400a.8.8 0 0 1-.2.9z"/></svg>
+      واتساب
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<!-- Hero -->
+<div class="hero">
+  <div class="container hero-grid">
+    <div class="rv">
+      <span class="chip"><svg class="ic" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>رام الله – البالوع – بجانب محطة الهدى</span>
+      <h1>خلّي <span class="red">الإضاءة</span><br>تحكي ذوقك</h1>
+      <p class="lead">في Trend Light بنجمع بين الأناقة والجودة والتفاصيل اللي بتصنع الفرق، لنقدّم لك حلول إنارة عصرية وتجهيزات كهربائية بتضيف لمسة مميزة لكل زاوية في مساحتك.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="https://wa.me/970595123330" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M3 21l1.65-4.8A9 9 0 1 1 8 19.5L3 21z"/></svg>
+          احكينا على واتساب
+        </a>
+        <a class="btn btn-ghost" href="https://maps.app.goo.gl/AQrW2fUtKvscw4P99" target="_blank" rel="noopener">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          موقعنا على الخريطة
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div><b>إنارة عصرية</b>تصاميم بتواكب الموضة</div>
+        <div><b>تجهيزات كهربائية</b>كل اللي بتحتاجه بمكان واحد</div>
+        <div><b>رد سريع</b>عالواتساب واتصال مباشر</div>
+      </div>
+    </div>
+
+    <div class="lamp-stage rv" aria-hidden="true">
+      <span class="dust" style="left:22%;top:62%;animation-delay:0s"></span>
+      <span class="dust" style="left:70%;top:55%;animation-delay:1.4s"></span>
+      <span class="dust" style="left:46%;top:75%;animation-delay:2.6s"></span>
+      <span class="dust" style="left:60%;top:82%;animation-delay:3.8s"></span>
+      <span class="dust" style="left:32%;top:80%;animation-delay:5s"></span>
+      <svg viewBox="0 0 400 520">
+        <defs>
+          <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffd39a" stop-opacity=".62"/>
+            <stop offset="1" stop-color="#ffd39a" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#ffdca8" stop-opacity=".95"/>
+            <stop offset="1" stop-color="#ffdca8" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#1b1b20"/><stop offset=".5" stop-color="#34343c"/><stop offset="1" stop-color="#1b1b20"/>
+          </linearGradient>
+        </defs>
+        <g class="swing">
+          <line x1="200" y1="0" x2="200" y2="104" stroke="#3b3b43" stroke-width="2.5"/>
+          <rect x="190" y="98" width="20" height="16" rx="4" fill="#2a2a31"/>
+          <polygon class="pulse" points="128,222 272,222 392,520 8,520" fill="url(#cone)"/>
+          <circle class="pulse" cx="200" cy="226" r="70" fill="url(#halo)"/>
+          <path d="M112 224 C112 156 154 114 200 114 C246 114 288 156 288 224 Z" fill="url(#shade)"/>
+          <path d="M112 224 L288 224" stroke="#f31f28" stroke-width="5" stroke-linecap="round"/>
+          <ellipse cx="200" cy="228" rx="26" ry="10" fill="#fff3d6"/>
+          <path d="M150 168 C160 148 178 136 196 133" stroke="rgba(255,255,255,.18)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+        <ellipse cx="200" cy="510" rx="150" ry="10" fill="#ffd39a" opacity=".14"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Marquee -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>ثريات وإنارة ديكورية</span><span>إنارة LED</span><span>سبوت لايت</span><span>إنارة خارجية</span><span>تجهيزات كهربائية</span><span>استشارة إنارة</span>
+    <span>ثريات وإنارة ديكورية</span><span>إنارة LED</span><span>سبوت لايت</span><span>إنارة خارجية</span><span>تجهيزات كهربائية</span><span>استشارة إنارة</span>
+  </div>
+</div>
+
+<!-- Categories -->
+<section id="categories">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow">أقسامنا</span>
+      <h2>كل اللي بتحتاجه لمساحة مضيئة ومتكاملة</h2>
+      <p>من القطع الديكورية المميزة لحد التجهيزات الكهربائية، بنوفّرلك خيارات متنوعة بتناسب كل ذوق وكل ميزانية.</p>
+    </div>
+    <div class="cards">
+      <article class="cat rv">
+        <div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 16l.7 1.8L21.500 18.500l-1.800.7L19 21l-.7-1.800-1.800-.7 1.800-.7z"/></svg></div>
+        <h3>ثريات وإنارة ديكورية</h3><p>قطع مميزة بتعطي المكان طابع وشخصية وبتلفت النظر.</p>
+      </article>
+      <article class="cat rv">
+        <div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></div>
+        <h3>إنارة LED</h3><p>كفاءة عالية وتوفير بالطاقة، مناسبة لكل الاستخدامات.</p>
+      </article>
+      <article class="cat rv">
+        <div class="ico"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M2 12h2M20 12h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/></svg></div>
+        <h3>سبوت لايت وإنارة مخفية</h3><p>إضاءة ناعمة ومدروسة للأسقف والجدران بلمسة عصرية.</p>
+      </article>
+      <article class="cat rv">
+        <div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M21 12.800A9 9 0 1 1 11.200 3a7 7 0 0 0 9.800 9.800z"/></svg></div>
+        <h3>إنارة خارجية</h3><p>حلول للحدائق والواجهات والمداخل بمتانة وأناقة.</p>
+      </article>
+      <article class="cat rv">
+        <div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>تجهيزات كهربائية</h3><p>مستلزمات كهربائية بجودة موثوقة لكل مشروع.</p>
+      </article>
+      <article class="cat rv">
+        <div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>استشارة إنارة</h3><p>بنقترح عليك الأنسب لمساحتك وذوقك وميزانيتك.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Light demo -->
+<section class="demo" id="light">
+  <div class="container demo-grid">
+    <div class="rv">
+      <div class="sec-head" style="margin-bottom:24px">
+        <span class="eyebrow">جرّب بنفسك</span>
+        <h2>درجة لون الضوء بتغيّر إحساس المكان</h2>
+        <p>اختار درجة اللون وشوف كيف بتتغير الأجواء. وإحنا بنساعدك تختار الأنسب لكل غرفة.</p>
+      </div>
+      <div class="temps" role="group" aria-label="درجة لون الإضاءة">
+        <button class="temp" type="button" aria-pressed="true" data-c="#ffb45e" data-k="2700K" data-t="دافئ" data-d="أجواء هادئة ودافئة، مثالية لغرف الجلوس والنوم.">
+          <span class="dot" style="color:#ffb45e;background:#ffb45e"></span>
+          <span><b>أبيض دافئ</b><span>2700K – دفء وراحة</span></span>
+        </button>
+        <button class="temp" type="button" aria-pressed="false" data-c="#ffe6bf" data-k="4000K" data-t="محايد" data-d="توازن مريح للعين، مناسب للمطابخ والممرات والمكاتب.">
+          <span class="dot" style="color:#ffe6bf;background:#ffe6bf"></span>
+          <span><b>أبيض محايد</b><span>4000K – توازن ووضوح</span></span>
+        </button>
+        <button class="temp" type="button" aria-pressed="false" data-c="#cfe1ff" data-k="6500K" data-t="بارد" data-d="إضاءة ساطعة وحادة، مناسبة للمحلات والمستودعات وأماكن العمل.">
+          <span class="dot" style="color:#cfe1ff;background:#cfe1ff"></span>
+          <span><b>أبيض بارد</b><span>6500K – سطوع وتركيز</span></span>
+        </button>
+      </div>
+      <p id="tempNote" style="margin-top:18px;color:rgba(255,255,255,.7);font-size:14.5px;font-weight:500;min-height:48px">أجواء هادئة ودافئة، مثالية لغرف الجلوس والنوم.</p>
+    </div>
+
+    <div class="room rv" id="room" aria-hidden="true">
+      <div class="wall"></div><div class="floor"></div><div class="cone"></div>
+      <div class="cord"></div><div class="shade"></div><div class="bulb"></div>
+      <div class="art"></div><div class="sofa"></div><div class="table"></div>
+      <div class="tag"><i id="tagK">2700K</i> · <span id="tagT">دافئ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why -->
+<section id="why">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow">ليش تريند لايت</span>
+      <h2>التفاصيل الصغيرة هي اللي بتفرق</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why rv"><div class="num">01</div><h3>تصاميم عصرية</h3><p>قطع مختارة بعناية بتواكب أحدث توجهات الإنارة.</p></div>
+      <div class="why rv"><div class="num">02</div><h3>جودة مختارة</h3><p>منتجات موثوقة بتعيش وبتحافظ على مظهرها وأدائها.</p></div>
+      <div class="why rv"><div class="num">03</div><h3>تنوع بالخيارات</h3><p>من الديكور للتجهيزات الكهربائية، كله بمكان واحد.</p></div>
+      <div class="why rv"><div class="num">04</div><h3>تواصل سهل</h3><p>رد سريع عالواتساب ومحل بموقع واضح في رام الله.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow">كيف نشتغل</span>
+      <h2>ثلاث خطوات بسيطة</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3>تواصل معنا</h3><p>ابعتلنا رسالة عالواتساب أو اتصل فينا مباشرة.</p></div>
+      <div class="step rv"><h3>احكينا عن مساحتك</h3><p>قلنا شو نوع المكان وشو الأجواء اللي بتحبها.</p></div>
+      <div class="step rv"><h3>اختار الأنسب</h3><p>بنقترح عليك الخيارات الأنسب، وبتاخد اللي بتحبه.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<div class="band">
+  <div class="container">
+    <div class="band-box rv">
+      <div>
+        <h2>جاهز تضيء مساحتك؟</h2>
+        <p>ابعتلنا فكرتك وبنساعدك تحوّلها لإضاءة بتشبهك.</p>
+      </div>
+      <a class="btn btn-wa" href="https://wa.me/970595123330" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M3 21l1.65-4.8A9 9 0 1 1 8 19.5L3 21z"/></svg>
+        ابدأ المحادثة
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<section id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow">تواصل معنا</span>
+      <h2>ابعتلنا واترك الباقي علينا</h2>
+    </div>
+    <div class="contact-grid">
+      <a class="c-card wa rv" href="https://wa.me/970595123330" target="_blank" rel="noopener">
+        <div class="c-ico"><svg class="ic" viewBox="0 0 24 24"><path d="M3 21l1.65-4.8A9 9 0 1 1 8 19.5L3 21z"/></svg></div>
+        <div><strong>واتساب</strong><span dir="ltr">+970 595 123 330</span></div>
+      </a>
+      <a class="c-card tel rv" href="tel:+970595123330">
+        <div class="c-ico"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.920v3a2 2 0 0 1-2.180 2 19.790 19.790 0 0 1-8.630-3.070 19.500 19.500 0 0 1-6-6 19.790 19.790 0 0 1-3.070-8.670A2 2 0 0 1 4.110 2h3a2 2 0 0 1 2 1.720c.130.960.360 1.900.700 2.810a2 2 0 0 1-.450 2.110L8.090 9.910a16 16 0 0 0 6 6l1.270-1.270a2 2 0 0 1 2.110-.450c.910.340 1.850.570 2.810.700A2 2 0 0 1 22 16.920z"/></svg></div>
+        <div><strong>اتصال مباشر</strong><span dir="ltr">+970 595 123 330</span></div>
+      </a>
+      <a class="c-card mp rv" href="https://maps.app.goo.gl/AQrW2fUtKvscw4P99" target="_blank" rel="noopener">
+        <div class="c-ico"><svg class="ic" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><strong>موقعنا على الخريطة</strong><span>رام الله – البالوع – بجانب محطة الهدى</span></div>
+      </a>
+      <a class="c-card ig rv" href="https://www.instagram.com/trend.light.ps/" target="_blank" rel="noopener">
+        <div class="c-ico"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".8" fill="currentColor"/></svg></div>
+        <div><strong>Instagram</strong><span dir="ltr">@trend.light.ps</span></div>
+      </a>
+      <a class="c-card fb rv" href="https://www.facebook.com/profile.php?id=61585063657583" target="_blank" rel="noopener">
+        <div class="c-ico"><svg class="ic" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+        <div><strong>Facebook</strong><span>تابعنا لكل جديد</span></div>
+      </a>
+      <div class="c-card ad rv">
+        <div class="c-ico"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><strong>زورنا بالمحل</strong><span>شوف الإضاءة على أرض الواقع</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div><b>Trend <span class="red">Light</span> – تريند <span class="red">لايت</span></b> · للإنارة والتجهيزات الكهربائية</div>
+    <div>جميع الحقوق محفوظة © 2026</div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/970595123330" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg class="ic" viewBox="0 0 24 24"><path d="M3 21l1.65-4.8A9 9 0 1 1 8 19.5L3 21z"/></svg>
+</a>
+
+<script>
+(function(){
+  // Reveal on scroll
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el,i){ el.style.transitionDelay=((i%3)*80)+'ms'; io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+
+  // Light temperature demo
+  var room=document.getElementById('room'),
+      note=document.getElementById('tempNote'),
+      tk=document.getElementById('tagK'),
+      tt=document.getElementById('tagT'),
+      btns=document.querySelectorAll('.temp');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      document.documentElement.style.setProperty('--glow',b.dataset.c);
+      tk.textContent=b.dataset.k; tt.textContent=b.dataset.t; note.textContent=b.dataset.d;
+    });
+  });
+})();
+</script>
+</body>
+</html>
